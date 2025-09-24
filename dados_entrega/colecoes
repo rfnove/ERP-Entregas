@@ -1,0 +1,25 @@
+db.entregador.insertOne({
+  "nome": "João da Silva",
+  "cpf": 12345678900,
+  "email": "joao.silva@email.com",
+  "senha_hash": "a1b2c3d4e5f6g7h8i9j0"
+});
+
+
+
+db.entregas.insertOne({
+  "numero_pedido": "PED12345",
+  "nome_cliente": "Ana Souza",
+  "endereco_completo": "Rua Vergueiro, 100",
+  "cidade": "São Paulo",
+  "tipo_entrega": "Shoppe",
+  "status": "Em andamento",
+  "descricao_entrega": "Pacote pequeno",
+  "data_criacao": new Date(),
+  "data_entrega_estimada": new Date("2025-10-25T14:00:00Z"),
+  "data_entrega_concluida": null,
+  "entregador_id": ObjectId("68d012f4f2fe94a6afdc8682")
+});
+
+db.entregador.find()
+db.entregas.find()
