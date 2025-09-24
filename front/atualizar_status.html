@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Status - Sistema ERP Entregadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f1f5f9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="flex h-screen">
+        <aside class="w-64 bg-white shadow-lg border-r border-gray-200">
+            <div class="p-6">
+                <div class="flex items-center space-x-3 mb-8">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-semibold text-gray-900">ERP Entregas</h1>
+                        <p class="text-sm text-secondary">Sistema de Gestão</p>
+                    </div>
+                </div>
+
+                <nav class="space-y-2">
+                    <a href="painel.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
+                        <span>Dashboard</span>
+                    </a>
+                    <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <span>Cadastro</span>
+                    </a>
+                    <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Relatórios</span>
+                    </a>
+                    <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Histórico</span>
+                    </a>
+                    <a href="chatbot.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M12 18H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-7zm-4-4h.01M12 14h.01M16 14h.01"></path></svg>
+                        <span>Chatbot de Suporte</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                        <span class="text-sm font-medium text-gray-700">JS</span>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-900">João Silva</p>
+                        <p class="text-xs text-secondary">Entregador</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="flex-1 flex flex-col">
+            <div class="bg-white border-b border-gray-200 p-6">
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Atualizar Status da Entrega</h1>
+                <p class="text-secondary">Selecione o novo status para a entrega.</p>
+            </div>
+            
+            <div class="flex-1 p-6 overflow-auto">
+                <div class="max-w-2xl">
+                    <form id="statusForm" class="space-y-6">
+                        <div>
+                            <label for="orderNumber" class="block text-sm font-medium text-gray-900 mb-2">Número do Pedido</label>
+                            <input type="text" id="orderNumber" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-gray-100 cursor-not-allowed" readonly>
+                        </div>
+                        <div>
+                            <label for="customerName" class="block text-sm font-medium text-gray-900 mb-2">Nome do Cliente</label>
+                            <input type="text" id="customerName" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-gray-100 cursor-not-allowed" readonly>
+                        </div>
+                        <div>
+                            <label for="status" class="block text-sm font-medium text-gray-900 mb-2">Novo Status</label>
+                            <select id="status" name="status" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                <option value="pendente">Pendente</option>
+                                <option value="em_transporte">Em Transporte</option>
+                                <option value="entregue">Entregue</option>
+                                <option value="nao_entregue">Não Entregue</option>
+                            </select>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <button type="submit" id="saveStatus" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-sm">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Salvar Status</span>
+                            </button>
+                            <a href="cad_entrega.html" class="flex-1 text-center bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 transition-colors duration-200 flex items-center justify-center space-x-2">
+                                <span>Voltar</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const deliveryId = params.get('id');
+
+            // Simulação de carregamento de dados da entrega
+            const deliveryData = {
+                id: deliveryId,
+                orderNumber: 'Ex: #12345',
+                customerName: 'Ex: João da Silva',
+                currentStatus: 'pendente'
+            };
+
+            document.getElementById('orderNumber').value = deliveryData.orderNumber;
+            document.getElementById('customerName').value = deliveryData.customerName;
+            document.getElementById('status').value = deliveryData.currentStatus;
+
+            const form = document.getElementById('statusForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const newStatus = document.getElementById('status').value;
+                alert(`Simulando atualização do status da entrega ${deliveryData.orderNumber} para: ${newStatus}`);
+                window.location.href = 'cad_entrega.html';
+            });
+        });
+    </script>
+</body>
+</html>

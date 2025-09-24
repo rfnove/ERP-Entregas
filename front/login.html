@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema ERP Entregadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f1f5f9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .login-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="login-bg min-h-screen flex items-center justify-center p-4">
+    <!-- Background Decorative Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-20 w-32 h-32 bg-white bg-opacity-10 rounded-full floating-animation"></div>
+        <div class="absolute top-40 right-32 w-20 h-20 bg-white bg-opacity-5 rounded-full floating-animation" style="animation-delay: -2s;"></div>
+        <div class="absolute bottom-32 left-1/4 w-24 h-24 bg-white bg-opacity-10 rounded-full floating-animation" style="animation-delay: -4s;"></div>
+        <div class="absolute bottom-20 right-20 w-16 h-16 bg-white bg-opacity-5 rounded-full floating-animation" style="animation-delay: -1s;"></div>
+    </div>
+
+    <!-- Login Card -->
+    <div class="w-full max-w-md slide-in">
+        <div class="bg-white rounded-2xl shadow-2xl p-8 backdrop-blur-sm">
+            <!-- Logo/Brand -->
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Entrar</h1>
+                <p class="text-secondary text-sm">Acesse sua conta para continuar</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-6">
+                <!-- Email/Username Field -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-900 mb-2">
+                        Email
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path>
+                            </svg>
+                        </div>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                            placeholder="Digite seu email"
+                            required
+                        >
+                    </div>
+                    <div class="mt-1 text-sm text-red-600 hidden" id="emailError">
+                        Por favor, digite um email válido
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-900 mb-2">
+                        Senha
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                            </svg>
+                        </div>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            class="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+                            placeholder="Digite sua senha"
+                            required
+                        >
+                        <button 
+                            type="button"
+                            id="togglePassword"
+                            class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 transition-colors"
+                        >
+                            <svg class="h-5 w-5" id="eyeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-1 text-sm text-red-600 hidden" id="passwordError">
+                        Por favor, digite sua senha
+                    </div>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input 
+                            id="remember" 
+                            name="remember" 
+                            type="checkbox" 
+                            class="h-4 w-4 text-primary focus:ring-primary border-gray-300 rounded transition-colors"
+                        >
+                        <label for="remember" class="ml-2 block text-sm text-gray-900 cursor-pointer">
+                            Lembrar-me
+                        </label>
+                    </div>
+                    <div class="text-sm">
+                        <a href="#" id="forgotPassword" class="font-medium text-primary hover:text-blue-700 transition-colors">
+                            Esqueceu a senha?
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <button 
+                    type="submit"
+                    id="loginButton"
+                    class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                >
+                    <span>Entrar</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </button>
+            </form>
+
+            <!-- Additional Options -->
+            <div class="mt-8 text-center">
+                <p class="text-sm text-secondary">
+                    Não tem uma conta? 
+                    <a href="#" class="font-medium text-primary hover:text-blue-700 transition-colors">
+                        Cadastre-se
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8">
+            <p class="text-white text-opacity-80 text-sm">
+                © 2024 ERP Entregas. Todos os direitos reservados.
+            </p>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden z-50">
+        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center slide-in">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Login realizado com sucesso!</h3>
+            <p class="text-secondary text-sm mb-6">Redirecionando para o dashboard...</p>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="progressBar" class="bg-primary h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Form elements
+        const form = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const loginButton = document.getElementById('loginButton');
+        const togglePassword = document.getElementById('togglePassword');
+        const eyeIcon = document.getElementById('eyeIcon');
+        const successModal = document.getElementById('successModal');
+        const progressBar = document.getElementById('progressBar');
+
+        // Toggle password visibility
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            if (type === 'text') {
+                eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.878 9.878L3 3m6.878 6.878L21 21"></path>
+                `;
+            } else {
+                eyeIcon.innerHTML = `
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                `;
+            }
+        });
+
+        // Form validation
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function showError(field, errorElement, message) {
+            field.classList.add('border-red-500');
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+        }
+
+        function hideError(field, errorElement) {
+            field.classList.remove('border-red-500');
+            errorElement.classList.add('hidden');
+        }
+
+        // Real-time validation
+        emailInput.addEventListener('input', function() {
+            const errorElement = document.getElementById('emailError');
+            if (this.value && !validateEmail(this.value)) {
+                showError(this, errorElement, 'Por favor, digite um email válido');
+            } else {
+                hideError(this, errorElement);
+            }
+        });
+
+        passwordInput.addEventListener('input', function() {
+            const errorElement = document.getElementById('passwordError');
+            if (this.value.length > 0) {
+                hideError(this, errorElement);
+            }
+        });
+
+        // Forgot password handler
+        document.getElementById('forgotPassword').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Funcionalidade de recuperação de senha será implementada em breve!');
+        });
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+            
+            // Validate email
+            const emailError = document.getElementById('emailError');
+            if (!emailInput.value) {
+                showError(emailInput, emailError, 'Por favor, digite seu email');
+                isValid = false;
+            } else if (!validateEmail(emailInput.value)) {
+                showError(emailInput, emailError, 'Por favor, digite um email válido');
+                isValid = false;
+            } else {
+                hideError(emailInput, emailError);
+            }
+            
+            // Validate password
+            const passwordError = document.getElementById('passwordError');
+            if (!passwordInput.value) {
+                showError(passwordInput, passwordError, 'Por favor, digite sua senha');
+                isValid = false;
+            } else {
+                hideError(passwordInput, passwordError);
+            }
+            
+            if (!isValid) {
+                return;
+            }
+            
+            // Simulate login process
+            loginButton.innerHTML = `
+                <svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+                <span>Entrando...</span>
+            `;
+            loginButton.disabled = true;
+            
+            setTimeout(() => {
+                // Show success modal
+                successModal.classList.remove('hidden');
+                
+                // Animate progress bar
+                let progress = 0;
+                const interval = setInterval(() => {
+                    progress += 2;
+                    progressBar.style.width = progress + '%';
+                    
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            alert('Redirecionando para o dashboard...');
+                            // In a real application, you would redirect here
+                            // window.location.href = '/dashboard';
+                            
+                            // Reset for demo
+                            successModal.classList.add('hidden');
+                            progressBar.style.width = '0%';
+                            loginButton.innerHTML = `
+                                <span>Entrar</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                                </svg>
+                            `;
+                            loginButton.disabled = false;
+                        }, 500);
+                    }
+                }, 50);
+                
+            }, 2000);
+        });
+
+        // Close modal on click outside
+        successModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+                progressBar.style.width = '0%';
+                loginButton.innerHTML = `
+                    <span>Entrar</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                `;
+                loginButton.disabled = false;
+            }
+        });
+
+        // Demo credentials hint
+        setTimeout(() => {
+            emailInput.placeholder = "Teste: admin@exemplo.com";
+            passwordInput.placeholder = "Teste: 123456";
+        }, 3000);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97e383fc943acab6',t:'MTc1NzcyMzIxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
