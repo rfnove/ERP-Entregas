@@ -21,133 +21,159 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        .chat-option-btn {
+            background-color: #fff;
+            border: 1px solid #d1d5db;
+            color: #374151;
+            padding: 8px 16px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .chat-option-btn:hover {
+            background-color: #f3f4f6;
+            border-color: #9ca3af;
+        }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
     <div class="flex h-screen">
-        <aside class="w-64 bg-white shadow-lg border-r border-gray-200">
-            <div class="p-6">
-                <div class="flex items-center space-x-3 mb-8">
-                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+        <aside class="w-64 bg-white shadow-lg border-r border-gray-200 relative">
+                        <div class="p-6">
+                            <div class="flex items-center space-x-3 mb-8">
+                                <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                        </div>
+                        <div>
+                            <h1 class="text-lg font-semibold text-gray-900">ERP Entregas</h1>
+                            <p class="text-sm text-secondary">Sistema de Gestão</p>
+                        </div>
                     </div>
-                    <div>
-                        <h1 class="text-lg font-semibold text-gray-900">ERP Entregas</h1>
-                        <p class="text-sm text-secondary">Sistema de Gestão</p>
-                    </div>
-                </div>
 
-                <nav class="space-y-2">
-                    <a href="painel.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
-                        <span>Dashboard</span>
-                    </a>
-                    <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                        <span>Cadastro</span>
-                    </a>
-                    <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>Relatórios</span>
-                    </a>
-                    <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <span>Histórico</span>
-                    </a>
-                    <a href="chatbot.html" class="w-full flex items-center space-x-3 px-4 py-3 text-primary bg-blue-50 rounded-lg font-medium transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M12 18H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-7zm-4-4h.01M12 14h.01M16 14h.01"></path></svg>
-                        <span>Chatbot de Suporte</span>
-                    </a>
-                </nav>
-            </div>
-            <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                        <span class="text-sm font-medium text-gray-700">JS</span>
-                    </div>
-                    <div>
-                        <p class="text-sm font-medium text-gray-900">João Silva</p>
-                        <p class="text-xs text-secondary">Entregador</p>
+                    <nav class="space-y-2">
+                        <a href="painel.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
+                            <span>Dashboard</span>
+                        </a>
+                        <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            <span>Cadastro</span>
+                        </a>
+                        <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                            <span>Relatórios</span>
+                        </a>
+                        <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Histórico</span>
+                        </a>
+                        <a href="chatbot.html" class="w-full flex items-center space-x-3 px-4 py-3 text-primary bg-blue-50 rounded-lg font-medium transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M12 18H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-7zm-4-4h.01M12 14h.01M16 14h.01"></path></svg>
+                            <span>Chatbot de Suporte</span>
+                        </a>
+                    </nav>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                            <span class="text-sm font-medium text-gray-700">JS</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">João Silva</p>
+                            <p class="text-xs text-secondary">Entregador</p>
+                        </div>
                     </div>
                 </div>
-            </div>
         </aside>
 
         <main class="flex-1 flex flex-col">
             <div class="bg-white border-b border-gray-200 p-6">
                 <h1 class="text-2xl font-bold text-gray-900 mb-2">Assistente Virtual</h1>
-                <p class="text-secondary">Olá! Estou aqui para ajudar com as suas dúvidas sobre o sistema.</p>
+                <p class="text-secondary">Olá! Clique em uma das opções abaixo para que eu possa te ajudar.</p>
             </div>
 
-            <div class="flex-1 overflow-auto p-6 flex flex-col-reverse">
+            <div id="chat-container" class="flex-1 overflow-auto p-6">
                 <div id="chat-messages" class="flex flex-col space-y-4">
-                    <div class="flex justify-start">
-                        <div class="bg-gray-200 text-gray-800 p-3 rounded-xl max-w-lg shadow-sm">
-                            <p class="text-sm">Olá! Por favor, digite sua pergunta para que eu possa te ajudar. Aqui estão alguns exemplos do que posso responder: "como cadastrar entrega", "ver meu desempenho", "histórico de entregas".</p>
-                        </div>
                     </div>
-                </div>
             </div>
 
             <div class="bg-white border-t border-gray-200 p-6">
-                <form id="chat-form" class="flex items-center space-x-4">
-                    <input type="text" id="chat-input" class="flex-1 px-4 py-3 border border-gray-300 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="Digite sua pergunta...">
-                    <button type="submit" class="w-12 h-12 bg-primary hover:bg-blue-700 text-white rounded-full flex items-center justify-center transition-colors duration-200 shadow-md">
-                        <svg class="w-6 h-6 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                    </button>
-                </form>
+                <div id="chat-options" class="flex flex-wrap gap-3 justify-center">
+                    <button data-op="1" class="chat-option-btn">Como o sistema funciona?</button>
+                    <button data-op="2" class="chat-option-btn">Como cadastrar uma entrega?</button>
+                    <button data-op="3" class="chat-option-btn">O que é o Dashboard?</button>
+                    <button data-op="4" class="chat-option-btn">Ver entregas de hoje</button>
+                    <button data-op="5" class="chat-option-btn">Ver entregas pendentes</button>
+                </div>
             </div>
         </main>
     </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const chatForm = document.getElementById('chat-form');
-            const chatInput = document.getElementById('chat-input');
+            const chatOptions = document.getElementById('chat-options');
             const chatMessages = document.getElementById('chat-messages');
+            const apiEndpoint = 'http://127.0.0.1:5000/chatbot'; // URL do nosso servidor Flask
 
             function createMessageElement(text, isUser) {
+                const chatMessages = document.getElementById('chat-messages');
+                const chatContainer = document.getElementById('chat-container'); // Pega o container do chat
+
                 const messageContainer = document.createElement('div');
                 messageContainer.className = `flex ${isUser ? 'justify-end' : 'justify-start'}`;
 
                 const messageBubble = document.createElement('div');
+                const formattedText = text.replace(/\n/g, '<br>');
                 messageBubble.className = `p-3 rounded-xl max-w-lg shadow-sm ${isUser ? 'bg-primary text-white' : 'bg-gray-200 text-gray-800'}`;
-                messageBubble.innerHTML = `<p class="text-sm">${text}</p>`;
+                messageBubble.innerHTML = `<p class="text-sm">${formattedText}</p>`;
 
                 messageContainer.appendChild(messageBubble);
-                chatMessages.appendChild(messageContainer);
-                chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll to bottom
-            }
 
-            function getBotResponse(userMessage) {
-                const msg = userMessage.toLowerCase();
-                let response = "Desculpe, não entendi a sua pergunta. Por favor, tente reformular.";
+                // MUDANÇA PRINCIPAL: Adiciona a mensagem no FINAL da div
+                chatMessages.appendChild(messageContainer); 
 
-                if (msg.includes("cadastrar") || msg.includes("nova entrega") || msg.includes("adicionar pedido")) {
-                    response = "Para cadastrar uma nova entrega, vá para a página 'Cadastro', preencha os dados no formulário e clique em 'Salvar Entrega'.";
-                } else if (msg.includes("atualizar status") || msg.includes("mudar status")) {
-                    response = "Você pode atualizar o status de uma entrega na lista 'Entregas do Dia' na tela de Cadastro.";
-                } else if (msg.includes("desempenho") || msg.includes("relatorio") || msg.includes("métricas")) {
-                    response = "Seu desempenho pode ser visualizado na página de 'Relatórios'. Lá você encontrará as métricas-chave do seu trabalho.";
-                } else if (msg.includes("histórico")) {
-                    response = "Para ver todas as suas entregas anteriores, navegue para a página 'Histórico'.";
-                } else if (msg.includes("olá") || msg.includes("oi") || msg.includes("ajuda")) {
-                    response = "Olá! Fico feliz em ajudar. Qual é a sua dúvida?";
+                // NOVO: Faz o container rolar para o final para mostrar a nova mensagem
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+            async function getBotResponse(optionNumber) {
+                try {
+                    const response = await fetch(apiEndpoint, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ op: optionNumber }), // Envia o número da opção
+                    });
+
+                    if (!response.ok) throw new Error(`Erro na API: ${response.statusText}`);
+
+                    const data = await response.json();
+                    return data.response;
+                } catch (error) {
+                    console.error("Falha ao contatar o backend:", error);
+                    return "Desculpe, estou com problemas para me conectar ao servidor. Tente novamente mais tarde.";
                 }
-                return response;
             }
 
-            chatForm.addEventListener('submit', function(event) {
-                event.preventDefault();
-                const userMessage = chatInput.value.trim();
-                if (userMessage === "") return;
+            // Adiciona um listener para cliques na área dos botões
+            chatOptions.addEventListener('click', async function(event) {
+                const button = event.target.closest('.chat-option-btn');
+                if (!button) return; // Se o clique não foi em um botão, ignora
 
-                createMessageElement(userMessage, true);
-                chatInput.value = "";
+                const userMessage = button.textContent;
+                const optionNumber = button.dataset.op;
 
-                setTimeout(() => {
-                    const botResponse = getBotResponse(userMessage);
-                    createMessageElement(botResponse, false);
-                }, 500);
+                createMessageElement(userMessage, true); // Mostra a pergunta do usuário no chat
+                
+                // Desativa botões para prevenir cliques duplos enquanto espera a resposta
+                chatOptions.style.pointerEvents = 'none'; 
+                
+                const botResponse = await getBotResponse(optionNumber);
+                createMessageElement(botResponse, false); // Mostra a resposta do bot
+
+                // Reativa os botões
+                chatOptions.style.pointerEvents = 'auto';
             });
         });
     </script>
