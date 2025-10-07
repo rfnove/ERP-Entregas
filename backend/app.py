@@ -14,11 +14,15 @@ def handle_chat_request():
         return jsonify({"error": "O parâmetro 'op' é obrigatório."}), 400
 
     try:
-        # Pega o número da opção e converte para inteiro
+        # 1. Pega o número da opção e converte para inteiro
         option = int(data['op'])
         
-        # Chama a sua função original 'chat' com a opção recebida
-        response_message = chat(option)
+        # 2. Pega o número do pedido, se estiver presente na requisição JSON
+        # O valor será None se o campo não existir, o que é tratado pela função chat(op, numero_pedido=None)
+        numero_pedido = data.get('numero_pedido') 
+        
+        # 3. Chama a função 'chat' com a opção e o número do pedido (pode ser None)
+        response_message = chat(option, numero_pedido)
         
         # Retorna a resposta do seu script para o frontend
         return jsonify({"response": response_message})
