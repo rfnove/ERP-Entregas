@@ -106,7 +106,7 @@
                     <button data-op="3" class="chat-option-btn">O que é o Dashboard?</button>
                     <button data-op="4" class="chat-option-btn">Ver entregas de hoje</button>
                     <button data-op="5" class="chat-option-btn">Ver entregas pendentes</button>
-                </div>
+                    <button data-op="6" class="chat-option-btn">Ver entregas concluídas</button> <button data-op="7" class="chat-option-btn">Consultar pedido por número</button> </div>
             </div>
         </main>
     </div>
@@ -119,7 +119,7 @@
 
             function createMessageElement(text, isUser) {
                 const chatMessages = document.getElementById('chat-messages');
-                const chatContainer = document.getElementById('chat-container'); // Pega o container do chat
+                const chatContainer = document.getElementById('chat-container'); 
 
                 const messageContainer = document.createElement('div');
                 messageContainer.className = `flex ${isUser ? 'justify-end' : 'justify-start'}`;
@@ -131,19 +131,22 @@
 
                 messageContainer.appendChild(messageBubble);
 
-                // MUDANÇA PRINCIPAL: Adiciona a mensagem no FINAL da div
                 chatMessages.appendChild(messageContainer); 
 
-                // NOVO: Faz o container rolar para o final para mostrar a nova mensagem
                 chatContainer.scrollTop = chatContainer.scrollHeight;
-}
+            }
 
-            async function getBotResponse(optionNumber) {
+            async function getBotResponse(optionNumber, pedidoNumber = null) {
+                const payload = { op: optionNumber };
+                if (pedidoNumber) {
+                    payload.numero_pedido = pedidoNumber; // Adiciona o número do pedido ao payload
+                }
+                
                 try {
                     const response = await fetch(apiEndpoint, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ op: optionNumber }), // Envia o número da opção
+                        body: JSON.stringify(payload),
                     });
 
                     if (!response.ok) throw new Error(`Erro na API: ${response.statusText}`);
@@ -159,20 +162,32 @@
             // Adiciona um listener para cliques na área dos botões
             chatOptions.addEventListener('click', async function(event) {
                 const button = event.target.closest('.chat-option-btn');
-                if (!button) return; // Se o clique não foi em um botão, ignora
+                if (!button) return; 
 
-                const userMessage = button.textContent;
-                const optionNumber = button.dataset.op;
+                const optionNumber = parseInt(button.dataset.op);
+                let userMessage = button.textContent;
+                let pedidoNumber = null;
 
-                createMessageElement(userMessage, true); // Mostra a pergunta do usuário no chat
+                // Lógica para o botão Consultar Pedido por Número (op=7)
+                if (optionNumber === 7) {
+                    const promptText = "Por favor, digite o número do pedido que deseja consultar:";
+                    pedidoNumber = window.prompt(promptText);
+
+                    if (pedidoNumber === null || pedidoNumber.trim() === "") {
+                        createMessageElement("Consulta cancelada.", false);
+                        return;
+                    }
+                    userMessage = `${userMessage}: ${pedidoNumber}`;
+                }
+
+                createMessageElement(userMessage, true); 
                 
-                // Desativa botões para prevenir cliques duplos enquanto espera a resposta
                 chatOptions.style.pointerEvents = 'none'; 
                 
-                const botResponse = await getBotResponse(optionNumber);
-                createMessageElement(botResponse, false); // Mostra a resposta do bot
+                // Chamada à API com ou sem o número do pedido
+                const botResponse = await getBotResponse(optionNumber, pedidoNumber);
+                createMessageElement(botResponse, false); 
 
-                // Reativa os botões
                 chatOptions.style.pointerEvents = 'auto';
             });
         });
