@@ -45,9 +45,9 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                         <span>Cadastro</span>
                     </a>
-                    <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>Relatórios</span>
+                    <a href="atualizar_status.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Gerenciar</span>
                     </a>
                     <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-primary bg-blue-50 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -62,16 +62,16 @@
             <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                        <span class="text-sm font-medium text-gray-700">JS</span>
+                        <span id="profileInitials" class="text-sm font-medium text-gray-700">JS</span>
                     </div>
                     <div>
-                        <p class="text-sm font-medium text-gray-900">João Silva</p>
+                        <p id="profileName" class="text-sm font-medium text-gray-900">João Silva</p>
                         <p class="text-xs text-secondary">Entregador</p>
                     </div>
                 </div>
             </div>
-        </aside>
-
+            </aside>
+        
         <main class="flex-1 flex flex-col">
             <div class="bg-white border-b border-gray-200 p-6">
                 <h1 class="text-2xl font-bold text-gray-900 mb-2">Histórico de Entregas</h1>
@@ -110,13 +110,130 @@
         </main>
     </div>
     <script>
+    // --- INÍCIO DA ALTERAÇÃO JAVASCRIPT ---
+
+    // Função para carregar dados do usuário (Nome e Iniciais)
+    function loadUserData() {
+        const nome = localStorage.getItem('entregador_nome');
+        const iniciais = localStorage.getItem('entregador_iniciais');
+
+        if (nome && iniciais) {
+            document.getElementById('profileName').textContent = nome;
+            document.getElementById('profileInitials').textContent = iniciais;
+        } else {
+            // Se não achar, volta pro login
+            alert('Sessão não encontrada. Por favor, faça login novamente.');
+            window.location.href = 'login.html';
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+        loadUserData(); // Carrega os dados do perfil
+        
+        // --- FIM DA ALTERAÇÃO JAVASCRIPT ---
+
         const searchInput = document.getElementById('searchInput');
         const startDateInput = document.getElementById('startDate');
         const endDateInput = document.getElementById('endDate');
         const clearFiltersButton = document.getElementById('clearFilters');
         const historyListContainer = document.getElementById('historyListContainer');
 
+        // --- INÍCIO DO NOVO CÓDIGO ---
+
+        // Função para formatar a data ISO (ex: 2025-10-24T10:00:00) para pt-BR (ex: 24/10/2025)
+        function formatarData(isoString) {
+            if (!isoString) return 'N/A';
+            const data = new Date(isoString);
+            return data.toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        }
+
+        // Função para formatar a data ISO para o formato AAAA-MM-DD (usado no atributo data-date)
+        function formatarDataParaFiltro(isoString) {
+             if (!isoString) return '';
+             // Pega apenas a parte da data (ex: "2025-10-24")
+             return isoString.split('T')[0]; 
+        }
+
+        // Função principal para carregar o histórico do backend
+        async function carregarHistorico() {
+            // Pega o ID do entregador, que deve ter sido salvo no localStorage durante o login
+            const entregadorId = localStorage.getItem('entregador_id');
+
+            if (!entregadorId) {
+                historyListContainer.innerHTML = '<p class="p-6 text-center text-red-600">Erro: Entregador não identificado. Por favor, faça login novamente.</p>';
+                return;
+            }
+
+            // Define a URL da API. 
+            // Para a tela de "Histórico", queremos APENAS as entregas "Concluída"
+            const apiUrl = `http://127.0.0.1:5000/entregas?entregador_id=${entregadorId}&status=Concluída`;
+            
+            historyListContainer.innerHTML = '<p class="p-6 text-center text-gray-500">Carregando histórico...</p>';
+
+            try {
+                const response = await fetch(apiUrl);
+                
+                if (!response.ok) {
+                    throw new Error(`Erro ao buscar dados: ${response.statusText}`);
+                }
+                
+                const entregas = await response.json();
+
+                if (entregas.length === 0) {
+                    historyListContainer.innerHTML = '<p class="p-6 text-center text-gray-500">Nenhuma entrega concluída encontrada no histórico.</p>';
+                    return;
+                }
+
+                // Limpa a mensagem de "Carregando"
+                historyListContainer.innerHTML = ''; 
+
+                // Itera sobre cada entrega e cria o HTML
+                entregas.forEach(entrega => {
+                    // A data que importa para o histórico é a data de conclusão
+                    const dataParaFiltro = formatarDataParaFiltro(entrega.data_entrega_concluida);
+                    const dataFormatada = formatarData(entrega.data_entrega_concluida);
+
+                    const itemHtml = `
+                        <div class="history-item grid grid-cols-12 gap-4 items-center px-6 py-4 text-sm text-gray-800" data-date="${dataParaFiltro}">
+                            <div class="col-span-2">${dataFormatada}</div>
+                            <div class="col-span-2 font-medium">${entrega.nome_cliente || 'N/A'}</div>
+                            <div class="col-span-3 text-gray-600">${entrega.endereco_completo || 'N/A'}</div>
+                            <div class="col-span-2 text-gray-600">${entrega.cidade || 'N/A'}</div>
+                            <div class="col-span-1">
+                                <span class="px-2 py-1 text-xs font-semibold text-green-800 bg-green-100 rounded-full">
+                                    ${entrega.status}
+                                </span>
+                            </div>
+                            <div class="col-span-1 text-gray-600">${entrega.numero_pedido || 'N/A'}</div>
+                            <div class="col-span-1 text-center">
+                                <button class="text-primary hover:text-blue-700" title="Ver Detalhes">
+                                    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-.001 0-.001 0 0 0-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7 0 0 0 0 0 0z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Adiciona o HTML da linha ao container
+                    historyListContainer.innerHTML += itemHtml;
+                });
+
+            } catch (error) {
+                console.error('Falha ao carregar histórico:', error);
+                historyListContainer.innerHTML = `<p class="p-6 text-center text-red-600">Falha ao carregar histórico: ${error.message}</p>`;
+            }
+        }
+
+        // Chama a função para carregar os dados assim que a página estiver pronta
+        carregarHistorico();
+
+        // --- FIM DO NOVO CÓDIGO ---
+
+
+        // (Início do seu código de filtro original)
         const applyFilters = () => {
             const searchTerm = searchInput.value.toLowerCase();
             const startDate = startDateInput.value ? new Date(startDateInput.value) : null;
@@ -128,10 +245,18 @@
             
             rows.forEach(row => {
                 const rowText = row.textContent.toLowerCase();
-                const dateText = row.dataset.date;
+                const dateText = row.dataset.date; // Pega a data do atributo data-date
+                
+                // Ignora linhas que ainda não têm uma data (ex: se data_entrega_concluida for null)
+                if (!dateText) {
+                    row.classList.add('hidden');
+                    return;
+                }
+
                 const rowDate = new Date(dateText);
                 
                 const textMatch = !searchTerm || rowText.includes(searchTerm);
+                // Ajuste para garantir que a comparação de datas seja inclusiva
                 const startDateMatch = !startDate || rowDate >= startDate;
                 const endDateMatch = !endDate || rowDate <= endDate;
                 

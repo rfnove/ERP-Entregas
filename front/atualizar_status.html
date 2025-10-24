@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atualizar Status - Sistema ERP Entregadores</title>
+    <title>Gerenciar Entregas - Sistema ERP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,7 +25,7 @@
 </head>
 <body class="bg-gray-50 min-h-screen">
     <div class="flex h-screen">
-        <aside class="w-64 bg-white shadow-lg border-r border-gray-200">
+        <aside class="w-64 bg-white shadow-lg border-r border-gray-200 relative">
             <div class="p-6">
                 <div class="flex items-center space-x-3 mb-8">
                     <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -36,19 +36,18 @@
                         <p class="text-sm text-secondary">Sistema de Gestão</p>
                     </div>
                 </div>
-
                 <nav class="space-y-2">
                     <a href="painel.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
                         <span>Dashboard</span>
                     </a>
                     <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                         <span>Cadastro</span>
                     </a>
-                    <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
-                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>Relatórios</span>
+                    <a href="atualizar_status.html" class="w-full flex items-center space-x-3 px-4 py-3 text-primary bg-blue-50 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Gerenciar</span>
                     </a>
                     <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -60,14 +59,13 @@
                     </a>
                 </nav>
             </div>
-
             <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                        <span class="text-sm font-medium text-gray-700">JS</span>
+                        <span id="profileInitials" class="text-sm font-medium text-gray-700">JS</span>
                     </div>
                     <div>
-                        <p class="text-sm font-medium text-gray-900">João Silva</p>
+                        <p id="profileName" class="text-sm font-medium text-gray-900">João Silva</p>
                         <p class="text-xs text-secondary">Entregador</p>
                     </div>
                 </div>
@@ -76,69 +74,223 @@
         
         <main class="flex-1 flex flex-col">
             <div class="bg-white border-b border-gray-200 p-6">
-                <h1 class="text-2xl font-bold text-gray-900 mb-2">Atualizar Status da Entrega</h1>
-                <p class="text-secondary">Selecione o novo status para a entrega.</p>
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Gerenciar Entregas</h1>
+                <p class="text-secondary">Filtre e atualize o status das suas entregas.</p>
             </div>
             
+            <div class="bg-white border-b border-gray-200 p-6">
+                <form id="filterForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label for="filterDate" class="block text-sm font-medium text-gray-900 mb-2">Filtrar por Data</label>
+                        <input type="date" id="filterDate" name="filterDate" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900">
+                    </div>
+                    <div>
+                        <label for="filterStatus" class="block text-sm font-medium text-gray-900 mb-2">Filtrar por Status</label>
+                        <select id="filterStatus" name="filterStatus" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900">
+                            <option value="">Todos</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Concluída">Concluída</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="submit" id="filterButton" class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg">
+                            Filtrar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
             <div class="flex-1 p-6 overflow-auto">
-                <div class="max-w-2xl">
-                    <form id="statusForm" class="space-y-6">
-                        <div>
-                            <label for="orderNumber" class="block text-sm font-medium text-gray-900 mb-2">Número do Pedido</label>
-                            <input type="text" id="orderNumber" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-gray-100 cursor-not-allowed" readonly>
-                        </div>
-                        <div>
-                            <label for="customerName" class="block text-sm font-medium text-gray-900 mb-2">Nome do Cliente</label>
-                            <input type="text" id="customerName" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 bg-gray-100 cursor-not-allowed" readonly>
-                        </div>
-                        <div>
-                            <label for="status" class="block text-sm font-medium text-gray-900 mb-2">Novo Status</label>
-                            <select id="status" name="status" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
-                                <option value="pendente">Pendente</option>
-                                <option value="em_transporte">Em Transporte</option>
-                                <option value="entregue">Entregue</option>
-                                <option value="nao_entregue">Não Entregue</option>
-                            </select>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <button type="submit" id="saveStatus" class="flex-1 bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2 shadow-sm">
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                                <span>Salvar Status</span>
-                            </button>
-                            <a href="cad_entrega.html" class="flex-1 text-center bg-white hover:bg-gray-50 text-gray-700 font-semibold py-3 px-6 rounded-lg border border-gray-300 transition-colors duration-200 flex items-center justify-center space-x-2">
-                                <span>Voltar</span>
-                            </a>
-                        </div>
-                    </form>
+                <div id="loadingIndicator" class="text-center p-10 text-secondary hidden">
+                    <p>Buscando entregas...</p>
                 </div>
+                <div id="noResults" class="text-center p-10 text-secondary hidden">
+                    <p>Nenhuma entrega encontrada para os filtros selecionados.</p>
+                </div>
+                <div id="deliveriesList" class="space-y-4">
+                    </div>
             </div>
         </main>
     </div>
+
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const params = new URLSearchParams(window.location.search);
-            const deliveryId = params.get('id');
+    // Função para carregar dados do usuário (Nome e Iniciais)
+    function loadUserData() {
+        const nome = localStorage.getItem('entregador_nome');
+        const iniciais = localStorage.getItem('entregador_iniciais');
 
-            // Simulação de carregamento de dados da entrega
-            const deliveryData = {
-                id: deliveryId,
-                orderNumber: 'Ex: #12345',
-                customerName: 'Ex: João da Silva',
-                currentStatus: 'pendente'
-            };
+        if (nome && iniciais) {
+            document.getElementById('profileName').textContent = nome;
+            document.getElementById('profileInitials').textContent = iniciais;
+        } else {
+            // Se não achar, volta pro login
+            alert('Sessão não encontrada. Por favor, faça login novamente.');
+            window.location.href = 'login.html';
+        }
+    }
 
-            document.getElementById('orderNumber').value = deliveryData.orderNumber;
-            document.getElementById('customerName').value = deliveryData.customerName;
-            document.getElementById('status').value = deliveryData.currentStatus;
+    // Pega a data de hoje e formata como AAAA-MM-DD
+    function getTodayYYYYMMDD() {
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+    }
 
-            const form = document.getElementById('statusForm');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const newStatus = document.getElementById('status').value;
-                alert(`Simulando atualização do status da entrega ${deliveryData.orderNumber} para: ${newStatus}`);
-                window.location.href = 'cad_entrega.html';
+    document.addEventListener('DOMContentLoaded', function() {
+        loadUserData(); // Carrega os dados do perfil
+
+        const filterForm = document.getElementById('filterForm');
+        const deliveriesList = document.getElementById('deliveriesList');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const noResults = document.getElementById('noResults');
+        const filterDateInput = document.getElementById('filterDate');
+        const deliveriesApi = 'http://127.0.0.1:5000/entregas';
+
+        // Função para buscar e renderizar as entregas
+        async function fetchAndRenderDeliveries() {
+            loadingIndicator.classList.remove('hidden');
+            noResults.classList.add('hidden');
+            deliveriesList.innerHTML = '';
+            
+            // --- ESTA É A MUDANÇA PRINCIPAL ---
+            // 1. Pega o ID salvo no login
+            const entregadorId = localStorage.getItem('entregador_id');
+
+            if (!entregadorId) {
+                alert('Erro: Entregador não identificado. Faça login novamente.');
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const filterDate = filterDateInput.value;
+            const filterStatus = document.getElementById('filterStatus').value;
+            
+            // 2. Monta a URL com os parâmetros de query
+            const params = new URLSearchParams();
+            if (filterDate) {
+                params.append('data', filterDate);
+            }
+            if (filterStatus) {
+                params.append('status', filterStatus);
+            }
+            // 3. ADICIONA O ID DO ENTREGADOR AO FILTRO
+            params.append('entregador_id', entregadorId);
+            
+            const url = `${deliveriesApi}?${params.toString()}`;
+
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Erro ao buscar entregas');
+                }
+                const entregas = await response.json();
+                
+                if (entregas.length === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    renderDeliveries(entregas);
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                alert('Não foi possível carregar as entregas.');
+            } finally {
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+        
+        // Função para criar o HTML de cada entrega
+        function renderDeliveries(entregas) {
+             entregas.forEach(entrega => {
+                const item = document.createElement('div');
+                item.className = 'bg-white p-5 rounded-lg shadow border border-gray-200 grid grid-cols-1 md:grid-cols-3 gap-4 items-center';
+                
+                // Coluna 1: Infos do Cliente
+                item.innerHTML = `
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900">${entrega.nome_cliente}</p>
+                        <p class="text-xs text-secondary mt-1">${entrega.endereco_completo}, ${entrega.cidade}</p>
+                        <span class="text-xs text-primary font-medium mt-1 inline-block">${entrega.numero_pedido}</span>
+                    </div>
+                `;
+                
+                // Coluna 2: Seletor de Status
+                const statusDiv = document.createElement('div');
+                statusDiv.innerHTML = `
+                    <select data-id="${entrega._id}" class="status-select w-full px-3 py-2 border border-gray-300 rounded-lg text-gray-900">
+                        <option value="Pendente" ${entrega.status === 'Pendente' ? 'selected' : ''}>Pendente</option>
+                        <option value="Em andamento" ${entrega.status === 'Em andamento' ? 'selected' : ''}>Em andamento</option>
+                        <option value="Concluída" ${entrega.status === 'Concluída' ? 'selected' : ''}>Concluída</option>
+                    </select>
+                `;
+                
+                // Coluna 3: Botão Salvar
+                const buttonDiv = document.createElement('div');
+                const saveButton = document.createElement('button');
+                saveButton.className = 'save-status-btn w-full bg-primary hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg';
+                saveButton.textContent = 'Salvar';
+                saveButton.dataset.id = entrega._id; // Armazena o ID no botão
+                
+                buttonDiv.appendChild(saveButton);
+                
+                item.appendChild(statusDiv);
+                item.appendChild(buttonDiv);
+                deliveriesList.appendChild(item);
             });
+        }
+
+        // Event Listener para o formulário de filtro
+        filterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            fetchAndRenderDeliveries();
         });
-    </script>
+
+        // Event Listener para os botões "Salvar" (usando delegação de evento)
+        deliveriesList.addEventListener('click', async function(e) {
+            if (e.target && e.target.classList.contains('save-status-btn')) {
+                const button = e.target;
+                const entregaId = button.dataset.id;
+                
+                // Encontra o <select> correspondente
+                const selectElement = document.querySelector(`.status-select[data-id="${entregaId}"]`);
+                const newStatus = selectElement.value;
+                
+                button.textContent = 'Salvando...';
+                button.disabled = true;
+                
+                try {
+                    const response = await fetch(`${deliveriesApi}/${entregaId}`, {
+                        method: 'PATCH',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ status: newStatus })
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (response.ok) {
+                        alert(result.message);
+                    } else {
+                        alert(`Erro: ${result.error}`);
+                    }
+                } catch (error) {
+                    console.error('Erro ao salvar:', error);
+                    alert('Não foi possível conectar ao servidor para salvar.');
+                } finally {
+                    button.textContent = 'Salvar';
+                    button.disabled = false;
+                }
+            }
+        });
+        
+        // Define o valor do input de data para hoje
+        filterDateInput.value = getTodayYYYYMMDD();
+        
+        // Chama a função de busca
+        fetchAndRenderDeliveries();
+    });
+</script>
 </body>
 </html>

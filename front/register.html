@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Sistema ERP Entregadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f1f5f9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .login-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    </style>
+</head>
+<body class="login-bg min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <div class="bg-white rounded-2xl shadow-2xl p-8">
+            <div class="text-center mb-8">
+                <div class="w-16 h-16 bg-primary rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                </div>
+                <h1 class="text-2xl font-bold text-gray-900 mb-2">Criar Conta</h1>
+                <p class="text-secondary text-sm">Cadastre um novo entregador</p>
+            </div>
+
+            <form id="registerForm" class="space-y-6" novalidate>
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-900 mb-2">Nome Completo</label>
+                    <input type="text" id="name" name="name" class="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-lg" placeholder="Digite o nome completo" required>
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-900 mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-lg" placeholder="Digite o email" required>
+                </div>
+
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-900 mb-2">Senha</label>
+                    <input type="password" id="password" name="password" class="w-full pl-4 pr-4 py-3 border border-gray-300 rounded-lg" placeholder="Digite a senha" required>
+                </div>
+
+                <div class="mt-1 text-sm text-red-600 hidden" id="registerError"></div>
+
+                <button type="submit" id="registerButton" class="w-full bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg">
+                    <span>Cadastrar</span>
+                </button>
+            </form>
+
+            <div class="text-center mt-6">
+                <a href="login.html" class="text-sm font-medium text-primary hover:text-blue-700">
+                    Já tem uma conta? Entrar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registerForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const passwordInput = document.getElementById('password');
+            const registerButton = document.getElementById('registerButton');
+            const registerError = document.getElementById('registerError');
+
+            // O endpoint que criamos no app.py
+            const registerApiEndpoint = 'http://127.0.0.1:5000/register';
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault(); 
+
+                const name = nameInput.value;
+                const email = emailInput.value;
+                const password = passwordInput.value;
+
+                if (!name || !email || !password) {
+                    registerError.textContent = 'Por favor, preencha nome, email e senha.';
+                    registerError.classList.remove('hidden');
+                    return;
+                }
+                
+                registerButton.disabled = true;
+                registerButton.innerHTML = `<span>Cadastrando...</span>`;
+                registerError.classList.add('hidden');
+
+                try {
+                    const response = await fetch(registerApiEndpoint, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            password: password 
+                        }),
+                    });
+
+                    const data = await response.json();
+
+                    if (response.ok) { // Status 201 (Created)
+                        alert('Cadastro realizado com sucesso! Redirecionando para o login...');
+                        window.location.href = 'login.html'; 
+                    } else {
+                        // Se deu erro (400, 409, 500)
+                        registerError.textContent = data.error || 'Ocorreu um erro inesperado.';
+                        registerError.classList.remove('hidden');
+                    }
+
+                } catch (error) {
+                    console.error('Erro de conexão:', error);
+                    registerError.textContent = 'Não foi possível conectar ao servidor.';
+                    registerError.classList.remove('hidden');
+                } finally {
+                    registerButton.disabled = false;
+                    registerButton.innerHTML = '<span>Cadastrar</span>';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

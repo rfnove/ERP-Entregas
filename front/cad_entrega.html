@@ -25,7 +25,7 @@
 </head>
 <body class="bg-gray-50 min-h-screen">
     <div class="flex h-screen">
-        <aside class="w-64 bg-white shadow-lg border-r border-gray-200">
+        <aside class="w-64 bg-white shadow-lg border-r border-gray-200 relative">
             <div class="p-6">
                 <div class="flex items-center space-x-3 mb-8">
                     <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
@@ -45,9 +45,9 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                         <span>Cadastro</span>
                     </a>
-                    <a href="relatorio.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                    <a href="atualizar_status.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-                        <span>Relatórios</span>
+                        <span>Gerenciar</span>
                     </a>
                     <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -62,10 +62,10 @@
             <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                        <span class="text-sm font-medium text-gray-700">JS</span>
+                        <span id="profileInitials" class="text-sm font-medium text-gray-700">JS</span>
                     </div>
                     <div>
-                        <p class="text-sm font-medium text-gray-900">João Silva</p>
+                        <p id="profileName" class="text-sm font-medium text-gray-900">João Silva</p>
                         <p class="text-xs text-secondary">Entregador</p>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                     <p class="text-secondary">Preencha os dados da entrega para adicionar à sua lista do dia.</p>
                 </div>
 
-                <div class="flex-1 p-6 overflow-auto">
+                <div class="flex-1 p-6 overflow-auto min-h-0">
                     <div class="max-w-2xl">
                         <form id="deliveryForm" class="space-y-6" novalidate>
                             <div>
@@ -148,115 +148,232 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('deliveryForm');
-            const saveButton = document.getElementById('saveDelivery');
-            const clearButton = document.getElementById('clearForm');
-            const deliveriesList = document.getElementById('deliveriesList');
-            document.getElementById('currentDate').textContent = new Date().toLocaleDateString('pt-BR', { dateStyle: 'long' });
+    // Função para carregar dados do usuário (Nome e Iniciais)
+    function loadUserData() {
+        const nome = localStorage.getItem('entregador_nome');
+        const iniciais = localStorage.getItem('entregador_iniciais');
 
-            const entregasApiEndpoint = 'http://127.0.0.1:5000/entregas';
-            
-            const updateDeliveryList = (deliveryData) => {
-                const newDelivery = document.createElement('div');
-                newDelivery.className = 'bg-white rounded-lg p-4 border flex items-center justify-between';
-                newDelivery.innerHTML = `
-                    <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-gray-900 truncate">${deliveryData.customerName}</p>
-                        <p class="text-xs text-secondary mt-1">${deliveryData.address}, ${deliveryData.city}</p>
-                        <div class="flex items-center justify-between mt-2">
-                            <span class="text-xs text-secondary">${deliveryData.orderNumber}</span>
-                        </div>
-                    </div>
-                `;
-                deliveriesList.insertBefore(newDelivery, deliveriesList.firstChild);
-            };
+        if (nome && iniciais) {
+            document.getElementById('profileName').textContent = nome;
+            document.getElementById('profileInitials').textContent = iniciais;
+        } else {
+            // Se não achar, volta pro login
+            alert('Sessão não encontrada. Por favor, faça login novamente.');
+            window.location.href = 'login.html';
+        }
+    }
 
+    //
+    // --- FUNÇÃO CORRIGIDA ---
+    // Esta função valida os campos e mostra os erros
+    //
+    function validateForm() {
+        let isValid = true;
         
-            function validateForm() {
-                let isFormValid = true;
-                const fieldsToValidate = [
-                    { id: 'customerName', message: 'Por favor, digite o nome do cliente' },
-                    { id: 'orderNumber', message: 'Por favor, digite o número do pedido' },
-                    { id: 'address', message: 'Por favor, digite o endereço completo' },
-                    { id: 'city', message: 'Por favor, digite a cidade' },
-                    { id: 'deliveryType', message: 'Por favor, digite o tipo de entrega' }
-                ];
+        // Lista de campos obrigatórios [idDoInput, idDoErro]
+        const requiredFields = [
+            ['customerName', 'customerNameError'],
+            ['orderNumber', 'orderNumberError'],
+            ['address', 'addressError'],
+            ['city', 'cityError'],
+            ['deliveryType', 'deliveryTypeError']
+        ];
 
-                fieldsToValidate.forEach(f => {
-                    const fieldElement = document.getElementById(f.id);
-                    const errorElement = document.getElementById(f.id + 'Error');
-                    if (!fieldElement.value.trim()) {
-                        fieldElement.classList.add('border-red-500');
-                        errorElement.classList.remove('hidden');
-                        isFormValid = false;
-                    } else {
-                        fieldElement.classList.remove('border-red-500');
-                        errorElement.classList.add('hidden');
-                    }
-                });
-                return isFormValid;
+        // Oculta todos os erros primeiro
+        requiredFields.forEach(([_, errorId]) => {
+            document.getElementById(errorId).classList.add('hidden');
+        });
+
+        // Verifica cada campo
+        for (const [inputId, errorId] of requiredFields) {
+            const inputElement = document.getElementById(inputId);
+            const errorElement = document.getElementById(errorId);
+            
+            // .trim() remove espaços em branco
+            if (inputElement.value.trim() === '') {
+                errorElement.classList.remove('hidden'); // Mostra o erro
+                isValid = false; // Marca como inválido
+            }
+        }
+        
+        return isValid; // Retorna true se tudo estiver preenchido
+    }
+       
+    //
+    // --- FUNÇÃO (OPCIONAL) ---
+    // Esta função adicionava o item na lista lateral,
+    // mas não estava implementada. Deixei comentada.
+    //
+    const updateDeliveryList = (deliveryData) => {
+        // console.log("Item salvo:", deliveryData);
+        // Aqui você poderia adicionar o HTML na 'deliveriesList'
+    };
+
+    //
+    // --- NOVA FUNÇÃO ---
+    // Esta função renderiza os itens na lista lateral
+    //
+    function renderDeliveriesList(deliveries) {
+        const listElement = document.getElementById('deliveriesList');
+        listElement.innerHTML = ''; // Limpa a lista
+
+        if (deliveries.length === 0) {
+            listElement.innerHTML = '<p class="text-sm text-gray-500 text-center px-4">Nenhuma entrega cadastrada para hoje.</p>';
+            return;
+        }
+
+        let htmlContent = '';
+        deliveries.forEach(delivery => {
+            let statusClass = 'bg-blue-100 text-blue-800'; // Em andamento
+            if (delivery.status === 'Concluída') {
+                statusClass = 'bg-green-100 text-green-800';
+            } else if (delivery.status === 'Pendente') {
+                statusClass = 'bg-yellow-100 text-yellow-800';
+            }
+            
+            // Usamos os nomes dos campos que vêm do backend (app.py)
+            htmlContent += `
+                <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
+                    <div class="flex justify-between items-center mb-1">
+                        <h3 class="text-sm font-semibold text-gray-800">${delivery.numero_pedido}</h3>
+                        <span class="text-xs font-medium px-2 py-0.5 rounded-full ${statusClass}">${delivery.status}</span>
+                    </div>
+                    <p class="text-sm text-gray-600 truncate" title="${delivery.nome_cliente}">${delivery.nome_cliente}</p>
+                    <p class="text-xs text-gray-500 truncate" title="${delivery.endereco_completo}">${delivery.endereco_completo}</p>
+                </div>
+            `;
+        });
+        listElement.innerHTML = htmlContent;
+    }
+
+    //
+    // --- NOVA FUNÇÃO ---
+    // Esta função busca as entregas do dia no backend
+    //
+    async function loadDailyDeliveries() {
+        const entregadorId = localStorage.getItem('entregador_id');
+        if (!entregadorId) {
+            console.error("ID do entregador não encontrado, não é possível buscar entregas.");
+            return;
+        }
+
+        // 1. Pega a data de hoje no formato AAAA-MM-DD
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const todayString = `${year}-${month}-${day}`;
+
+        // 2. Monta a URL com os filtros de ID e data
+        const apiUrl = `http://127.0.0.1:5000/entregas?entregador_id=${entregadorId}&data=${todayString}`;
+        const listElement = document.getElementById('deliveriesList');
+
+        try {
+            listElement.innerHTML = '<p class="text-sm text-gray-500 text-center px-4">Carregando...</p>';
+            
+            const response = await fetch(apiUrl);
+            
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Falha ao buscar entregas');
             }
 
-           
-            form.addEventListener('submit', async function(e) {
-                e.preventDefault();
-                
-                if (!validateForm()) {
-                    return;
+            const deliveries = await response.json();
+            renderDeliveriesList(deliveries); // Chama a função para criar o HTML
+
+        } catch (error) {
+            console.error('Erro ao buscar entregas:', error);
+            listElement.innerHTML = '<p class="text-sm text-red-600 text-center px-4">Erro ao carregar entregas.</p>';
+        }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadUserData(); // Carrega os dados do perfil
+        
+        // --- ADICIONADO ---
+        loadDailyDeliveries(); // Carrega as entregas do dia na barra lateral
+
+        const form = document.getElementById('deliveryForm');
+        const saveButton = document.getElementById('saveDelivery');
+        const clearButton = document.getElementById('clearForm');
+        
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('pt-BR', { dateStyle: 'long' });
+
+        const entregasApiEndpoint = 'http://127.0.0.1:5000/entregas';
+       
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            if (!validateForm()) {
+                return;
+            }
+            
+            saveButton.textContent = 'Salvando...';
+            saveButton.disabled = true;
+
+            const entregadorId = localStorage.getItem('entregador_id');
+
+            if (!entregadorId) {
+                alert('Erro: Entregador não identificado. Faça login novamente.');
+                saveButton.textContent = 'Salvar Entrega';
+                saveButton.disabled = false;
+                window.location.href = 'login.html';
+                return;
+            }
+
+            // Coleta os dados do formulário
+            const deliveryData = {
+                customerName: document.getElementById('customerName').value,
+                orderNumber: document.getElementById('orderNumber').value,
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                deliveryType: document.getElementById('deliveryType').value,
+                status: document.getElementById('status').value,
+                notes: document.getElementById('notes').value,
+                entregador_id: entregadorId // USA O ID REAL
+            };
+
+            try {
+                const response = await fetch(entregasApiEndpoint, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(deliveryData),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert(result.message + "\nRedirecionando para a tela de gerenciamento...");
+                    // Redireciona para a tela Gerenciar
+                    window.location.href = 'atualizar_status.html'; 
+                } else {
+                    alert(`Erro: ${result.error}`);
                 }
-                
-                saveButton.textContent = 'Salvando...';
-                saveButton.disabled = true;
+            } catch (error) {
+                alert('Não foi possível conectar ao servidor.');
+                console.error('Erro de conexão:', error);
+            } finally {
+                saveButton.textContent = 'Salvar Entrega';
+                saveButton.disabled = false;
+            }
+        });
 
-                // Coletamos os dados do formulário
-                const deliveryData = {
-                    customerName: document.getElementById('customerName').value,
-                    orderNumber: document.getElementById('orderNumber').value,
-                    address: document.getElementById('address').value,
-                    city: document.getElementById('city').value,
-                    deliveryType: document.getElementById('deliveryType').value,
-                    status: document.getElementById('status').value,
-                    notes: document.getElementById('notes').value,
-                    entregador_id: "2345678" // id de exemplo, tem que validar isso tb
-                };
-
-                try {
-                    //Troca do timeout antigo pela função fetch para sincronizar com o backend
-                    const response = await fetch(entregasApiEndpoint, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(deliveryData),
-                    });
-
-                    const result = await response.json();
-
-                    if (response.ok) {
-                        alert(result.message);
-                        updateDeliveryList(deliveryData);
-                        form.reset();
-                    } else {
-                        alert(`Erro: ${result.error}`);
-                    }
-                } catch (error) {
-                    alert('Não foi possível conectar ao servidor.');
-                    console.error('Erro de conexão:', error);
-                } finally {
-                    saveButton.textContent = 'Salvar Entrega';
-                    saveButton.disabled = false;
-                }
-            });
-
-            clearButton.addEventListener('click', function() {
-                form.reset();
-                // Limpa as mensagens de erro da validação
-                 const fieldsToValidate = ['customerName', 'orderNumber', 'address', 'city', 'deliveryType'];
-                 fieldsToValidate.forEach(id => {
-                    document.getElementById(id).classList.remove('border-red-500');
-                    document.getElementById(id + 'Error').classList.add('hidden');
-                 });
+        clearButton.addEventListener('click', function() {
+            form.reset();
+            // Oculta todos os erros ao limpar
+             const requiredFields = [
+                'customerNameError',
+                'orderNumberError',
+                'addressError',
+                'cityError',
+                'deliveryTypeError'
+            ];
+            requiredFields.forEach(errorId => {
+                document.getElementById(errorId).classList.add('hidden');
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
