@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from chat import chat  # Importa a sua função original do arquivo chat.py
 from connection import get_db_connection # chamar a conexão com o banco
-from datetime import datetime, time #se precisar usar o registro de tempo igual no último pi
+from datetime import datetime, time, timedelta #se precisar usar o registro de tempo igual no último pi
 from bson import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 app = Flask(__name__)
@@ -338,6 +338,8 @@ def handle_dashboard_stats():
             "status": {"$ne": "Concluída"}
         })
 
+        total_geral = colecao_entregas.count_documents({
+            "entregador_id": entregador_obj_id})
         # 5. Buscar últimas 3 atividades recentes (de hoje)
         recentes_cursor = colecao_entregas.find(base_query).sort("data_criacao", -1).limit(3)
         
@@ -356,13 +358,195 @@ def handle_dashboard_stats():
             "total_hoje": total_hoje,
             "concluidas_hoje": concluidas_hoje,
             "pendentes_hoje": pendentes_hoje,
-            "atividades_recentes": lista_recentes
+            "atividades_recentes": lista_recentes,
+            "total_geral": total_geral
         }), 200
 
     except Exception as e:
         print(f"Erro na rota /dashboard-stats: {e}")
         return jsonify({"error": f"Ocorreu um erro ao calcular estatísticas: {e}"}), 500
+
+@app.route('/analytics/deliveries-over-time', methods=['GET'])
+def handle_deliveries_over_time():
+    # 1. Validação do ID do Entregador (igual a antes)
+    entregador_id_filter = request.args.get('entregador_id')
+    if not entregador_id_filter:
+        return jsonify({"error": "O 'entregador_id' é obrigatório."}), 400
+
+    try:
+        entregador_obj_id = ObjectId(entregador_id_filter)
+    except Exception:
+        return jsonify({"error": "ID do entregador inválido."}), 400
+
+    db = get_db_connection()
+    if db is None:
+        return jsonify({"error": "Não foi possível conectar ao banco de dados."}), 500
         
+    colecao_entregas = db["entregas"]
+
+    # 2. DEFINIR O INTERVALO DE DATAS (Lógica igual a antes)
+    start_date_str = request.args.get('start_date')
+    end_date_str = request.args.get('end_date')
+
+    try:
+        if start_date_str and end_date_str:
+            start_date_dt = datetime.strptime(start_date_str, '%Y-%m-%d').date()
+            end_date_dt = datetime.strptime(end_date_str, '%Y-%m-%d').date()
+        else:
+            end_date_dt = datetime.now().date()
+            start_date_dt = end_date_dt - timedelta(days=6)
+            
+        if (end_date_dt - start_date_dt).days > 90:
+            return jsonify({"error": "O intervalo de datas não pode ser maior que 90 dias."}), 400
+        if start_date_dt > end_date_dt:
+            return jsonify({"error": "A data inicial não pode ser maior que a data final."}), 400
+
+        start_datetime = datetime.combine(start_date_dt, time.min)
+        end_datetime = datetime.combine(end_date_dt, time.max)
+        
+    except ValueError:
+        return jsonify({"error": "Formato de data inválido. Use AAAA-MM-DD."}), 400
+
+    try:
+        # 3. Pipeline de Agregação 1: ENTREGAS CRIADAS
+        pipeline_criadas = [
+            {
+                "$match": {
+                    "entregador_id": entregador_obj_id,
+                    "data_criacao": {"$gte": start_datetime, "$lte": end_datetime}
+                }
+            },
+            {
+                "$project": {
+                    "data_dia": {"$dateToString": {"format": "%Y-%m-%d", "date": "$data_criacao", "timezone": "America/Sao_Paulo"}}
+                }
+            },
+            {
+                "$group": {"_id": "$data_dia", "total": {"$sum": 1}}
+            }
+        ]
+        
+        # 4. Pipeline de Agregação 2: ENTREGAS CONCLUÍDAS
+        pipeline_concluidas = [
+            {
+                "$match": {
+                    "entregador_id": entregador_obj_id,
+                    "status": "Concluída", # Apenas as concluídas
+                    "data_entrega_concluida": {"$gte": start_datetime, "$lte": end_datetime} # Filtra pela data de CONCLUSÃO
+                }
+            },
+            {
+                "$project": {
+                    # Agrupa pela data de CONCLUSÃO
+                    "data_dia": {"$dateToString": {"format": "%Y-%m-%d", "date": "$data_entrega_concluida", "timezone": "America/Sao_Paulo"}}
+                }
+            },
+            {
+                "$group": {"_id": "$data_dia", "total": {"$sum": 1}}
+            }
+        ]
+
+        # Executa as duas agregações
+        result_criadas = list(colecao_entregas.aggregate(pipeline_criadas))
+        result_concluidas = list(colecao_entregas.aggregate(pipeline_concluidas))
+        
+        # 5. Processar dados para preencher dias vazios (LÓGICA ATUALIZADA)
+        
+        # Converte resultados em dicionários para busca rápida
+        criadas_data = {item['_id']: item['total'] for item in result_criadas}
+        concluidas_data = {item['_id']: item['total'] for item in result_concluidas}
+
+        labels = []
+        data_criadas = []     # Nova lista para a linha 1
+        data_concluidas = []  # Nova lista para a linha 2
+
+        # Loop pelo intervalo de datas
+        current_date = start_date_dt
+        while current_date <= end_date_dt:
+            current_date_str = current_date.strftime("%Y-%m-%d")
+            label_str = current_date.strftime("%d/%m")
+            
+            # Pega o total de cada dicionário (ou 0 se não existir)
+            total_criadas = criadas_data.get(current_date_str, 0)
+            total_concluidas = concluidas_data.get(current_date_str, 0)
+            
+            labels.append(label_str)
+            data_criadas.append(total_criadas)
+            data_concluidas.append(total_concluidas)
+            
+            current_date += timedelta(days=1)
+
+        # 6. Retornar os dados formatados (NOVO FORMATO)
+        return jsonify({
+            "labels": labels,
+            "data_criadas": data_criadas,
+            "data_concluidas": data_concluidas
+        }), 200
+
+    except Exception as e:
+        print(f"Erro na rota /analytics/deliveries-over-time: {e}")
+        return jsonify({"error": f"Ocorreu um erro ao calcular estatísticas: {e}"}), 500
+#
+@app.route('/analytics/status-distribution', methods=['GET'])
+def handle_status_distribution():
+    # 1. Validação do ID do Entregador
+    entregador_id_filter = request.args.get('entregador_id')
+    if not entregador_id_filter:
+        return jsonify({"error": "O 'entregador_id' é obrigatório."}), 400
+
+    try:
+        entregador_obj_id = ObjectId(entregador_id_filter)
+    except Exception:
+        return jsonify({"error": "ID do entregador inválido."}), 400
+
+    db = get_db_connection()
+    if db is None:
+        return jsonify({"error": "Não foi possível conectar ao banco de dados."}), 500
+        
+    colecao_entregas = db["entregas"]
+
+    # 2. Pipeline de Agregação
+    # Queremos TODAS as entregas, sem filtro de data
+    pipeline = [
+        {
+            "$match": { # Filtra apenas pelo entregador
+                "entregador_id": entregador_obj_id
+            }
+        },
+        {
+            "$group": { # Agrupa pelo campo 'status'
+                "_id": "$status",
+                "total": { "$sum": 1 } # Conta quantos documentos em cada grupo
+            }
+        },
+        {
+            "$sort": { "total": -1 } # Opcional: ordena do status mais comum para o menos
+        }
+    ]
+
+    try:
+        aggregation_result = list(colecao_entregas.aggregate(pipeline))
+        
+        # 3. Formatar dados para o Chart.js
+        # O resultado é [ {"_id": "Concluída", "total": 50}, {"_id": "Pendente", "total": 15} ]
+        
+        labels = [] # Ex: ["Concluída", "Pendente"]
+        data = []   # Ex: [50, 15]
+
+        for item in aggregation_result:
+            labels.append(item['_id'])
+            data.append(item['total'])
+            
+        # 4. Retornar os dados
+        return jsonify({
+            "labels": labels,
+            "data": data
+        }), 200
+
+    except Exception as e:
+        print(f"Erro na rota /analytics/status-distribution: {e}")
+        return jsonify({"error": f"Ocorreu um erro ao calcular estatísticas: {e}"}), 500
+#
 if __name__ == '__main__':
     # Roda o servidor na porta 5000
     app.run(port=5000, debug=True)

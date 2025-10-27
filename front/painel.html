@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Sistema ERP Entregadores</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -90,7 +93,21 @@
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                                </svg>
+                            </div>
+                            </div>
+                        <h3 id="stats-total-geral" class="text-2xl font-bold text-gray-900 mb-1">...</h3>
+                        <p class="text-sm font-medium text-gray-700 mb-2">Total Geral de Entregas</p>
+                        <p class="text-xs text-secondary">Todo o seu histórico</p>
+                    </div>
+
                     <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -133,7 +150,6 @@
                         <p class="text-xs text-secondary">Entregas de hoje não concluídas</p>
                     </div>
                 </div>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                     <button onclick="window.location.href='cad_entrega.html'" class="bg-primary hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-colors duration-200 flex items-center justify-center space-x-3 shadow-sm">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,12 +166,48 @@
                     </button>
                 </div>
 
-                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">Atividade Recente (de hoje)</h3>
                     <div id="recent-activity-list" class="space-y-4">
                         <p class="text-sm text-gray-500">Carregando atividades...</p>
                     </div>
                 </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-8">
+                    
+                    <div class="lg:col-span-3 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-gray-900">Desempenho de Entregas</h3>
+                            
+                            <div class="flex items-center space-x-2 mt-4 md:mt-0">
+                                <div>
+                                    <label for="start-date" class="text-xs text-secondary">De:</label>
+                                    <input type="date" id="start-date" name="start-date" class="text-sm p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="end-date" class="text-xs text-secondary">Até:</label>
+                                    <input type="date" id="end-date" name="end-date" class="text-sm p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                                </div>
+                                <button id="filter-chart-button" class="p-2 bg-primary text-white rounded-md hover:bg-blue-700 transition-colors mt-4 md:mt-0">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="h-80">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">Entregas por Status (Total)</h3>
+                        <div class="h-80 relative flex items-center justify-center">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </main>
     </div>
@@ -163,99 +215,99 @@
     <script>
         // Define a URL base da sua API
         const API_URL = 'http://127.0.0.1:5000';
+        let lineChartInstance = null;
 
-        // Executa o script quando o conteúdo da página estiver carregado
         document.addEventListener('DOMContentLoaded', () => {
             
-            // 1. Verificação de Autenticação
             const entregadorId = localStorage.getItem('entregador_id');
             const nomeEntregador = localStorage.getItem('entregador_nome');
 
             if (!entregadorId || !nomeEntregador) {
-                // Se não encontrar, redireciona para a página de login
-                // ATENÇÃO: Mude 'index.html' se sua página de login tiver outro nome
                 alert('Você precisa estar logado para ver esta página.');
                 window.location.href = 'index.html';
-                return; // Para a execução do script
+                return;
             }
 
-            // 2. Atualizar Informações do Usuário na Tela
-            const userNameEl = document.getElementById('user-name');
-            const userInitialsEl = document.getElementById('user-initials');
-            
-            userNameEl.textContent = nomeEntregador;
-            // Pega as iniciais (ex: "João Silva" -> "JS")
-            const iniciais = nomeEntregador.split(' ')
-                                         .map(n => n[0])
-                                         .join('')
-                                         .substring(0, 2)
-                                         .toUpperCase();
-            userInitialsEl.textContent = iniciais;
+            // --- Configuração dos Dados do Usuário e Data ---
+            document.getElementById('user-name').textContent = nomeEntregador;
+            const iniciais = nomeEntregador.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+            document.getElementById('user-initials').textContent = iniciais;
 
-            // 3. Atualizar Data Atual
             const today = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             document.getElementById('current-date').textContent = `Hoje, ${today.toLocaleDateString('pt-BR', options)}`;
 
-
-            // 4. Configurar Botão de Logout
-            const logoutButton = document.getElementById('logout-button');
-            logoutButton.addEventListener('click', () => {
-                // Limpa os dados do usuário
+            // --- Configuração do Logout ---
+            document.getElementById('logout-button').addEventListener('click', () => {
                 localStorage.removeItem('entregador_id');
                 localStorage.removeItem('entregador_nome');
-                // Redireciona para o login
                 window.location.href = 'login.html';
             });
 
-            // 5. Buscar Dados do Dashboard
+            // --- Chamadas Iniciais ---
             fetchDashboardData(entregadorId);
+            
+            // --- Configuração Filtro de Data ---
+            const formatDate = (date) => date.toISOString().split('T')[0];
+            const endDateInput = document.getElementById('end-date');
+            const startDateInput = document.getElementById('start-date');
+            const todayDate = new Date();
+            const sevenDaysAgoDate = new Date(todayDate.getTime() - 6 * 24 * 60 * 60 * 1000); 
+            endDateInput.value = formatDate(todayDate);
+            startDateInput.value = formatDate(sevenDaysAgoDate);
+            
+            document.getElementById('filter-chart-button').addEventListener('click', () => {
+                if (!startDateInput.value || !endDateInput.value) {
+                    alert("Por favor, selecione data inicial e final.");
+                    return;
+                }
+                if (startDateInput.value > endDateInput.value) {
+                    alert("A data inicial não pode ser maior que a data final.");
+                    return;
+                }
+                fetchLineChartData(entregadorId);
+            });
+
+            // --- Carregar dados dos gráficos ---
+            fetchLineChartData(entregadorId);
+            fetchPieChartData(entregadorId);
         });
 
-        // Função para buscar os dados da API
+        // --- fetchDashboardData (sem mudança) ---
         async function fetchDashboardData(entregadorId) {
             try {
-                // Chama a nova rota /dashboard-stats, passando o ID do entregador
                 const response = await fetch(`${API_URL}/dashboard-stats?entregador_id=${entregadorId}`);
-
                 if (!response.ok) {
                     const errorData = await response.json();
                     throw new Error(errorData.error || 'Erro ao buscar dados do dashboard.');
                 }
-
                 const data = await response.json();
-                
-                // Se os dados vierem corretos, atualiza a interface
                 updateDashboardUI(data);
-
             } catch (error) {
                 console.error('Erro na requisição:', error);
                 alert('Não foi possível carregar os dados do painel. Verifique o console.');
             }
         }
 
-        // Função para atualizar os elementos da tela com os dados
+        //
+        // ===== INÍCIO DA MUDANÇA (updateDashboardUI) =====
+        //
         function updateDashboardUI(data) {
             
-            // Atualiza os Cards de Estatística
+            // 2. ADICIONAR LINHA PARA O NOVO CARD
+            document.getElementById('stats-total-geral').textContent = data.total_geral;
+
+            // Cards antigos
             document.getElementById('stats-total').textContent = data.total_hoje;
             document.getElementById('stats-concluidas').textContent = data.concluidas_hoje;
             document.getElementById('stats-pendentes').textContent = data.pendentes_hoje;
-
-            // Calcula e atualiza a Barra de Progresso
-            let progressoPercent = 0;
-            if (data.total_hoje > 0) {
-                // Calcula a porcentagem de concluídas
-                progressoPercent = Math.round((data.concluidas_hoje / data.total_hoje) * 100);
-            }
             
+            let progressoPercent = (data.total_hoje > 0) ? Math.round((data.concluidas_hoje / data.total_hoje) * 100) : 0;
             document.getElementById('stats-progress-bar').style.width = `${progressoPercent}%`;
             document.getElementById('stats-progress-text').textContent = `${progressoPercent}%`;
 
-            // Atualiza a Lista de Atividades Recentes
+            // Atividade Recente (sem mudança)
             const activityListEl = document.getElementById('recent-activity-list');
-            
-            // Limpa o conteúdo estático ("Carregando...")
             activityListEl.innerHTML = '';
 
             if (data.atividades_recentes.length === 0) {
@@ -263,22 +315,16 @@
                 return;
             }
 
-            // Mapeia os status para cores (do Tailwind) e texto
             const statusMap = {
                 'Concluída': { color: 'green', text: 'concluída' },
                 'Pendente': { color: 'yellow', text: 'adicionada (pendente)' },
                 'Em trânsito': { color: 'blue', text: 'em trânsito' }
-                // Adicione outros status se necessário
             };
 
-            // Cria o HTML para cada atividade recente
             data.atividades_recentes.forEach(item => {
                 const statusInfo = statusMap[item.status] || { color: 'gray', text: `status: ${item.status}` };
-                
-                // Converte a hora (ISO string) para um formato legível (ex: 14:30)
                 const dataCriacao = new Date(item.data_criacao);
                 const hora = dataCriacao.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-
                 const itemHtml = `
                     <div class="flex items-center space-x-4 p-3 bg-${statusInfo.color}-50 rounded-lg">
                         <div class="w-2 h-2 bg-${statusInfo.color}-500 rounded-full"></div>
@@ -289,14 +335,173 @@
                             <p class="text-xs text-secondary">${item.nome_cliente} - ${item.endereco_completo}, ${item.cidade}</p>
                         </div>
                         <span class="text-xs text-secondary">${hora}</span>
-                    </div>
-                `;
-                
-                // Adiciona o novo item na lista
+                    </div>`;
                 activityListEl.insertAdjacentHTML('beforeend', itemHtml);
             });
         }
+        // ===== FIM DA MUDANÇA (updateDashboardUI) =====
+        //
 
+
+        // --- Funções do Gráfico de Linha (com 2 linhas, sem mudança) ---
+        async function fetchLineChartData(entregadorId) {
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+            const chartEl = document.getElementById('lineChart');
+            chartEl.style.opacity = '0.5';
+
+            try {
+                const url = new URL(`${API_URL}/analytics/deliveries-over-time`);
+                url.searchParams.append('entregador_id', entregadorId);
+                url.searchParams.append('start_date', startDate);
+                url.searchParams.append('end_date', endDate);
+                
+                const response = await fetch(url);
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Erro ao buscar dados do gráfico.');
+                }
+                const data = await response.json();
+                renderLineChart(data);
+            } catch (error) {
+                console.error('Erro na requisição do gráfico:', error);
+                const chartContainer = chartEl.parentElement;
+                chartContainer.innerHTML = `<p class="text-sm text-red-500">Não foi possível carregar o gráfico: ${error.message}</p>`;
+            } finally {
+                chartEl.style.opacity = '1';
+            }
+        }
+
+        function renderLineChart(data) {
+            const ctx = document.getElementById('lineChart').getContext('2d');
+            if (lineChartInstance) {
+                lineChartInstance.destroy();
+            }
+            lineChartInstance = new Chart(ctx, {
+                type: 'line', 
+                data: {
+                    labels: data.labels,
+                    datasets: [
+                        {
+                            label: 'Entregas Criadas',
+                            data: data.data_criadas, 
+                            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                            borderColor: 'rgba(37, 99, 235, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.1 
+                        },
+                        {
+                            label: 'Entregas Concluídas',
+                            data: data.data_concluidas,
+                            backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                            borderColor: 'rgba(34, 197, 94, 1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.1 
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } },
+                    plugins: {
+                        legend: { display: true, position: 'bottom' },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed.y !== null) { label += context.parsed.y + ' entregas'; }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // --- Funções do Gráfico de Pizza (sem mudança) ---
+        async function fetchPieChartData(entregadorId) {
+            const chartEl = document.getElementById('pieChart');
+            chartEl.style.opacity = '0.5';
+
+            try {
+                const url = new URL(`${API_URL}/analytics/status-distribution`);
+                url.searchParams.append('entregador_id', entregadorId);
+                
+                const response = await fetch(url);
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Erro ao buscar dados do gráfico.');
+                }
+                const data = await response.json();
+                
+                if (data.labels.length === 0) {
+                     chartEl.parentElement.innerHTML = '<p class="text-sm text-gray-500">Nenhuma entrega encontrada para exibir no gráfico.</p>';
+                     return;
+                }
+                
+                renderPieChart(data);
+            } catch (error) {
+                console.error('Erro na requisição do gráfico de pizza:', error);
+                chartEl.parentElement.innerHTML = `<p class="text-sm text-red-500">Não foi possível carregar o gráfico: ${error.message}</p>`;
+            } finally {
+                chartEl.style.opacity = '1';
+            }
+        }
+
+        function renderPieChart(data) {
+            const ctx = document.getElementById('pieChart').getContext('2d');
+
+            const colorMap = {
+                'Concluída': '#22c55e',
+                'Pendente': '#f59e0b',
+                'Em trânsito': '#3b82f6', 
+            };
+            const defaultColor = '#9ca3af'; 
+
+            const backgroundColors = data.labels.map(label => colorMap[label] || defaultColor);
+
+            new Chart(ctx, {
+                type: 'doughnut', 
+                data: {
+                    labels: data.labels,
+                    datasets: [{
+                        label: 'Total de Entregas',
+                        data: data.data,
+                        backgroundColor: backgroundColors,
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.chart.getDatasetMeta(0).total;
+                                    const percentage = total > 0 ? ((value / total) * 100).toFixed(1) : 0;
+                                    return ` ${label}: ${value} entregas (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
     </script>
 </body>
 </html>
