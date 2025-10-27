@@ -5,6 +5,7 @@ from connection import get_db_connection # chamar a conexão com o banco
 from datetime import datetime, time, timedelta #se precisar usar o registro de tempo igual no último pi
 from bson import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+import math
 app = Flask(__name__)
 CORS(app)  # Permite que o frontend se comunique com este servidor
 
@@ -307,7 +308,7 @@ def handle_dashboard_stats():
         return jsonify({"error": "Não foi possível conectar ao banco de dados."}), 500
         
     colecao_entregas = db["entregas"]
-
+    colecao_metas = db["metas_entregador"]
     # 2. Definir o intervalo de "Hoje"
     # Usamos data_criacao, pois é o campo que temos. Idealmente, seria "data_agendada".
     today = datetime.now().date()
@@ -352,14 +353,20 @@ def handle_dashboard_stats():
             if entrega['data_entrega_concluida'] and isinstance(entrega['data_entrega_concluida'], datetime):
                 entrega['data_entrega_concluida'] = entrega['data_entrega_concluida'].isoformat()
             lista_recentes.append(entrega)
-            
+
+        meta_produtividade = 0 # Padrão
+        meta_data = colecao_metas.find_one({"entregador_id": entregador_obj_id})
+        
+        if meta_data and meta_data.get('meta_produtividade_diaria_calculada'):
+            meta_produtividade = meta_data['meta_produtividade_diaria_calculada']    
         # 6. Retornar os dados
         return jsonify({
             "total_hoje": total_hoje,
             "concluidas_hoje": concluidas_hoje,
             "pendentes_hoje": pendentes_hoje,
             "atividades_recentes": lista_recentes,
-            "total_geral": total_geral
+            "total_geral": total_geral,
+            "meta_produtividade_diaria": meta_produtividade
         }), 200
 
     except Exception as e:
@@ -547,6 +554,104 @@ def handle_status_distribution():
         print(f"Erro na rota /analytics/status-distribution: {e}")
         return jsonify({"error": f"Ocorreu um erro ao calcular estatísticas: {e}"}), 500
 #
+@app.route('/metas', methods=['GET'])
+def handle_get_metas():
+    # 1. Validação do ID do Entregador
+    entregador_id_filter = request.args.get('entregador_id')
+    if not entregador_id_filter:
+        return jsonify({"error": "O 'entregador_id' é obrigatório."}), 400
+
+    try:
+        entregador_obj_id = ObjectId(entregador_id_filter)
+    except Exception:
+        return jsonify({"error": "ID do entregador inválido."}), 400
+
+    db = get_db_connection()
+    if db is None:
+        return jsonify({"error": "Não foi possível conectar ao banco de dados."}), 500
+        
+    colecao_metas = db["metas_entregador"]
+
+    # 2. Busca o plano de metas desse entregador
+    meta_data = colecao_metas.find_one({"entregador_id": entregador_obj_id})
+    
+    # 3. Retorna os dados
+    if meta_data:
+        # Converte IDs para strings para o JSON
+        meta_data['_id'] = str(meta_data['_id'])
+        meta_data['entregador_id'] = str(meta_data['entregador_id'])
+        
+        # Converte datas (se houver)
+        if 'data_atualizacao' in meta_data:
+             meta_data['data_atualizacao'] = meta_data['data_atualizacao'].isoformat()
+
+        return jsonify(meta_data), 200
+    else:
+        # É importante retornar 404 para o frontend saber que não existem metas
+        return jsonify({"error": "Nenhum plano de metas encontrado."}), 404
+
+@app.route('/metas', methods=['POST'])
+def handle_save_metas():
+    data = request.get_json()
+
+    # 1. Validação dos dados
+    required_fields = [
+        'entregador_id', 'meta_financeira_total', 'dias_trabalho', 
+        'ganho_medio_entrega', 'meta_eficiencia_perc', 'meta_qualidade_falhas_perc'
+    ]
+    if not data or not all(field in data for field in required_fields):
+        return jsonify({"error": "Todos os campos de metas são obrigatórios."}), 400
+
+    try:
+        entregador_obj_id = ObjectId(data.get('entregador_id'))
+        meta_financeira = float(data.get('meta_financeira_total'))
+        dias_trabalho = int(data.get('dias_trabalho'))
+        ganho_medio = float(data.get('ganho_medio_entrega'))
+        
+        if dias_trabalho <= 0 or ganho_medio <= 0:
+             return jsonify({"error": "Dias e ganho médio devem ser maiores que zero."}), 400
+
+        # 2. CALCULA A META DE PRODUTIVIDADE (derivada)
+        # (math.ceil arredonda para cima)
+        meta_produtividade_diaria = math.ceil(meta_financeira / dias_trabalho / ganho_medio)
+
+    except Exception as e:
+        return jsonify({"error": f"Dados inválidos: {e}"}), 400
+
+    db = get_db_connection()
+    if db is None:
+        return jsonify({"error": "Não foi possível conectar ao banco de dados."}), 500
+        
+    colecao_metas = db["metas_entregador"]
+
+    # 3. Monta o documento para salvar
+    plano_metas = {
+        "entregador_id": entregador_obj_id,
+        "meta_financeira_total": meta_financeira,
+        "dias_trabalho": dias_trabalho,
+        "ganho_medio_entrega": ganho_medio,
+        "meta_produtividade_diaria_calculada": meta_produtividade_diaria, # Salva o cálculo
+        "meta_eficiencia_perc": int(data.get('meta_eficiencia_perc')),
+        "meta_qualidade_falhas_perc": int(data.get('meta_qualidade_falhas_perc')),
+        "data_atualizacao": datetime.now()
+    }
+    
+    # 4. Salva usando update_one com upsert=True
+    # Isso vai ATUALIZAR o plano se ele já existir, ou CRIAR um novo se não existir.
+    try:
+        colecao_metas.update_one(
+            {"entregador_id": entregador_obj_id}, # O filtro para encontrar o documento
+            {"$set": plano_metas},                 # Os dados para atualizar/definir
+            upsert=True                            # A mágica: "crie se não existir"
+        )
+        
+        return jsonify({
+            "message": "Plano de metas salvo com sucesso!",
+            "meta_produtividade_calculada": meta_produtividade_diaria
+        }), 200
+        
+    except Exception as e:
+        return jsonify({"error": f"Ocorreu um erro ao salvar as metas: {e}"}), 500
 if __name__ == '__main__':
     # Roda o servidor na porta 5000
     app.run(port=5000, debug=True)

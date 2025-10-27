@@ -47,6 +47,10 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
                         <span>Dashboard</span>
                     </a>
+                    <a href="metas.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6H8.5l-1-1H5a2 2 0 00-2 2z"></path></svg>
+                        <span>Metas</span>
+                    </a>
                     <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
                         <span>Cadastro</span>
@@ -128,10 +132,13 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                 </svg>
                             </div>
-                            <span id="stats-progress-text" class="text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded-full font-medium">...%</span>
+                            <span id="stats-progress-text" class="text-xs text-green-600 bg-green-100 px-2 py-1 rounded-full font-medium">...%</span>
                         </div>
+                        
                         <h3 id="stats-concluidas" class="text-2xl font-bold text-gray-900 mb-1">...</h3>
-                        <p class="text-sm font-medium text-gray-700 mb-2">Progresso (Concluídas)</p>
+                        
+                        <p id="stats-progress-title" class="text-sm font-medium text-gray-700 mb-2">Progresso (Concluídas)</p>
+                        
                         <div class="w-full bg-gray-200 rounded-full h-2">
                             <div id="stats-progress-bar" class="bg-green-500 h-2 rounded-full" style="width: 0%"></div>
                         </div>
@@ -289,24 +296,60 @@
             }
         }
 
-        //
+       //
         // ===== INÍCIO DA MUDANÇA (updateDashboardUI) =====
         //
         function updateDashboardUI(data) {
             
-            // 2. ADICIONAR LINHA PARA O NOVO CARD
+            // 1. Cards simples
             document.getElementById('stats-total-geral').textContent = data.total_geral;
-
-            // Cards antigos
             document.getElementById('stats-total').textContent = data.total_hoje;
-            document.getElementById('stats-concluidas').textContent = data.concluidas_hoje;
             document.getElementById('stats-pendentes').textContent = data.pendentes_hoje;
-            
-            let progressoPercent = (data.total_hoje > 0) ? Math.round((data.concluidas_hoje / data.total_hoje) * 100) : 0;
-            document.getElementById('stats-progress-bar').style.width = `${progressoPercent}%`;
-            document.getElementById('stats-progress-text').textContent = `${progressoPercent}%`;
 
-            // Atividade Recente (sem mudança)
+            // 2. Lógica do Card de Meta (O card verde)
+            const metaDiaria = data.meta_produtividade_diaria; // Vem do Backend
+            const concluidasHoje = data.concluidas_hoje;
+
+            const progressTitleEl = document.getElementById('stats-progress-title');
+            const progressTextEl = document.getElementById('stats-progress-text');
+            const progressBarEl = document.getElementById('stats-progress-bar');
+            const concluidasEl = document.getElementById('stats-concluidas');
+
+            let progressoPercent = 0;
+
+            if (metaDiaria && metaDiaria > 0) {
+                // --- MODO "COM META" ---
+                progressTitleEl.textContent = 'Meta de Produtividade';
+                
+                // Exibe "18 / 30"
+                concluidasEl.innerHTML = `${concluidasHoje} <span class="text-xl text-secondary">/ ${metaDiaria}</span>`;
+                
+                // Calcula a porcentagem da meta
+                if (concluidasHoje > 0) {
+                    progressoPercent = Math.round((concluidasHoje / metaDiaria) * 100);
+                }
+                
+                progressTextEl.textContent = `${progressoPercent}%`;
+                // Garante que a barra não passe de 100%
+                progressBarEl.style.width = `${Math.min(progressoPercent, 100)}%`; 
+                
+            } else {
+                // --- MODO "SEM META" (Comportamento antigo) ---
+                progressTitleEl.textContent = 'Progresso (Concluídas)';
+                
+                // Exibe apenas "18"
+                concluidasEl.textContent = concluidasHoje;
+
+                // Calcula a porcentagem do dia (concluídas / total)
+                if (data.total_hoje > 0) {
+                    progressoPercent = Math.round((concluidasHoje / data.total_hoje) * 100);
+                }
+
+                progressTextEl.textContent = `${progressoPercent}%`;
+                progressBarEl.style.width = `${progressoPercent}%`;
+            }
+
+            // 3. Atividade Recente (sem mudança)
             const activityListEl = document.getElementById('recent-activity-list');
             activityListEl.innerHTML = '';
 

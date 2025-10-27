@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metas - Sistema ERP Entregadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#64748b',
+                        accent: '#f1f5f9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="flex h-screen">
+        <aside class="w-64 bg-white shadow-lg border-r border-gray-200 flex flex-col">
+            <div class="p-6 flex-1">
+                <div class="flex items-center space-x-3 mb-8">
+                    <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-lg font-semibold text-gray-900">ERP Entregas</h1>
+                        <p class="text-sm text-secondary">Sistema de Gestão</p>
+                    </div>
+                </div>
+
+                <nav class="space-y-2">
+                    <a href="painel.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2H5a2 2 0 00-2-2z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 7 5 5 5-5"></path></svg>
+                        <span>Dashboard</span>
+                    </a>
+                    
+                    <a href="metas.html" class="w-full flex items-center space-x-3 px-4 py-3 text-primary bg-blue-50 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6H8.5l-1-1H5a2 2 0 00-2 2z"></path></svg>
+                        <span>Metas</span>
+                    </a>
+
+                    <a href="cad_entrega.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <span>Cadastro</span>
+                    </a>
+                    <a href="atualizar_status.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Gerenciar</span>
+                    </a>
+                    <a href="historico.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Histórico</span>
+                    </a>
+                    <a href="chatbot.html" class="w-full flex items-center space-x-3 px-4 py-3 text-secondary hover:text-gray-900 hover:bg-gray-100 rounded-lg font-medium transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M12 18H5a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v11a2 2 0 01-2 2h-7zm-4-4h.01M12 14h.01M16 14h.01"></path></svg>
+                        <span>Chatbot de Suporte</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="p-6 border-t border-gray-200">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div id="user-initials-bg" class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                        <span id="user-initials" class="text-sm font-medium text-gray-700">JS</span>
+                    </div>
+                    <div>
+                        <p id="user-name" class="text-sm font-medium text-gray-900">João Silva</p>
+                        <p class="text-xs text-secondary">Entregador</p>
+                    </div>
+                </div>
+                <button id="logout-button" class="w-full flex items-center justify-center space-x-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 rounded-lg font-medium transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>
+                    <span>Sair</span>
+                </button>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-8 overflow-y-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-2">Planejador Estratégico de Metas</h1>
+                    <p class="text-secondary">Defina seus objetivos financeiros e operacionais para otimizar seus ganhos.</p>
+                </div>
+
+                <form id="metas-form" class="bg-white rounded-xl shadow-sm border border-gray-200 p-8 space-y-8">
+
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-semibold text-gray-900 border-b pb-2">Passo 1: Sua Meta Financeira</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="meta_financeira_total" class="block text-sm font-medium text-gray-700 mb-1">Quanto você quer ganhar (R$)?</label>
+                                <input type="number" id="meta_financeira_total" name="meta_financeira_total" step="0.01" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Ex: 3750.00" required>
+                            </div>
+                            <div>
+                                <label for="dias_trabalho" class="block text-sm font-medium text-gray-700 mb-1">Em quantos dias de trabalho?</label>
+                                <input type="number" id="dias_trabalho" name="dias_trabalho" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Ex: 25" required>
+                            </div>
+                            <div>
+                                <label for="ganho_medio_entrega" class="block text-sm font-medium text-gray-700 mb-1">Seu ganho médio por entrega (R$)?</label>
+                                <input type="number" id="ganho_medio_entrega" name="ganho_medio_entrega" step="0.01" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Ex: 5.00" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="productivity-result" class="hidden text-center bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                        <p class="text-sm font-medium text-blue-800">Com base nesses dados, seu objetivo principal é:</p>
+                        <p class="text-4xl font-bold text-primary mt-2">
+                            <span id="productivity-goal">0</span>
+                            <span class="text-2xl font-semibold text-gray-700">Entregas Concluídas por Dia</span>
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-semibold text-gray-900 border-b pb-2">Passo 2: Metas de Eficiência e Qualidade</h2>
+                        <p class="text-sm text-secondary">Para atingir sua meta de produtividade, você precisa garantir eficiência. Defina metas para seus diagnósticos.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="meta_eficiencia_perc" class="block text-sm font-medium text-gray-700 mb-1">Meta de Eficiência (Taxa de Conclusão)</label>
+                                <p class="text-xs text-secondary mb-2">Diagnóstico Atual: <span id="current-efficiency" class="font-bold text-gray-600">...%</span></p>
+                                <div class="relative">
+                                    <input type="number" id="meta_eficiencia_perc" name="meta_eficiencia_perc" min="0" max="100" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Ex: 95" required>
+                                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500">%</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label for="meta_qualidade_falhas_perc" class="block text-sm font-medium text-gray-700 mb-1">Meta de Qualidade (Reduzir "Não Entregue")</label>
+                                <p class="text-xs text-secondary mb-2">Diagnóstico Atual: <span id="current-failure-rate" class="font-bold text-gray-600">...%</span></p>
+                                <div class="relative">
+                                    <input type="number" id="meta_qualidade_falhas_perc" name="meta_qualidade_falhas_perc" min="0" max="100" class="w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary" placeholder="Ex: 2" required>
+                                    <span class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500">%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t pt-6">
+                        <div class="flex justify-end items-center space-x-4">
+                            <span id="form-status-message" class="text-sm font-medium"></span>
+                            <button type="submit" id="save-button" class="bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 shadow-sm">
+                                Salvar Plano de Metas
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:5000';
+        let entregadorId = null; // Será preenchido no DOMContentLoaded
+
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            entregadorId = localStorage.getItem('entregador_id');
+            const nomeEntregador = localStorage.getItem('entregador_nome');
+
+            if (!entregadorId || !nomeEntregador) {
+                alert('Você precisa estar logado para ver esta página.');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            // --- Configuração dos Dados do Usuário ---
+            document.getElementById('user-name').textContent = nomeEntregador;
+            const iniciais = nomeEntregador.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+            document.getElementById('user-initials').textContent = iniciais;
+
+            // --- Configuração do Logout ---
+            document.getElementById('logout-button').addEventListener('click', () => {
+                localStorage.removeItem('entregador_id');
+                localStorage.removeItem('entregador_nome');
+                window.location.href = 'login.html';
+            });
+
+            // --- Carregar Dados Iniciais ---
+            loadCurrentGoals(entregadorId);
+            loadDiagnostics(entregadorId);
+
+            // --- Event Listeners do Formulário ---
+            document.getElementById('metas-form').addEventListener('submit', handleSaveMetas);
+
+            // Listeners para calcular a meta de produtividade em tempo real
+            const step1Inputs = ['meta_financeira_total', 'dias_trabalho', 'ganho_medio_entrega'];
+            step1Inputs.forEach(id => {
+                document.getElementById(id).addEventListener('input', updateProductivityGoal);
+            });
+        });
+
+        /**
+         * Carrega os diagnósticos (Taxas de Conclusão e Falha)
+         */
+        async function loadDiagnostics(entregadorId) {
+            const efficiencyEl = document.getElementById('current-efficiency');
+            const failureEl = document.getElementById('current-failure-rate');
+
+            try {
+                const url = new URL(`${API_URL}/analytics/status-distribution`);
+                url.searchParams.append('entregador_id', entregadorId);
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    efficiencyEl.textContent = "N/A";
+                    failureEl.textContent = "N/A";
+                    return;
+                }
+                
+                const data = await response.json();
+                
+                if (data.labels.length === 0) {
+                    efficiencyEl.textContent = "0%";
+                    failureEl.textContent = "0%";
+                    return;
+                }
+
+                let totalEntregas = 0;
+                let totalConcluidas = 0;
+                let totalNaoEntregue = 0;
+
+                data.data.forEach((value) => { totalEntregas += value; });
+
+                const concluidaIndex = data.labels.indexOf('Concluída');
+                if (concluidaIndex > -1) {
+                    totalConcluidas = data.data[concluidaIndex];
+                }
+
+                // Ajuste: "não_entregue" (como no diagnóstico) ou "Não Entregue"?
+                // Vamos supor que no status-distribution venha como "Não Entregue"
+                const naoEntregueIndex = data.labels.indexOf('Não Entregue'); // << Verifique se o status é esse
+                if (naoEntregueIndex > -1) {
+                    totalNaoEntregue = data.data[naoEntregueIndex];
+                }
+
+                if (totalEntregas > 0) {
+                    const efficiency = ((totalConcluidas / totalEntregas) * 100).toFixed(1);
+                    const failureRate = ((totalNaoEntregue / totalEntregas) * 100).toFixed(1);
+                    efficiencyEl.textContent = `${efficiency}%`;
+                    failureEl.textContent = `${failureRate}%`;
+                } else {
+                    efficiencyEl.textContent = "0%";
+                    failureEl.textContent = "0%";
+                }
+
+            } catch (error) {
+                console.error('Erro ao carregar diagnósticos:', error);
+                efficiencyEl.textContent = "Erro";
+                failureEl.textContent = "Erro";
+            }
+        }
+
+        /**
+         * Carrega as metas já salvas (se existirem)
+         */
+        async function loadCurrentGoals(entregadorId) {
+            try {
+                const response = await fetch(`${API_URL}/metas?entregador_id=${entregadorId}`);
+                if (!response.ok) {
+                    // Se não encontrar (404), não é um erro, só não tem metas
+                    if (response.status === 404) return; 
+                    throw new Error('Falha ao carregar metas');
+                }
+                
+                const data = await response.json();
+
+                if (data && data.entregador_id) {
+                    document.getElementById('meta_financeira_total').value = data.meta_financeira_total || '';
+                    document.getElementById('dias_trabalho').value = data.dias_trabalho || '';
+                    document.getElementById('ganho_medio_entrega').value = data.ganho_medio_entrega || '';
+                    document.getElementById('meta_eficiencia_perc').value = data.meta_eficiencia_perc || '';
+                    document.getElementById('meta_qualidade_falhas_perc').value = data.meta_qualidade_falhas_perc || '';
+                    
+                    // Dispara o cálculo da meta de produtividade
+                    updateProductivityGoal();
+                }
+
+            } catch (error) {
+                console.error('Erro ao buscar metas salvas:', error);
+            }
+        }
+
+        /**
+         * Calcula e exibe a meta de produtividade (Passo 1 -> Resultado)
+         */
+        function updateProductivityGoal() {
+            const metaFinanceira = parseFloat(document.getElementById('meta_financeira_total').value);
+            const dias = parseInt(document.getElementById('dias_trabalho').value);
+            const ganhoMedio = parseFloat(document.getElementById('ganho_medio_entrega').value);
+            
+            const resultEl = document.getElementById('productivity-result');
+            const goalEl = document.getElementById('productivity-goal');
+
+            if (metaFinanceira > 0 && dias > 0 && ganhoMedio > 0) {
+                // Usamos Math.ceil() para arredondar para CIMA. 
+                // Se der 29.1, a meta é 30.
+                const metaDiaria = Math.ceil(metaFinanceira / dias / ganhoMedio);
+                goalEl.textContent = metaDiaria;
+                resultEl.classList.remove('hidden');
+            } else {
+                resultEl.classList.add('hidden');
+            }
+        }
+
+        /**
+         * Manipula o envio do formulário (Salvar Metas)
+         */
+        async function handleSaveMetas(event) {
+            event.preventDefault();
+            
+            const saveButton = document.getElementById('save-button');
+            const statusMessage = document.getElementById('form-status-message');
+            saveButton.disabled = true;
+            saveButton.textContent = 'Salvando...';
+            statusMessage.textContent = '';
+
+            try {
+                const formData = {
+                    entregador_id: entregadorId,
+                    meta_financeira_total: parseFloat(document.getElementById('meta_financeira_total').value),
+                    dias_trabalho: parseInt(document.getElementById('dias_trabalho').value),
+                    ganho_medio_entrega: parseFloat(document.getElementById('ganho_medio_entrega').value),
+                    meta_eficiencia_perc: parseInt(document.getElementById('meta_eficiencia_perc').value),
+                    meta_qualidade_falhas_perc: parseInt(document.getElementById('meta_qualidade_falhas_perc').value),
+                };
+
+                const response = await fetch(`${API_URL}/metas`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || 'Erro ao salvar metas.');
+                }
+
+                statusMessage.textContent = 'Plano de metas salvo com sucesso!';
+                statusMessage.className = 'text-sm font-medium text-green-600';
+
+            } catch (error) {
+                console.error('Erro ao salvar:', error);
+                statusMessage.textContent = `Erro: ${error.message}`;
+                statusMessage.className = 'text-sm font-medium text-red-600';
+            } finally {
+                saveButton.disabled = false;
+                saveButton.textContent = 'Salvar Plano de Metas';
+                
+                // Limpa a mensagem de status após alguns segundos
+                setTimeout(() => { statusMessage.textContent = ''; }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
