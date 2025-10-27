@@ -14,9 +14,9 @@ def chat(op, numero_pedido=None, entregador_id=None):
     if op == 1:
         return "Claro! Eu sou seu assistente no sistema de entregas. 👋\n\nVocê pode me usar para tirar dúvidas rápidas sobre o sistema ou para consultar suas entregas do dia, pendentes e concluídas. Basta clicar nas opções!"
     elif op == 2:
-        return "É bem simples!\n\n1. Clique em **'Cadastro'** no menu ao lado.\n2. Preencha o formulário com os dados da entrega.\n3. Clique em **'Salvar Entrega'**.\n\nProntinho! Se preferir, você também pode usar o atalho 'Adicionar Nova Entrega' no Dashboard."
+        return "É bem simples!\n\n1. Clique em 'Cadastro' no menu ao lado.\n2. Preencha o formulário com os dados da entrega.\n3. Clique em 'Salvar Entrega'.\n\nProntinho! Se preferir, você também pode usar o atalho 'Adicionar Nova Entrega' no Dashboard."
     elif op == 3:
-        return "O **Dashboard** é sua tela principal! 📊\n\nEle mostra um resumo rápido das suas atividades de hoje: quantas entregas você tem no total, quantas já concluiu e quantas ainda estão pendentes. É perfeito para organizar o seu dia!"
+        return "O Dashboard é sua tela principal! 📊\n\nEle mostra um resumo rápido das suas atividades de hoje: quantas entregas você tem no total, quantas já concluiu e quantas ainda estão pendentes. É perfeito para organizar o seu dia!"
 
     # --- Respostas dinâmicas (AGORA PRECISAM DE ID) ---
 
@@ -48,7 +48,7 @@ def chat(op, numero_pedido=None, entregador_id=None):
         entregas = colecao.find(base_query).sort("data_criacao", -1)
 
         # Resposta
-        resposta = "📦 **Suas entregas para hoje:**\n"
+        resposta = "📦 Suas entregas para hoje:\n"
         encontrou = False
         for entrega in entregas:
             resposta += f"- Pedido: {entrega['numero_pedido']} ({entrega['status']})\n  Cliente: {entrega['nome_cliente']}\n  Endereço: {entrega['endereco_completo']}\n\n"
@@ -68,7 +68,7 @@ def chat(op, numero_pedido=None, entregador_id=None):
         entregas = colecao.find(query_pendentes).sort("data_criacao", -1)
 
         # Resposta
-        resposta = "📋 **Suas entregas pendentes de hoje:**\n"
+        resposta = "📋 Suas entregas pendentes de hoje:\n"
         encontrou = False
         for entrega in entregas:
             resposta += f"- Pedido: {entrega['numero_pedido']} ({entrega['status']})\n  Cliente: {entrega['nome_cliente']}\n  Endereço: {entrega['endereco_completo']}\n\n"
@@ -88,7 +88,7 @@ def chat(op, numero_pedido=None, entregador_id=None):
         entregas = colecao.find(query_concluidas).sort("data_criacao", -1)
 
         # Resposta
-        resposta = "✅ **Suas entregas concluídas hoje:**\n"
+        resposta = "✅ Suas entregas concluídas hoje:\n"
         encontrou = False
         for entrega in entregas:
             resposta += f"- Pedido: {entrega['numero_pedido']}\n  Cliente: {entrega['nome_cliente']}\n  Endereço: {entrega['endereco_completo']}\n\n"
@@ -114,12 +114,12 @@ def chat(op, numero_pedido=None, entregador_id=None):
 
         # Resposta
         resposta = (
-            f"🔍 **Informações do Pedido: {entrega['numero_pedido']}**\n"
+            f"🔍 Informações do Pedido: {entrega['numero_pedido']}\n"
             f"---------------------------------\n"
-            f"- **Cliente:** {entrega['nome_cliente']}\n"
-            f"- **Endereço:** {entrega['endereco_completo']}\n"
-            f"- **Status:** {entrega['status']}\n"
-            f"- **Descrição:** {entrega.get('descricao_entrega', 'N/A')}"
+            f"- Cliente: {entrega['nome_cliente']}\n"
+            f"- Endereço: {entrega['endereco_completo']}\n"
+            f"- Status: {entrega['status']}\n"
+            f"- Descrição: {entrega.get('descricao_entrega', 'N/A')}"
         )
 
         return resposta

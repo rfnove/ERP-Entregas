@@ -73,12 +73,13 @@ def handle_login():
 def handle_register():
     data = request.get_json()
 
-    # 1. Validação dos dados
-    if not data or not data.get('email') or not data.get('password') or not data.get('name'):
-        return jsonify({"error": "Nome, email e senha são obrigatórios."}), 400
+    # 1. Validação dos dados (ATUALIZADO)
+    if not data or not data.get('email') or not data.get('password') or not data.get('name') or not data.get('cpf'):
+        return jsonify({"error": "Nome, email, CPF e senha são obrigatórios."}), 400
 
     nome = data.get('name')
     email = data.get('email')
+    cpf = data.get('cpf') # <-- ADICIONADO
     senha_texto_puro = data.get('password')
 
     db = get_db_connection()
@@ -90,14 +91,19 @@ def handle_register():
     # 2. Verifica se o email já existe
     if colecao_entregador.find_one({"email": email}):
         return jsonify({"error": "Este email já está cadastrado."}), 409 # 409 = Conflito
+    
+    # 2b. Verifica se o CPF já existe (ADICIONADO)
+    if colecao_entregador.find_one({"cpf": cpf}):
+        return jsonify({"error": "Este CPF já está cadastrado."}), 409 # 409 = Conflito
 
     # 3. CRIA O HASH DA SENHA
     senha_hash = generate_password_hash(senha_texto_puro)
 
-    # 4. Cria o novo documento de entregador
+    # 4. Cria o novo documento de entregador (ATUALIZADO)
     novo_entregador = {
         "nome": nome,
         "email": email,
+        "cpf": cpf, # <-- ADICIONADO
         "senha_hash": senha_hash, # Salva o HASH, não a senha pura
         "data_cadastro": datetime.now()
     }
