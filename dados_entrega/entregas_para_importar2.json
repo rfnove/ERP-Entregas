@@ -1,0 +1,6192 @@
+[
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c7e"
+    },
+    "numero_pedido": "2434034942735",
+    "nome_cliente": "Lunna Novais",
+    "endereco_completo": "Quadra Carlos Eduardo Moraes, 50",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Esse quos magni dolorem ut odit id.",
+    "data_criacao": {
+      "$date": "2025-09-25T01:46:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-26T22:46:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c7f"
+    },
+    "numero_pedido": "0261250892061",
+    "nome_cliente": "Nathan Castro",
+    "endereco_completo": "Setor Machado, 722",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Harum porro nisi aperiam ipsam.",
+    "data_criacao": {
+      "$date": "2025-09-27T23:17:24"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-29T08:17:24"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c80"
+    },
+    "numero_pedido": "9020461703648",
+    "nome_cliente": "Vinicius da Paz",
+    "endereco_completo": "Ladeira Sousa, 9",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur necessitatibus necessitatibus accusamus impedit officia.",
+    "data_criacao": {
+      "$date": "2025-10-06T01:16:15"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-06T08:16:15"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c81"
+    },
+    "numero_pedido": "3459588359876",
+    "nome_cliente": "Srta. Bella Câmara",
+    "endereco_completo": "Núcleo Viana, 73",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Autem necessitatibus quidem expedita error.",
+    "data_criacao": {
+      "$date": "2025-10-25T02:39:26"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c82"
+    },
+    "numero_pedido": "2565678863732",
+    "nome_cliente": "Isabela Ferreira",
+    "endereco_completo": "Residencial Pacheco, 44",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nemo repudiandae voluptatum natus.",
+    "data_criacao": {
+      "$date": "2025-08-29T18:40:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-30T09:40:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c83"
+    },
+    "numero_pedido": "3196033671496",
+    "nome_cliente": "Cauã Cassiano",
+    "endereco_completo": "Estação Luiz Otávio da Rocha, 853",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Molestias voluptatem pariatur sequi perspiciatis.",
+    "data_criacao": {
+      "$date": "2025-08-06T14:43:34"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-07T14:43:34"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c84"
+    },
+    "numero_pedido": "6537491403132",
+    "nome_cliente": "Emanuel Marques",
+    "endereco_completo": "Campo Luigi da Mota, 29",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Odio asperiores laborum rerum ipsam illum eos.",
+    "data_criacao": {
+      "$date": "2025-09-18T12:35:11"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c85"
+    },
+    "numero_pedido": "8407746137342",
+    "nome_cliente": "Luiz Otávio Pimenta",
+    "endereco_completo": "Recanto de Moraes, 56",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Natus beatae vero laborum.",
+    "data_criacao": {
+      "$date": "2025-10-01T00:17:08"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-01T13:17:08"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c86"
+    },
+    "numero_pedido": "3570891583236",
+    "nome_cliente": "Zoe Cavalcanti",
+    "endereco_completo": "Vereda Lara da Rocha, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Autem eveniet asperiores ex id unde tenetur.",
+    "data_criacao": {
+      "$date": "2025-10-21T21:39:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-23T16:39:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c87"
+    },
+    "numero_pedido": "2838419923874",
+    "nome_cliente": "Clarice Peixoto",
+    "endereco_completo": "Favela Alexia Silveira, 96",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Cum voluptatem beatae inventore.",
+    "data_criacao": {
+      "$date": "2025-08-28T08:13:16"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c88"
+    },
+    "numero_pedido": "9535458793194",
+    "nome_cliente": "Eduarda Cavalcante",
+    "endereco_completo": "Viaduto Silva, 89",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Mollitia perferendis quisquam porro eum quae unde.",
+    "data_criacao": {
+      "$date": "2025-09-29T22:21:44"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c89"
+    },
+    "numero_pedido": "5426806097603",
+    "nome_cliente": "Dra. Evelyn Duarte",
+    "endereco_completo": "Largo Luiza da Mata",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Porro rem in aliquam id consequuntur.",
+    "data_criacao": {
+      "$date": "2025-08-22T22:47:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T22:47:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8a"
+    },
+    "numero_pedido": "0619264587464",
+    "nome_cliente": "Theo Farias",
+    "endereco_completo": "Área Silva, 38",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nam fugit magnam vel.",
+    "data_criacao": {
+      "$date": "2025-10-07T21:57:19"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-08T01:57:19"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8b"
+    },
+    "numero_pedido": "2382416974556",
+    "nome_cliente": "Sr. Caleb Freitas",
+    "endereco_completo": "Quadra de Fogaça, 885",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Ea illum dolores.",
+    "data_criacao": {
+      "$date": "2025-10-16T18:05:40"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8c"
+    },
+    "numero_pedido": "3207151758904",
+    "nome_cliente": "Anthony Guerra",
+    "endereco_completo": "Avenida Benicio Lopes, 11",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Nesciunt exercitationem ipsa totam quae fuga.",
+    "data_criacao": {
+      "$date": "2025-10-25T00:31:24"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8d"
+    },
+    "numero_pedido": "5472754307196",
+    "nome_cliente": "Matteo Câmara",
+    "endereco_completo": "Pátio Nogueira, 349",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quia dolorum suscipit nulla deleniti soluta.",
+    "data_criacao": {
+      "$date": "2025-09-26T01:42:27"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-26T12:42:27"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8e"
+    },
+    "numero_pedido": "5467722561878",
+    "nome_cliente": "Lívia Pereira",
+    "endereco_completo": "Área de da Mota, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Quod rerum nulla cumque unde ab.",
+    "data_criacao": {
+      "$date": "2025-08-22T07:47:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-22T19:47:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c8f"
+    },
+    "numero_pedido": "0360394275188",
+    "nome_cliente": "Enrico Mendonça",
+    "endereco_completo": "Trevo Teixeira, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Distinctio excepturi eligendi ratione.",
+    "data_criacao": {
+      "$date": "2025-10-27T04:48:48"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-27T17:48:48"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c90"
+    },
+    "numero_pedido": "3437303254873",
+    "nome_cliente": "Clarice Gonçalves",
+    "endereco_completo": "Lagoa Caroline da Conceição, 400",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "In recusandae perferendis.",
+    "data_criacao": {
+      "$date": "2025-08-11T11:42:30"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c91"
+    },
+    "numero_pedido": "6566071101885",
+    "nome_cliente": "Aylla Casa Grande",
+    "endereco_completo": "Pátio da Costa, 313",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Saepe laudantium iste placeat.",
+    "data_criacao": {
+      "$date": "2025-08-25T18:38:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-26T18:38:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c92"
+    },
+    "numero_pedido": "4249873811986",
+    "nome_cliente": "João Pedro Alves",
+    "endereco_completo": "Via de Almeida, 56",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Blanditiis voluptatum doloremque voluptatibus nulla.",
+    "data_criacao": {
+      "$date": "2025-08-19T11:25:33"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-20T14:25:33"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c93"
+    },
+    "numero_pedido": "3154814814067",
+    "nome_cliente": "Gael Henrique Santos",
+    "endereco_completo": "Residencial Araújo, 91",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Aliquam ullam nobis optio asperiores.",
+    "data_criacao": {
+      "$date": "2025-08-08T12:34:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-09T11:34:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c94"
+    },
+    "numero_pedido": "2477945504340",
+    "nome_cliente": "Luiz Miguel Pereira",
+    "endereco_completo": "Distrito de da Rocha, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Modi velit tempora facere quae cum minus.",
+    "data_criacao": {
+      "$date": "2025-10-02T18:25:54"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-03T02:25:54"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c95"
+    },
+    "numero_pedido": "6812482509896",
+    "nome_cliente": "Kamilly Moreira",
+    "endereco_completo": "Pátio de Pereira, 94",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Ducimus architecto aspernatur error ipsa esse.",
+    "data_criacao": {
+      "$date": "2025-08-21T14:22:12"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-22T03:22:12"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c96"
+    },
+    "numero_pedido": "3426286216138",
+    "nome_cliente": "Melina Rios",
+    "endereco_completo": "Trecho Diogo Leão, 77",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Cumque aspernatur inventore accusantium provident esse ab.",
+    "data_criacao": {
+      "$date": "2025-08-23T17:39:11"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-25T01:39:11"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c97"
+    },
+    "numero_pedido": "4048639189464",
+    "nome_cliente": "Sr. Davi Luiz Fonseca",
+    "endereco_completo": "Rodovia de Mendonça, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Iusto impedit illum quibusdam laudantium omnis soluta.",
+    "data_criacao": {
+      "$date": "2025-08-23T23:20:09"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-25T15:20:09"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c98"
+    },
+    "numero_pedido": "5512296757193",
+    "nome_cliente": "Rafaela Borges",
+    "endereco_completo": "Parque Fernanda Aragão, 61",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Maxime eum asperiores maxime ratione similique laborum veritatis.",
+    "data_criacao": {
+      "$date": "2025-10-16T12:44:09"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T13:44:09"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c99"
+    },
+    "numero_pedido": "0615554315953",
+    "nome_cliente": "Dr. Caio Fernandes",
+    "endereco_completo": "Lagoa de Sales, 57",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Omnis voluptate blanditiis repudiandae excepturi minima.",
+    "data_criacao": {
+      "$date": "2025-10-09T02:28:26"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9a"
+    },
+    "numero_pedido": "8262609229219",
+    "nome_cliente": "Dom Campos",
+    "endereco_completo": "Favela da Conceição, 95",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Hic tenetur autem dolores eveniet odit.",
+    "data_criacao": {
+      "$date": "2025-10-26T06:47:20"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9b"
+    },
+    "numero_pedido": "3016972195467",
+    "nome_cliente": "Srta. Hellena Costela",
+    "endereco_completo": "Parque de Montenegro, 37",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Labore aliquid asperiores ipsam praesentium consequatur.",
+    "data_criacao": {
+      "$date": "2025-10-30T16:13:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-31T16:30:48.894284"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9c"
+    },
+    "numero_pedido": "2194619133445",
+    "nome_cliente": "Vinicius Vargas",
+    "endereco_completo": "Chácara de Ribeiro, 80",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur occaecati nemo consequuntur pariatur vel reprehenderit.",
+    "data_criacao": {
+      "$date": "2025-09-24T18:06:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-26T04:06:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9d"
+    },
+    "numero_pedido": "3025948866386",
+    "nome_cliente": "Ágatha Santos",
+    "endereco_completo": "Jardim de Porto, 34",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Delectus quia corrupti.",
+    "data_criacao": {
+      "$date": "2025-08-26T03:09:43"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9e"
+    },
+    "numero_pedido": "1554578489648",
+    "nome_cliente": "Diogo Oliveira",
+    "endereco_completo": "Trecho de Gomes",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Beatae explicabo fuga voluptatem.",
+    "data_criacao": {
+      "$date": "2025-09-06T20:38:17"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-07T07:38:17"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27c9f"
+    },
+    "numero_pedido": "9027679302533",
+    "nome_cliente": "Emanuelly Leão",
+    "endereco_completo": "Núcleo Breno Mendonça, 66",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Reiciendis rem praesentium odit.",
+    "data_criacao": {
+      "$date": "2025-09-21T05:12:05"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-22T07:12:05"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca0"
+    },
+    "numero_pedido": "0956776426325",
+    "nome_cliente": "Esther Costela",
+    "endereco_completo": "Viela Silveira, 63",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Sit odit maiores reprehenderit tenetur maxime voluptatibus.",
+    "data_criacao": {
+      "$date": "2025-09-30T13:18:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-02T10:18:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca1"
+    },
+    "numero_pedido": "3754862427013",
+    "nome_cliente": "Laís da Cruz",
+    "endereco_completo": "Via Cauã Costa, 601",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Temporibus distinctio quibusdam ex unde molestiae.",
+    "data_criacao": {
+      "$date": "2025-09-06T11:15:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-07T10:15:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca2"
+    },
+    "numero_pedido": "4952586742262",
+    "nome_cliente": "Sophie Mendonça",
+    "endereco_completo": "Vale Rafael Vargas, 69",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellendus aspernatur rem id.",
+    "data_criacao": {
+      "$date": "2025-08-29T11:39:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T02:39:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca3"
+    },
+    "numero_pedido": "8439529848985",
+    "nome_cliente": "Caroline Ribeiro",
+    "endereco_completo": "Alameda Melissa da Conceição, 956",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Saepe veniam fuga iste nobis.",
+    "data_criacao": {
+      "$date": "2025-08-17T10:20:20"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-18T12:20:20"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca4"
+    },
+    "numero_pedido": "4518095282622",
+    "nome_cliente": "Erick Alves",
+    "endereco_completo": "Vereda Isabel Pimenta, 832",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Consequuntur itaque doloremque cum molestias corporis.",
+    "data_criacao": {
+      "$date": "2025-08-26T04:32:22"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca5"
+    },
+    "numero_pedido": "7937790098210",
+    "nome_cliente": "João Vitor Sousa",
+    "endereco_completo": "Campo de Andrade, 10",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Dolor veniam sint distinctio vel possimus.",
+    "data_criacao": {
+      "$date": "2025-08-10T04:21:16"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-11T11:21:16"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca6"
+    },
+    "numero_pedido": "5665893351667",
+    "nome_cliente": "Lucca Lopes",
+    "endereco_completo": "Favela Moura, 90",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quibusdam voluptas nesciunt fugit est quaerat praesentium.",
+    "data_criacao": {
+      "$date": "2025-09-16T04:19:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-16T12:19:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca7"
+    },
+    "numero_pedido": "3593474133192",
+    "nome_cliente": "Sr. Kevin Cardoso",
+    "endereco_completo": "Colônia Anthony Gabriel Cavalcanti, 14",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Mollitia repellendus cupiditate architecto dolorum molestias est.",
+    "data_criacao": {
+      "$date": "2025-08-13T19:22:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-13T23:22:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca8"
+    },
+    "numero_pedido": "1382232570544",
+    "nome_cliente": "José Sales",
+    "endereco_completo": "Largo Alves, 12",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Aperiam totam modi repellat ut harum veritatis.",
+    "data_criacao": {
+      "$date": "2025-08-11T02:21:44"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-11T03:21:44"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ca9"
+    },
+    "numero_pedido": "3210080182887",
+    "nome_cliente": "Sr. Alexandre Pereira",
+    "endereco_completo": "Recanto Lopes, 214",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Tempora laudantium eligendi dolore.",
+    "data_criacao": {
+      "$date": "2025-10-17T16:17:49"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27caa"
+    },
+    "numero_pedido": "8077088959331",
+    "nome_cliente": "Isis Vieira",
+    "endereco_completo": "Praça de Ribeiro, 86",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Sunt saepe deleniti dicta.",
+    "data_criacao": {
+      "$date": "2025-10-31T08:35:57"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-31T15:35:57"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cab"
+    },
+    "numero_pedido": "5050581245715",
+    "nome_cliente": "Isabel Cardoso",
+    "endereco_completo": "Colônia Alves, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Culpa explicabo odit id accusamus adipisci.",
+    "data_criacao": {
+      "$date": "2025-10-15T20:07:55"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T18:07:55"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cac"
+    },
+    "numero_pedido": "9068667076456",
+    "nome_cliente": "Daniela Aragão",
+    "endereco_completo": "Via Silveira, 6",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Quasi odio nulla laborum repellendus nisi dolores.",
+    "data_criacao": {
+      "$date": "2025-10-12T10:36:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-14T07:36:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cad"
+    },
+    "numero_pedido": "9076153491096",
+    "nome_cliente": "Lara Machado",
+    "endereco_completo": "Lago Davi Lucca da Luz, 59",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "In saepe eligendi reiciendis ex dolore consequuntur.",
+    "data_criacao": {
+      "$date": "2025-08-28T20:27:31"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T03:27:31"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cae"
+    },
+    "numero_pedido": "0191362566300",
+    "nome_cliente": "Marcela Vargas",
+    "endereco_completo": "Jardim Melina Rocha, 134",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Nesciunt iure optio eius.",
+    "data_criacao": {
+      "$date": "2025-08-16T06:05:40"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27caf"
+    },
+    "numero_pedido": "7443880710301",
+    "nome_cliente": "Raquel Rocha",
+    "endereco_completo": "Conjunto Juan Oliveira, 33",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Corrupti adipisci molestias id porro molestiae quaerat.",
+    "data_criacao": {
+      "$date": "2025-08-18T18:49:51"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb0"
+    },
+    "numero_pedido": "5242863482226",
+    "nome_cliente": "Carlos Eduardo Campos",
+    "endereco_completo": "Esplanada de Martins, 83",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Nisi minima soluta deleniti tempora tempora ipsum.",
+    "data_criacao": {
+      "$date": "2025-10-29T05:58:16"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-29T07:58:16"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb1"
+    },
+    "numero_pedido": "9065036924714",
+    "nome_cliente": "Guilherme Vieira",
+    "endereco_completo": "Aeroporto André Sampaio",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Eos odio inventore dolor culpa.",
+    "data_criacao": {
+      "$date": "2025-10-01T21:48:05"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-02T11:48:05"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb2"
+    },
+    "numero_pedido": "9145489763051",
+    "nome_cliente": "Cauã Nunes",
+    "endereco_completo": "Fazenda de Sousa, 4",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Minima aspernatur distinctio.",
+    "data_criacao": {
+      "$date": "2025-10-21T03:13:28"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-21T20:13:28"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb3"
+    },
+    "numero_pedido": "7877684090947",
+    "nome_cliente": "Maria Cecília Borges",
+    "endereco_completo": "Lago Luigi Cassiano, 265",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Non porro ea dolores cum corrupti cum.",
+    "data_criacao": {
+      "$date": "2025-10-25T13:15:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-26T12:15:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb4"
+    },
+    "numero_pedido": "4656464846874",
+    "nome_cliente": "Sra. Amanda Mendes",
+    "endereco_completo": "Morro Marina Sousa, 99",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Vitae eveniet sapiente totam nemo facilis sequi.",
+    "data_criacao": {
+      "$date": "2025-09-02T22:52:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-04T03:52:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb5"
+    },
+    "numero_pedido": "1418124261983",
+    "nome_cliente": "Srta. Cecília Abreu",
+    "endereco_completo": "Vereda Siqueira, 47",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Asperiores officiis autem voluptate corrupti.",
+    "data_criacao": {
+      "$date": "2025-10-02T05:02:07"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb6"
+    },
+    "numero_pedido": "4383900970359",
+    "nome_cliente": "Maria Julia Mendes",
+    "endereco_completo": "Alameda de Nogueira, 20",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Enim esse sint necessitatibus.",
+    "data_criacao": {
+      "$date": "2025-08-29T22:08:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-30T18:08:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb7"
+    },
+    "numero_pedido": "8466075427678",
+    "nome_cliente": "Heloísa Carvalho",
+    "endereco_completo": "Praia Moraes",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptates aliquam mollitia officia.",
+    "data_criacao": {
+      "$date": "2025-08-03T06:39:19"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-04T22:39:19"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb8"
+    },
+    "numero_pedido": "1092294235397",
+    "nome_cliente": "Alícia Rios",
+    "endereco_completo": "Jardim de Brito, 23",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Illo commodi porro fugit eveniet perspiciatis.",
+    "data_criacao": {
+      "$date": "2025-10-20T09:55:27"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-21T08:55:27"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cb9"
+    },
+    "numero_pedido": "2598261750508",
+    "nome_cliente": "Henry Gabriel Azevedo",
+    "endereco_completo": "Feira Vasconcelos",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Porro nihil nam dicta autem.",
+    "data_criacao": {
+      "$date": "2025-09-17T09:02:47"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-19T06:02:47"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cba"
+    },
+    "numero_pedido": "1327708773319",
+    "nome_cliente": "Diogo Montenegro",
+    "endereco_completo": "Vila Rodrigo Sales, 49",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Eligendi deserunt sit dignissimos cupiditate reiciendis magni.",
+    "data_criacao": {
+      "$date": "2025-08-24T09:58:19"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T17:58:19"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cbb"
+    },
+    "numero_pedido": "5296560937015",
+    "nome_cliente": "Srta. Laís Guerra",
+    "endereco_completo": "Sítio Isabella Martins, 56",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quibusdam maxime esse ratione delectus assumenda laudantium.",
+    "data_criacao": {
+      "$date": "2025-10-06T21:27:17"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-08T02:27:17"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cbc"
+    },
+    "numero_pedido": "0820952617855",
+    "nome_cliente": "Srta. Marcela Camargo",
+    "endereco_completo": "Viela de Machado, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Ut facilis dicta necessitatibus similique.",
+    "data_criacao": {
+      "$date": "2025-10-26T15:12:20"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-27T06:12:20"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cbd"
+    },
+    "numero_pedido": "4039907722889",
+    "nome_cliente": "Anthony Sales",
+    "endereco_completo": "Morro de Andrade, 77",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Quaerat asperiores et in nobis.",
+    "data_criacao": {
+      "$date": "2025-08-07T20:53:43"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cbe"
+    },
+    "numero_pedido": "5432854334263",
+    "nome_cliente": "Daniela Viana",
+    "endereco_completo": "Recanto de Jesus, 747",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Reprehenderit ipsa ipsum dolorem harum similique.",
+    "data_criacao": {
+      "$date": "2025-10-15T04:07:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-16T22:07:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cbf"
+    },
+    "numero_pedido": "3709693235528",
+    "nome_cliente": "Sr. Isaac Teixeira",
+    "endereco_completo": "Feira de da Conceição, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Quibusdam nesciunt quisquam nemo.",
+    "data_criacao": {
+      "$date": "2025-10-10T16:12:28"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc0"
+    },
+    "numero_pedido": "8054884594607",
+    "nome_cliente": "Bianca Azevedo",
+    "endereco_completo": "Condomínio Sá, 40",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Perspiciatis accusantium nam blanditiis.",
+    "data_criacao": {
+      "$date": "2025-10-12T09:33:00"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-13T23:33:00"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc1"
+    },
+    "numero_pedido": "7863781929082",
+    "nome_cliente": "Melissa Carvalho",
+    "endereco_completo": "Passarela Pereira, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Maxime praesentium ipsa.",
+    "data_criacao": {
+      "$date": "2025-08-23T16:22:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T11:22:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc2"
+    },
+    "numero_pedido": "8414957565970",
+    "nome_cliente": "Anthony Correia",
+    "endereco_completo": "Lago Isabela da Luz, 30",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Repellendus optio sed enim velit.",
+    "data_criacao": {
+      "$date": "2025-08-16T21:41:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-17T01:41:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc3"
+    },
+    "numero_pedido": "9362407253191",
+    "nome_cliente": "Cauã Camargo",
+    "endereco_completo": "Praça de Lopes, 95",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Ipsum dolor molestiae aliquid dicta reprehenderit iure.",
+    "data_criacao": {
+      "$date": "2025-08-22T15:21:21"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T13:21:21"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc4"
+    },
+    "numero_pedido": "7747771880686",
+    "nome_cliente": "Laís Gonçalves",
+    "endereco_completo": "Praia Campos, 93",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Consectetur quis aliquid unde minima reiciendis ratione.",
+    "data_criacao": {
+      "$date": "2025-08-27T22:16:14"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T11:16:14"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc5"
+    },
+    "numero_pedido": "9856394378437",
+    "nome_cliente": "Felipe Mendonça",
+    "endereco_completo": "Conjunto Pedro Henrique Lopes, 420",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Minima at libero porro quod quasi.",
+    "data_criacao": {
+      "$date": "2025-10-24T01:42:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-25T05:42:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc6"
+    },
+    "numero_pedido": "0073461078192",
+    "nome_cliente": "Dr. Enzo Gabriel da Conceição",
+    "endereco_completo": "Condomínio de Moreira, 66",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Id ipsam aut sunt.",
+    "data_criacao": {
+      "$date": "2025-09-18T18:31:39"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc7"
+    },
+    "numero_pedido": "8490352645769",
+    "nome_cliente": "José Pedro Mendonça",
+    "endereco_completo": "Quadra Silveira, 34",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Adipisci illo neque animi.",
+    "data_criacao": {
+      "$date": "2025-09-24T01:01:37"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-25T00:01:37"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc8"
+    },
+    "numero_pedido": "0476614955638",
+    "nome_cliente": "Yuri Aparecida",
+    "endereco_completo": "Estação da Rosa, 2",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Odio sunt consequatur esse voluptate perferendis.",
+    "data_criacao": {
+      "$date": "2025-08-09T01:34:15"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cc9"
+    },
+    "numero_pedido": "1786518766636",
+    "nome_cliente": "Benicio Sales",
+    "endereco_completo": "Recanto Bianca Cassiano, 16",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Recusandae illo fugiat totam quas dicta rem.",
+    "data_criacao": {
+      "$date": "2025-10-23T13:49:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-24T10:49:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cca"
+    },
+    "numero_pedido": "3807995297852",
+    "nome_cliente": "Isabelly Costa",
+    "endereco_completo": "Passarela de Vargas, 488",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Ex nemo sunt sint perspiciatis id aspernatur.",
+    "data_criacao": {
+      "$date": "2025-10-11T06:20:55"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-12T03:20:55"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ccb"
+    },
+    "numero_pedido": "5701105828081",
+    "nome_cliente": "Lunna Peixoto",
+    "endereco_completo": "Esplanada de Nunes, 76",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Nesciunt pariatur eligendi unde quo voluptatem amet.",
+    "data_criacao": {
+      "$date": "2025-08-29T01:13:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-30T23:13:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ccc"
+    },
+    "numero_pedido": "9617561131855",
+    "nome_cliente": "Ana Vitória Viana",
+    "endereco_completo": "Morro Letícia Garcia, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptatibus cupiditate molestias voluptatibus.",
+    "data_criacao": {
+      "$date": "2025-09-15T03:26:10"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-16T09:26:10"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ccd"
+    },
+    "numero_pedido": "3139926239533",
+    "nome_cliente": "Maysa Câmara",
+    "endereco_completo": "Setor Moraes, 4",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Expedita est earum.",
+    "data_criacao": {
+      "$date": "2025-09-20T02:15:44"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-21T09:15:44"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cce"
+    },
+    "numero_pedido": "3521470249746",
+    "nome_cliente": "Cauê Teixeira",
+    "endereco_completo": "Estrada de Caldeira, 73",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Velit quas nihil ducimus dolore.",
+    "data_criacao": {
+      "$date": "2025-08-31T23:01:21"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-01T01:01:21"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ccf"
+    },
+    "numero_pedido": "9892539853728",
+    "nome_cliente": "Sophie Vasconcelos",
+    "endereco_completo": "Setor Ayla Dias, 55",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Eos iusto est blanditiis culpa illo.",
+    "data_criacao": {
+      "$date": "2025-08-29T06:41:03"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T23:41:03"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd0"
+    },
+    "numero_pedido": "1418407265073",
+    "nome_cliente": "Benício Borges",
+    "endereco_completo": "Núcleo Antônio Pires, 58",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur ab neque.",
+    "data_criacao": {
+      "$date": "2025-09-15T13:11:58"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-16T16:11:58"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd1"
+    },
+    "numero_pedido": "1324333576346",
+    "nome_cliente": "Yasmin Aragão",
+    "endereco_completo": "Rua Otávio Campos, 13",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Temporibus fugit voluptatibus qui sequi ea.",
+    "data_criacao": {
+      "$date": "2025-09-30T21:22:37"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-01T08:22:37"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd2"
+    },
+    "numero_pedido": "9685058198070",
+    "nome_cliente": "Sr. Arthur Moura",
+    "endereco_completo": "Alameda Apollo Nogueira, 125",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quaerat atque accusamus aut.",
+    "data_criacao": {
+      "$date": "2025-10-14T15:49:21"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-15T01:49:21"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd3"
+    },
+    "numero_pedido": "8016219596274",
+    "nome_cliente": "Nathan Rezende",
+    "endereco_completo": "Chácara Pires, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Inventore corporis nemo soluta.",
+    "data_criacao": {
+      "$date": "2025-08-22T14:26:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T03:26:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd4"
+    },
+    "numero_pedido": "9047512879947",
+    "nome_cliente": "Lucca Farias",
+    "endereco_completo": "Travessa de Correia, 39",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Sequi ut eius.",
+    "data_criacao": {
+      "$date": "2025-08-10T00:41:06"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-11T22:41:06"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd5"
+    },
+    "numero_pedido": "3973809433515",
+    "nome_cliente": "Luiz Otávio Lima",
+    "endereco_completo": "Praia Luna Cavalcante, 129",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptas deleniti vitae est neque dolore.",
+    "data_criacao": {
+      "$date": "2025-08-30T04:52:39"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T00:52:39"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd6"
+    },
+    "numero_pedido": "3670466251796",
+    "nome_cliente": "Mariah da Cunha",
+    "endereco_completo": "Recanto Bianca Guerra, 9",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Blanditiis quo dicta in.",
+    "data_criacao": {
+      "$date": "2025-09-08T16:55:16"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-09T07:55:16"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd7"
+    },
+    "numero_pedido": "0533198828274",
+    "nome_cliente": "Manuela Siqueira",
+    "endereco_completo": "Distrito Ribeiro",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Ut corporis explicabo fuga recusandae.",
+    "data_criacao": {
+      "$date": "2025-10-10T20:18:54"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-11T10:18:54"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd8"
+    },
+    "numero_pedido": "7137101530617",
+    "nome_cliente": "Antony Caldeira",
+    "endereco_completo": "Vila de Costela, 49",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Voluptatibus minima sunt nihil ab doloribus sunt.",
+    "data_criacao": {
+      "$date": "2025-09-08T20:11:09"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cd9"
+    },
+    "numero_pedido": "5357724474002",
+    "nome_cliente": "Lavínia Moura",
+    "endereco_completo": "Passarela Lara Nascimento, 42",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Modi perferendis illum autem dolore reiciendis nulla delectus.",
+    "data_criacao": {
+      "$date": "2025-08-08T22:38:20"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-10T15:38:20"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cda"
+    },
+    "numero_pedido": "4884317641714",
+    "nome_cliente": "Alexia Viana",
+    "endereco_completo": "Avenida de Farias",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quasi blanditiis qui.",
+    "data_criacao": {
+      "$date": "2025-08-04T05:36:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T01:36:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cdb"
+    },
+    "numero_pedido": "5624153135508",
+    "nome_cliente": "Maria Clara Nunes",
+    "endereco_completo": "Sítio de Albuquerque, 54",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Eveniet repellat accusamus voluptates at.",
+    "data_criacao": {
+      "$date": "2025-09-14T13:29:24"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-14T19:29:24"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cdc"
+    },
+    "numero_pedido": "9822347976173",
+    "nome_cliente": "João Miguel Sales",
+    "endereco_completo": "Chácara Oliveira",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Aut a voluptatum vel aliquam.",
+    "data_criacao": {
+      "$date": "2025-09-19T06:10:24"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cdd"
+    },
+    "numero_pedido": "2727983477169",
+    "nome_cliente": "Maria Helena Farias",
+    "endereco_completo": "Jardim de Barros, 169",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Dignissimos temporibus aliquid ipsam sapiente.",
+    "data_criacao": {
+      "$date": "2025-09-26T18:07:43"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-27T18:07:43"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cde"
+    },
+    "numero_pedido": "6544266226315",
+    "nome_cliente": "Mariana Souza",
+    "endereco_completo": "Setor de Andrade",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Provident culpa iusto expedita esse.",
+    "data_criacao": {
+      "$date": "2025-10-25T15:39:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-26T20:39:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cdf"
+    },
+    "numero_pedido": "8395367399754",
+    "nome_cliente": "Dr. Levi Vieira",
+    "endereco_completo": "Rua Alice Garcia, 61",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptatum deleniti velit.",
+    "data_criacao": {
+      "$date": "2025-10-05T15:59:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-07T10:59:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce0"
+    },
+    "numero_pedido": "0634321452868",
+    "nome_cliente": "Ana Luiza Jesus",
+    "endereco_completo": "Vale Bruno Pinto, 8",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Officia esse in quae reprehenderit.",
+    "data_criacao": {
+      "$date": "2025-10-25T10:28:18"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-27T00:28:18"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce1"
+    },
+    "numero_pedido": "6014123214965",
+    "nome_cliente": "Marina Sales",
+    "endereco_completo": "Aeroporto Santos, 742",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Aut sit nam.",
+    "data_criacao": {
+      "$date": "2025-08-18T11:54:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-19T08:54:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce2"
+    },
+    "numero_pedido": "5497424144413",
+    "nome_cliente": "Maria Isis Rios",
+    "endereco_completo": "Esplanada Bruna Gomes, 9",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Sed aliquid eius expedita laborum.",
+    "data_criacao": {
+      "$date": "2025-10-19T15:26:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-19T19:26:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce3"
+    },
+    "numero_pedido": "8837006942254",
+    "nome_cliente": "Maysa das Neves",
+    "endereco_completo": "Passarela Valentina Cavalcanti, 74",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Rerum quam blanditiis molestias.",
+    "data_criacao": {
+      "$date": "2025-10-23T16:18:37"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce4"
+    },
+    "numero_pedido": "2634413924332",
+    "nome_cliente": "Rhavi Macedo",
+    "endereco_completo": "Largo Camargo, 65",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur similique iure iusto.",
+    "data_criacao": {
+      "$date": "2025-10-30T20:12:38"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-30T23:12:38"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce5"
+    },
+    "numero_pedido": "3606249738963",
+    "nome_cliente": "Sra. Natália Monteiro",
+    "endereco_completo": "Campo Cardoso, 23",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Deleniti aliquid iusto consectetur.",
+    "data_criacao": {
+      "$date": "2025-10-04T03:15:06"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce6"
+    },
+    "numero_pedido": "9547148692434",
+    "nome_cliente": "Allana Castro",
+    "endereco_completo": "Pátio Oliveira, 87",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Numquam sequi doloribus ipsa illum blanditiis possimus.",
+    "data_criacao": {
+      "$date": "2025-08-23T22:34:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T08:34:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce7"
+    },
+    "numero_pedido": "6736180588321",
+    "nome_cliente": "Lívia Rezende",
+    "endereco_completo": "Lagoa Théo da Mata",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Veniam adipisci quod quibusdam et cupiditate.",
+    "data_criacao": {
+      "$date": "2025-09-23T09:36:21"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce8"
+    },
+    "numero_pedido": "4561767994903",
+    "nome_cliente": "Maria Luiza Azevedo",
+    "endereco_completo": "Condomínio Ferreira, 8",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Omnis blanditiis eius laboriosam.",
+    "data_criacao": {
+      "$date": "2025-09-23T04:55:04"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-24T08:55:04"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ce9"
+    },
+    "numero_pedido": "9928754216397",
+    "nome_cliente": "Theodoro da Mata",
+    "endereco_completo": "Viela Sophie Melo",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Assumenda autem perspiciatis temporibus magnam.",
+    "data_criacao": {
+      "$date": "2025-08-03T21:36:12"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-04T20:36:12"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cea"
+    },
+    "numero_pedido": "4235046165598",
+    "nome_cliente": "Maysa da Mota",
+    "endereco_completo": "Viela Miguel Monteiro, 92",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Occaecati esse praesentium enim libero id ipsa.",
+    "data_criacao": {
+      "$date": "2025-09-04T19:22:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-04T20:22:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ceb"
+    },
+    "numero_pedido": "0701353227235",
+    "nome_cliente": "Pedro Lucas Cavalcante",
+    "endereco_completo": "Praia de Montenegro, 69",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Distinctio maiores voluptas harum sit deleniti consequatur.",
+    "data_criacao": {
+      "$date": "2025-08-04T17:00:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T06:00:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cec"
+    },
+    "numero_pedido": "1006370644645",
+    "nome_cliente": "Caleb Barros",
+    "endereco_completo": "Núcleo de Rodrigues, 8",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Dolorum saepe voluptas aperiam veniam corrupti sed.",
+    "data_criacao": {
+      "$date": "2025-10-29T21:39:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-30T03:39:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27ced"
+    },
+    "numero_pedido": "9723942237693",
+    "nome_cliente": "Samuel da Conceição",
+    "endereco_completo": "Recanto de Nascimento, 93",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Ducimus tempora quisquam.",
+    "data_criacao": {
+      "$date": "2025-08-06T12:45:06"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cee"
+    },
+    "numero_pedido": "9543757404147",
+    "nome_cliente": "João Santos",
+    "endereco_completo": "Largo de Cunha, 90",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Possimus quibusdam blanditiis quis totam suscipit quia.",
+    "data_criacao": {
+      "$date": "2025-10-31T05:30:11"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-31T16:30:48.905195"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cef"
+    },
+    "numero_pedido": "6305665866034",
+    "nome_cliente": "Mathias Sá",
+    "endereco_completo": "Colônia Enzo Macedo, 42",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nemo id voluptate commodi dolorum ipsum repellat dolore.",
+    "data_criacao": {
+      "$date": "2025-09-15T12:41:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-15T21:41:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf0"
+    },
+    "numero_pedido": "6610827358440",
+    "nome_cliente": "Sra. Laís Sousa",
+    "endereco_completo": "Parque Cardoso, 15",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "In fugiat accusamus officiis ratione animi illo.",
+    "data_criacao": {
+      "$date": "2025-10-27T12:44:09"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-28T12:44:09"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf1"
+    },
+    "numero_pedido": "0910677049267",
+    "nome_cliente": "Davi Fernandes",
+    "endereco_completo": "Recanto Valentim Silveira, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Quia quidem praesentium eligendi.",
+    "data_criacao": {
+      "$date": "2025-08-24T19:42:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-25T16:42:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf2"
+    },
+    "numero_pedido": "6307542356157",
+    "nome_cliente": "José Gomes",
+    "endereco_completo": "Alameda Cunha, 75",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Provident laborum pariatur quis qui enim ex.",
+    "data_criacao": {
+      "$date": "2025-09-28T16:37:11"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-30T16:37:11"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf3"
+    },
+    "numero_pedido": "3299034067302",
+    "nome_cliente": "Benicio Pacheco",
+    "endereco_completo": "Trevo de Dias, 1",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Ipsa facere tempore.",
+    "data_criacao": {
+      "$date": "2025-08-13T05:35:53"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-13T10:35:53"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf4"
+    },
+    "numero_pedido": "4625787568619",
+    "nome_cliente": "Otto Mendes",
+    "endereco_completo": "Travessa Letícia Pimenta, 47",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Hic accusantium eaque laboriosam omnis possimus necessitatibus.",
+    "data_criacao": {
+      "$date": "2025-08-15T22:14:56"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf5"
+    },
+    "numero_pedido": "4734943122470",
+    "nome_cliente": "Yan Abreu",
+    "endereco_completo": "Vereda Maria Fernanda da Cruz, 75",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Debitis explicabo laudantium reiciendis repudiandae accusantium in unde.",
+    "data_criacao": {
+      "$date": "2025-09-13T08:46:30"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-15T05:46:30"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf6"
+    },
+    "numero_pedido": "9828568736169",
+    "nome_cliente": "Juliana Aparecida",
+    "endereco_completo": "Praia Luiz Henrique da Costa, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Libero distinctio commodi suscipit dolore doloribus veniam.",
+    "data_criacao": {
+      "$date": "2025-10-05T15:40:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-07T09:40:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf7"
+    },
+    "numero_pedido": "6783268181998",
+    "nome_cliente": "Nicole da Rosa",
+    "endereco_completo": "Pátio de Ramos, 57",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Saepe recusandae tempore repellendus iusto.",
+    "data_criacao": {
+      "$date": "2025-08-31T02:25:53"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-01T15:25:53"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf8"
+    },
+    "numero_pedido": "5004022853496",
+    "nome_cliente": "Luara Gomes",
+    "endereco_completo": "Residencial Bruno Correia, 83",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Ipsum doloremque itaque at.",
+    "data_criacao": {
+      "$date": "2025-09-09T11:16:35"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cf9"
+    },
+    "numero_pedido": "1526707262279",
+    "nome_cliente": "Ravi Nascimento",
+    "endereco_completo": "Fazenda Campos",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Sapiente quod corrupti.",
+    "data_criacao": {
+      "$date": "2025-08-12T17:20:34"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-13T08:20:34"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cfa"
+    },
+    "numero_pedido": "9362712555263",
+    "nome_cliente": "Sra. Yasmin Abreu",
+    "endereco_completo": "Viela Machado, 4",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ipsam et incidunt veritatis blanditiis.",
+    "data_criacao": {
+      "$date": "2025-08-29T05:08:36"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T22:08:36"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cfb"
+    },
+    "numero_pedido": "4731693767548",
+    "nome_cliente": "Olivia Dias",
+    "endereco_completo": "Viaduto de Mendes, 59",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quaerat dolores occaecati harum assumenda nihil natus.",
+    "data_criacao": {
+      "$date": "2025-10-17T17:42:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-19T10:42:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cfc"
+    },
+    "numero_pedido": "2740421161581",
+    "nome_cliente": "Mariana Farias",
+    "endereco_completo": "Condomínio Yan Pacheco",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellendus dolorem doloremque soluta dicta nesciunt suscipit.",
+    "data_criacao": {
+      "$date": "2025-09-09T22:05:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-11T04:05:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cfd"
+    },
+    "numero_pedido": "2764248387177",
+    "nome_cliente": "Davi Siqueira",
+    "endereco_completo": "Avenida Pedro Ribeiro, 74",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellendus enim adipisci.",
+    "data_criacao": {
+      "$date": "2025-10-16T15:33:56"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T20:33:56"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cfe"
+    },
+    "numero_pedido": "3643304713879",
+    "nome_cliente": "Lucas Fonseca",
+    "endereco_completo": "Praia de Barros",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Ratione sapiente consequuntur non adipisci quae.",
+    "data_criacao": {
+      "$date": "2025-09-21T03:34:38"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-21T15:34:38"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27cff"
+    },
+    "numero_pedido": "7937694860838",
+    "nome_cliente": "Manuela Peixoto",
+    "endereco_completo": "Área Manuela Souza, 96",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Dolorem distinctio voluptas quos ratione rem explicabo.",
+    "data_criacao": {
+      "$date": "2025-09-20T05:06:20"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-21T21:06:20"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d00"
+    },
+    "numero_pedido": "3082346198471",
+    "nome_cliente": "Manuella Sá",
+    "endereco_completo": "Rua de Ribeiro, 44",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quo non saepe commodi quibusdam excepturi magni.",
+    "data_criacao": {
+      "$date": "2025-10-14T08:03:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-15T18:03:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d01"
+    },
+    "numero_pedido": "6284854690721",
+    "nome_cliente": "Antônio Novaes",
+    "endereco_completo": "Lago de Alves, 41",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Aut maxime quaerat saepe modi adipisci.",
+    "data_criacao": {
+      "$date": "2025-09-24T13:45:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-25T08:45:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d02"
+    },
+    "numero_pedido": "4462733093258",
+    "nome_cliente": "Raquel Vieira",
+    "endereco_completo": "Esplanada Emanuella Rezende, 43",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Nesciunt dolor nam magni quis.",
+    "data_criacao": {
+      "$date": "2025-09-07T06:53:47"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-07T08:53:47"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d03"
+    },
+    "numero_pedido": "3025953295096",
+    "nome_cliente": "Hadassa Moreira",
+    "endereco_completo": "Chácara Martins, 89",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Iste ipsam ratione ratione.",
+    "data_criacao": {
+      "$date": "2025-08-05T03:32:06"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T13:32:06"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d04"
+    },
+    "numero_pedido": "3136688253746",
+    "nome_cliente": "Pietra Lopes",
+    "endereco_completo": "Condomínio da Luz, 55",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Beatae ex corporis minus numquam.",
+    "data_criacao": {
+      "$date": "2025-08-19T05:12:48"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-20T20:12:48"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d05"
+    },
+    "numero_pedido": "1714112063158",
+    "nome_cliente": "João Sá",
+    "endereco_completo": "Chácara de Freitas, 838",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Neque veniam vitae placeat ipsum reiciendis quod.",
+    "data_criacao": {
+      "$date": "2025-08-04T04:15:54"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T02:15:54"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d06"
+    },
+    "numero_pedido": "5048735876243",
+    "nome_cliente": "Luísa Fogaça",
+    "endereco_completo": "Recanto Eduardo Câmara",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Soluta quibusdam repellendus molestiae eaque quis autem explicabo.",
+    "data_criacao": {
+      "$date": "2025-09-13T22:52:02"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-14T09:52:02"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d07"
+    },
+    "numero_pedido": "4370410762710",
+    "nome_cliente": "Cecilia Camargo",
+    "endereco_completo": "Jardim de Jesus",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Consequatur ipsum reiciendis error.",
+    "data_criacao": {
+      "$date": "2025-10-06T23:22:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-08T15:22:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d08"
+    },
+    "numero_pedido": "8262757874385",
+    "nome_cliente": "Davi Luiz da Conceição",
+    "endereco_completo": "Trecho Yago Viana",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ex soluta ullam corrupti ullam at.",
+    "data_criacao": {
+      "$date": "2025-10-16T19:03:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-18T09:03:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d09"
+    },
+    "numero_pedido": "6178909849885",
+    "nome_cliente": "Marcelo Sampaio",
+    "endereco_completo": "Área Liz Garcia",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Similique eligendi voluptas atque necessitatibus non illo.",
+    "data_criacao": {
+      "$date": "2025-09-01T18:40:04"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-03T15:40:04"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0a"
+    },
+    "numero_pedido": "5387338303375",
+    "nome_cliente": "Sr. Théo Siqueira",
+    "endereco_completo": "Trecho de Borges, 20",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Tempore modi harum eos blanditiis hic nostrum.",
+    "data_criacao": {
+      "$date": "2025-09-12T10:09:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-14T06:09:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0b"
+    },
+    "numero_pedido": "5750495338793",
+    "nome_cliente": "Isaque Nunes",
+    "endereco_completo": "Área Helena Cavalcanti, 127",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Maxime voluptatum provident ea.",
+    "data_criacao": {
+      "$date": "2025-08-11T03:09:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-11T07:09:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0c"
+    },
+    "numero_pedido": "3689067996685",
+    "nome_cliente": "José Pedro Aparecida",
+    "endereco_completo": "Parque Sampaio, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Esse mollitia sed nesciunt.",
+    "data_criacao": {
+      "$date": "2025-10-05T18:37:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-05T19:37:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0d"
+    },
+    "numero_pedido": "4302819237209",
+    "nome_cliente": "Sra. Raquel Pires",
+    "endereco_completo": "Rua Brito, 170",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Dignissimos dolore distinctio blanditiis praesentium.",
+    "data_criacao": {
+      "$date": "2025-09-18T05:59:12"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-19T18:59:12"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0e"
+    },
+    "numero_pedido": "1065432407277",
+    "nome_cliente": "Yan Jesus",
+    "endereco_completo": "Jardim de Borges, 59",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Reprehenderit harum temporibus vero.",
+    "data_criacao": {
+      "$date": "2025-10-16T23:15:03"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d0f"
+    },
+    "numero_pedido": "1450413868022",
+    "nome_cliente": "Ravi Lucca Rocha",
+    "endereco_completo": "Quadra Rafaela Garcia, 89",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Veniam unde eveniet nulla eum quisquam ducimus quos.",
+    "data_criacao": {
+      "$date": "2025-10-01T04:33:00"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-01T12:33:00"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d10"
+    },
+    "numero_pedido": "0848730263544",
+    "nome_cliente": "Maria Flor Costela",
+    "endereco_completo": "Feira Viana, 909",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptatem deserunt non explicabo maxime accusamus pariatur.",
+    "data_criacao": {
+      "$date": "2025-10-02T04:17:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-03T02:17:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d11"
+    },
+    "numero_pedido": "5248819154391",
+    "nome_cliente": "Maria Júlia Andrade",
+    "endereco_completo": "Pátio de Duarte, 87",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Eaque reprehenderit aspernatur sequi.",
+    "data_criacao": {
+      "$date": "2025-09-07T03:10:22"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-07T09:10:22"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d12"
+    },
+    "numero_pedido": "9662793259143",
+    "nome_cliente": "Lucas Gabriel da Mata",
+    "endereco_completo": "Largo de Cassiano, 81",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Nisi dolorum voluptatem sequi nesciunt in.",
+    "data_criacao": {
+      "$date": "2025-08-13T19:29:14"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-15T11:29:14"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d13"
+    },
+    "numero_pedido": "9719925702494",
+    "nome_cliente": "Dante Souza",
+    "endereco_completo": "Pátio Siqueira, 35",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Exercitationem et suscipit numquam officia repellat.",
+    "data_criacao": {
+      "$date": "2025-10-29T09:11:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-30T04:11:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d14"
+    },
+    "numero_pedido": "4243795975832",
+    "nome_cliente": "Luiza Cirino",
+    "endereco_completo": "Viaduto Sá, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Qui eaque iusto.",
+    "data_criacao": {
+      "$date": "2025-09-29T04:51:05"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d15"
+    },
+    "numero_pedido": "8600571351352",
+    "nome_cliente": "Mariah da Rocha",
+    "endereco_completo": "Recanto de Rocha, 2",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Illo dolores fuga quae laboriosam reprehenderit quisquam.",
+    "data_criacao": {
+      "$date": "2025-08-04T05:49:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T19:49:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d16"
+    },
+    "numero_pedido": "7104618542952",
+    "nome_cliente": "Felipe da Mata",
+    "endereco_completo": "Esplanada de Gonçalves, 17",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Molestiae eius in provident.",
+    "data_criacao": {
+      "$date": "2025-10-15T02:05:39"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-15T19:05:39"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d17"
+    },
+    "numero_pedido": "1476323885782",
+    "nome_cliente": "Dr. Paulo Duarte",
+    "endereco_completo": "Rua Aragão, 124",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Vero veniam incidunt totam.",
+    "data_criacao": {
+      "$date": "2025-08-14T14:54:43"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-15T06:54:43"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d18"
+    },
+    "numero_pedido": "3346892154658",
+    "nome_cliente": "Daniel Machado",
+    "endereco_completo": "Praia Mariana Lima, 18",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Pariatur tempora cum sequi at dignissimos.",
+    "data_criacao": {
+      "$date": "2025-08-11T04:47:31"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-12T14:47:31"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d19"
+    },
+    "numero_pedido": "0224035169451",
+    "nome_cliente": "Ana da Rosa",
+    "endereco_completo": "Trevo Giovanna Camargo, 78",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Odio officiis illum blanditiis aut possimus vero.",
+    "data_criacao": {
+      "$date": "2025-09-25T15:44:59"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1a"
+    },
+    "numero_pedido": "9457788959760",
+    "nome_cliente": "Lucas Gabriel Costa",
+    "endereco_completo": "Vale Vieira, 599",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Labore molestiae quasi illum officiis quaerat.",
+    "data_criacao": {
+      "$date": "2025-08-31T05:49:57"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1b"
+    },
+    "numero_pedido": "9853216779502",
+    "nome_cliente": "Bruno Vargas",
+    "endereco_completo": "Viela Mariah Machado, 97",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Molestias dolorem ea sequi deserunt ducimus qui tempora.",
+    "data_criacao": {
+      "$date": "2025-10-25T19:01:35"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1c"
+    },
+    "numero_pedido": "5951848533364",
+    "nome_cliente": "Miguel Barros",
+    "endereco_completo": "Residencial Ferreira, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Autem enim tempore.",
+    "data_criacao": {
+      "$date": "2025-10-11T08:25:55"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-13T00:25:55"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1d"
+    },
+    "numero_pedido": "2308767163302",
+    "nome_cliente": "Heloísa Araújo",
+    "endereco_completo": "Vila Sabrina Cavalcante, 84",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Omnis quaerat pariatur consectetur laborum quam expedita.",
+    "data_criacao": {
+      "$date": "2025-10-20T08:07:27"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-21T00:07:27"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1e"
+    },
+    "numero_pedido": "0124130087110",
+    "nome_cliente": "Valentina Gomes",
+    "endereco_completo": "Esplanada Guerra, 60",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Exercitationem amet id eaque.",
+    "data_criacao": {
+      "$date": "2025-09-18T09:42:49"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-18T18:42:49"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d1f"
+    },
+    "numero_pedido": "8985935146288",
+    "nome_cliente": "Théo Silva",
+    "endereco_completo": "Setor Abreu, 36",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Fugit voluptatibus commodi rerum error adipisci.",
+    "data_criacao": {
+      "$date": "2025-10-04T06:39:28"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-04T19:39:28"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d20"
+    },
+    "numero_pedido": "3065022251202",
+    "nome_cliente": "Maria Eduarda Gonçalves",
+    "endereco_completo": "Viela de Farias, 64",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Aut id labore facilis laborum.",
+    "data_criacao": {
+      "$date": "2025-09-20T10:34:21"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-21T16:34:21"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d21"
+    },
+    "numero_pedido": "9926847280010",
+    "nome_cliente": "Bruno da Luz",
+    "endereco_completo": "Conjunto Juliana Correia, 299",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Culpa consectetur aut sunt ipsam.",
+    "data_criacao": {
+      "$date": "2025-10-13T23:09:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-14T21:09:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d22"
+    },
+    "numero_pedido": "9947700969620",
+    "nome_cliente": "Emanuel Marques",
+    "endereco_completo": "Avenida João Lucas Marques, 647",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Culpa porro hic totam mollitia.",
+    "data_criacao": {
+      "$date": "2025-08-27T12:12:21"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T00:12:21"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d23"
+    },
+    "numero_pedido": "2638638908733",
+    "nome_cliente": "Ana Luiza Nunes",
+    "endereco_completo": "Jardim Otávio Rezende, 377",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptates beatae repudiandae inventore quibusdam.",
+    "data_criacao": {
+      "$date": "2025-09-03T23:43:49"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-05T02:43:49"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d24"
+    },
+    "numero_pedido": "1869945831822",
+    "nome_cliente": "Joana Correia",
+    "endereco_completo": "Pátio Albuquerque, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Quos nostrum in exercitationem repellendus porro eum.",
+    "data_criacao": {
+      "$date": "2025-10-04T03:22:40"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d25"
+    },
+    "numero_pedido": "0708403870632",
+    "nome_cliente": "Catarina Barros",
+    "endereco_completo": "Núcleo Lucca da Rocha, 69",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Quisquam quas pariatur.",
+    "data_criacao": {
+      "$date": "2025-08-25T14:42:59"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d26"
+    },
+    "numero_pedido": "6870926022738",
+    "nome_cliente": "João Vitor Pimenta",
+    "endereco_completo": "Fazenda de Teixeira, 11",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Recusandae velit optio error.",
+    "data_criacao": {
+      "$date": "2025-09-09T17:24:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-11T17:24:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d27"
+    },
+    "numero_pedido": "9876930891336",
+    "nome_cliente": "Vitor Hugo Alves",
+    "endereco_completo": "Trevo Lopes, 20",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Quas quam facere soluta a facilis.",
+    "data_criacao": {
+      "$date": "2025-10-14T16:42:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-14T19:42:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d28"
+    },
+    "numero_pedido": "5261831678027",
+    "nome_cliente": "Luna Mendes",
+    "endereco_completo": "Esplanada Diego Lima, 41",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Doloremque voluptatibus aperiam voluptatem nobis possimus pariatur.",
+    "data_criacao": {
+      "$date": "2025-08-18T13:57:32"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-18T19:57:32"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d29"
+    },
+    "numero_pedido": "4664695787798",
+    "nome_cliente": "Arthur Gabriel Borges",
+    "endereco_completo": "Travessa de da Cunha, 98",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Est non placeat esse optio sunt.",
+    "data_criacao": {
+      "$date": "2025-08-21T04:01:31"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-22T08:01:31"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2a"
+    },
+    "numero_pedido": "7021861169142",
+    "nome_cliente": "Caio da Paz",
+    "endereco_completo": "Aeroporto Almeida, 99",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Laborum quis tempora hic error perferendis.",
+    "data_criacao": {
+      "$date": "2025-10-10T18:55:55"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-11T04:55:55"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2b"
+    },
+    "numero_pedido": "0619991953679",
+    "nome_cliente": "Heloisa Azevedo",
+    "endereco_completo": "Ladeira Murilo Freitas, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Est blanditiis quas iure.",
+    "data_criacao": {
+      "$date": "2025-09-19T13:25:37"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2c"
+    },
+    "numero_pedido": "5817522711773",
+    "nome_cliente": "Miguel Teixeira",
+    "endereco_completo": "Avenida Enzo Alves, 29",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Aperiam sint blanditiis necessitatibus ullam accusamus accusamus.",
+    "data_criacao": {
+      "$date": "2025-09-18T17:00:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-19T14:00:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2d"
+    },
+    "numero_pedido": "8648013441117",
+    "nome_cliente": "Pedro Souza",
+    "endereco_completo": "Conjunto de Santos, 60",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nam repellat natus libero tempore expedita occaecati.",
+    "data_criacao": {
+      "$date": "2025-08-07T14:26:47"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-09T08:26:47"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2e"
+    },
+    "numero_pedido": "6465008109522",
+    "nome_cliente": "Clarice Freitas",
+    "endereco_completo": "Trevo de Abreu, 12",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Esse occaecati quod ducimus consequatur.",
+    "data_criacao": {
+      "$date": "2025-08-08T21:02:29"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d2f"
+    },
+    "numero_pedido": "4506255513044",
+    "nome_cliente": "Luiz Otávio Carvalho",
+    "endereco_completo": "Estrada Costa, 204",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Consectetur eius consequuntur incidunt.",
+    "data_criacao": {
+      "$date": "2025-10-03T03:47:08"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-04T20:47:08"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d30"
+    },
+    "numero_pedido": "3176507171950",
+    "nome_cliente": "Ana Luiza Novaes",
+    "endereco_completo": "Feira de Sá, 41",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Cupiditate illo mollitia tempora vero.",
+    "data_criacao": {
+      "$date": "2025-10-07T23:26:53"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-09T13:26:53"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d31"
+    },
+    "numero_pedido": "1704723399074",
+    "nome_cliente": "Davi Luiz Cavalcanti",
+    "endereco_completo": "Setor de Pacheco, 15",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Enim hic et exercitationem accusamus.",
+    "data_criacao": {
+      "$date": "2025-10-29T09:25:37"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d32"
+    },
+    "numero_pedido": "5148163596628",
+    "nome_cliente": "Raquel Leão",
+    "endereco_completo": "Largo Asafe Sales, 290",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Nisi sapiente illo incidunt voluptatibus sit assumenda.",
+    "data_criacao": {
+      "$date": "2025-09-08T07:11:41"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d33"
+    },
+    "numero_pedido": "2023520778516",
+    "nome_cliente": "Sara Rodrigues",
+    "endereco_completo": "Estrada Alves, 40",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Tempora nam recusandae praesentium asperiores delectus.",
+    "data_criacao": {
+      "$date": "2025-10-13T13:24:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-14T00:24:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d34"
+    },
+    "numero_pedido": "7281156910891",
+    "nome_cliente": "Srta. Ana Liz Vieira",
+    "endereco_completo": "Pátio Davi Miguel Novais, 44",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Consequatur doloremque amet nesciunt praesentium maiores distinctio.",
+    "data_criacao": {
+      "$date": "2025-08-05T11:11:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T19:11:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d35"
+    },
+    "numero_pedido": "2633748161399",
+    "nome_cliente": "Maitê Alves",
+    "endereco_completo": "Avenida Lunna Nunes, 6",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Minus exercitationem ea eligendi.",
+    "data_criacao": {
+      "$date": "2025-10-16T16:01:56"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T17:01:56"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d36"
+    },
+    "numero_pedido": "5774097899308",
+    "nome_cliente": "Dr. João Lucas Câmara",
+    "endereco_completo": "Vereda Isabela Ramos, 12",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Recusandae adipisci quo ab dolore sunt facilis.",
+    "data_criacao": {
+      "$date": "2025-10-29T00:49:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-29T14:49:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d37"
+    },
+    "numero_pedido": "3546856260801",
+    "nome_cliente": "Benjamim Barbosa",
+    "endereco_completo": "Área de Cirino, 62",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Amet nisi nulla quia recusandae quam possimus.",
+    "data_criacao": {
+      "$date": "2025-09-14T00:41:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-14T04:41:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d38"
+    },
+    "numero_pedido": "4087638676513",
+    "nome_cliente": "Léo Leão",
+    "endereco_completo": "Trevo Milena Santos, 72",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quia qui beatae saepe quae quis.",
+    "data_criacao": {
+      "$date": "2025-10-17T13:22:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-18T17:22:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d39"
+    },
+    "numero_pedido": "1125946015679",
+    "nome_cliente": "Helena Porto",
+    "endereco_completo": "Estrada de Aragão, 29",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Voluptatibus fugiat repellendus eligendi suscipit rem.",
+    "data_criacao": {
+      "$date": "2025-10-17T01:07:49"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T18:07:49"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3a"
+    },
+    "numero_pedido": "3283477511645",
+    "nome_cliente": "Marcelo da Mata",
+    "endereco_completo": "Alameda de Monteiro",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Eaque veritatis a adipisci saepe perferendis officia omnis.",
+    "data_criacao": {
+      "$date": "2025-09-20T17:28:29"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-22T11:28:29"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3b"
+    },
+    "numero_pedido": "4520949669619",
+    "nome_cliente": "Maria Sophia Santos",
+    "endereco_completo": "Setor Josué da Costa, 38",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Odio eaque aperiam voluptas aliquam.",
+    "data_criacao": {
+      "$date": "2025-09-15T18:05:02"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-17T16:05:02"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3c"
+    },
+    "numero_pedido": "2812791650610",
+    "nome_cliente": "Alexia Aparecida",
+    "endereco_completo": "Residencial Nunes, 750",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Aliquid fugiat officiis esse quidem culpa.",
+    "data_criacao": {
+      "$date": "2025-09-14T22:57:14"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-15T14:57:14"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3d"
+    },
+    "numero_pedido": "5622213824621",
+    "nome_cliente": "Joaquim Rodrigues",
+    "endereco_completo": "Loteamento de Farias, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Officia eos omnis reprehenderit deleniti fugit.",
+    "data_criacao": {
+      "$date": "2025-10-04T03:06:48"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-05T04:06:48"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3e"
+    },
+    "numero_pedido": "3774100704966",
+    "nome_cliente": "Leandro Siqueira",
+    "endereco_completo": "Viela Diogo Costa, 46",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellendus esse quos quos.",
+    "data_criacao": {
+      "$date": "2025-10-25T06:36:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-25T15:36:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d3f"
+    },
+    "numero_pedido": "8944755545046",
+    "nome_cliente": "Arthur Miguel Barros",
+    "endereco_completo": "Parque Manuella Teixeira, 26",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Eos dignissimos tempore maiores.",
+    "data_criacao": {
+      "$date": "2025-08-04T11:02:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T06:02:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d40"
+    },
+    "numero_pedido": "8607017191695",
+    "nome_cliente": "Caroline Viana",
+    "endereco_completo": "Largo José Cunha, 26",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Aut aut amet tempore commodi nobis.",
+    "data_criacao": {
+      "$date": "2025-08-19T11:07:10"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-20T22:07:10"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d41"
+    },
+    "numero_pedido": "3265968397938",
+    "nome_cliente": "Thiago Castro",
+    "endereco_completo": "Lago Freitas, 2",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Tenetur quisquam accusamus ducimus incidunt quasi libero.",
+    "data_criacao": {
+      "$date": "2025-08-04T04:15:38"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d42"
+    },
+    "numero_pedido": "9326396697817",
+    "nome_cliente": "Gabriela Moraes",
+    "endereco_completo": "Vale da Luz, 7",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Totam earum laborum modi porro quas.",
+    "data_criacao": {
+      "$date": "2025-10-16T21:51:01"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-18T11:51:01"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d43"
+    },
+    "numero_pedido": "6805997062123",
+    "nome_cliente": "Kevin Montenegro",
+    "endereco_completo": "Viaduto Ribeiro, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Nemo odio ratione porro sed id veniam.",
+    "data_criacao": {
+      "$date": "2025-08-22T10:58:27"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-23T11:58:27"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d44"
+    },
+    "numero_pedido": "0321257607720",
+    "nome_cliente": "Davi Lucas Freitas",
+    "endereco_completo": "Estrada Ana Ramos",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Mollitia ipsum aliquam quia nisi repellat.",
+    "data_criacao": {
+      "$date": "2025-10-05T15:45:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-06T14:45:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d45"
+    },
+    "numero_pedido": "5371620504144",
+    "nome_cliente": "Carolina da Cruz",
+    "endereco_completo": "Aeroporto de Cassiano, 98",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Sunt inventore deserunt vitae cupiditate commodi.",
+    "data_criacao": {
+      "$date": "2025-08-30T12:14:54"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T15:14:54"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d46"
+    },
+    "numero_pedido": "2108281166496",
+    "nome_cliente": "Calebe Vargas",
+    "endereco_completo": "Setor Benjamim Almeida",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Delectus veniam rerum iste vel.",
+    "data_criacao": {
+      "$date": "2025-09-24T21:53:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-24T23:53:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d47"
+    },
+    "numero_pedido": "7639252468172",
+    "nome_cliente": "Sra. Raquel da Mota",
+    "endereco_completo": "Lago Benício Cunha, 35",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Deserunt eos enim fuga vel provident temporibus.",
+    "data_criacao": {
+      "$date": "2025-08-03T02:55:00"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T02:55:00"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d48"
+    },
+    "numero_pedido": "2785324207202",
+    "nome_cliente": "Lucca Fonseca",
+    "endereco_completo": "Núcleo de da Cruz, 225",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Accusantium a enim corrupti veritatis reprehenderit commodi.",
+    "data_criacao": {
+      "$date": "2025-09-21T08:08:59"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d49"
+    },
+    "numero_pedido": "3256395452994",
+    "nome_cliente": "Dr. João Gabriel Mendes",
+    "endereco_completo": "Distrito de Sousa, 32",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Illo consequatur eveniet.",
+    "data_criacao": {
+      "$date": "2025-09-11T00:01:20"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-12T13:01:20"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4a"
+    },
+    "numero_pedido": "9793361493659",
+    "nome_cliente": "Julia da Cruz",
+    "endereco_completo": "Colônia Alves, 70",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Earum doloremque harum sequi provident cumque.",
+    "data_criacao": {
+      "$date": "2025-10-09T04:08:34"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-10T13:08:34"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4b"
+    },
+    "numero_pedido": "5000629208677",
+    "nome_cliente": "Isabel Garcia",
+    "endereco_completo": "Largo de Dias, 52",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Officiis earum atque iure.",
+    "data_criacao": {
+      "$date": "2025-08-14T13:32:45"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4c"
+    },
+    "numero_pedido": "3517434793103",
+    "nome_cliente": "Srta. Gabriela Santos",
+    "endereco_completo": "Rua Anthony Ribeiro, 18",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Nobis autem accusamus molestiae amet.",
+    "data_criacao": {
+      "$date": "2025-08-04T03:11:09"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T09:11:09"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4d"
+    },
+    "numero_pedido": "3524283680690",
+    "nome_cliente": "Francisco Vasconcelos",
+    "endereco_completo": "Alameda Asafe Nunes, 35",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Dolorum numquam voluptas ipsum modi reprehenderit aut.",
+    "data_criacao": {
+      "$date": "2025-10-24T02:18:51"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-24T06:18:51"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4e"
+    },
+    "numero_pedido": "7245666548296",
+    "nome_cliente": "Gael Henrique Novais",
+    "endereco_completo": "Avenida Almeida, 23",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Facere quod at quos.",
+    "data_criacao": {
+      "$date": "2025-09-28T17:50:52"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-30T13:50:52"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d4f"
+    },
+    "numero_pedido": "5262401040671",
+    "nome_cliente": "Maitê Lima",
+    "endereco_completo": "Lagoa da Conceição, 13",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Dolore autem at suscipit autem unde harum.",
+    "data_criacao": {
+      "$date": "2025-09-05T20:23:28"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d50"
+    },
+    "numero_pedido": "2544275094602",
+    "nome_cliente": "Maria Sales",
+    "endereco_completo": "Aeroporto Vasconcelos, 80",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Aperiam laborum deserunt odit.",
+    "data_criacao": {
+      "$date": "2025-08-25T18:33:47"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d51"
+    },
+    "numero_pedido": "4982944235303",
+    "nome_cliente": "Sophie Nunes",
+    "endereco_completo": "Rua de Rezende, 18",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Numquam nihil non eos laudantium natus.",
+    "data_criacao": {
+      "$date": "2025-10-17T21:26:19"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-18T03:26:19"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d52"
+    },
+    "numero_pedido": "4905650998133",
+    "nome_cliente": "Srta. Sofia Freitas",
+    "endereco_completo": "Morro Isabela Caldeira, 90",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nam accusantium eius.",
+    "data_criacao": {
+      "$date": "2025-08-13T19:25:14"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-15T03:25:14"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d53"
+    },
+    "numero_pedido": "8852707706578",
+    "nome_cliente": "Yan Alves",
+    "endereco_completo": "Estrada de Fonseca, 100",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Doloribus sapiente blanditiis dolor blanditiis vitae.",
+    "data_criacao": {
+      "$date": "2025-08-31T08:04:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T12:04:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d54"
+    },
+    "numero_pedido": "5799275286695",
+    "nome_cliente": "Lara Sales",
+    "endereco_completo": "Núcleo de Rocha",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Sapiente optio repudiandae neque voluptatibus ad.",
+    "data_criacao": {
+      "$date": "2025-08-07T00:38:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-07T15:38:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d55"
+    },
+    "numero_pedido": "4064665181616",
+    "nome_cliente": "Emanuelly Costela",
+    "endereco_completo": "Vereda da Cruz, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Dolore aut voluptas dicta.",
+    "data_criacao": {
+      "$date": "2025-08-23T09:50:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T23:50:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d56"
+    },
+    "numero_pedido": "0581450256884",
+    "nome_cliente": "Maria Vitória Vieira",
+    "endereco_completo": "Estrada Fogaça",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Nisi odio dignissimos nostrum occaecati blanditiis rerum.",
+    "data_criacao": {
+      "$date": "2025-09-13T07:27:44"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-14T13:27:44"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d57"
+    },
+    "numero_pedido": "5160774413408",
+    "nome_cliente": "Maria Luiza da Costa",
+    "endereco_completo": "Pátio Dias, 85",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Nisi minus dicta amet.",
+    "data_criacao": {
+      "$date": "2025-08-03T09:01:56"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-04T17:01:56"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d58"
+    },
+    "numero_pedido": "4364080129775",
+    "nome_cliente": "Augusto Novais",
+    "endereco_completo": "Estação Brenda da Paz, 97",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Veritatis aperiam deserunt harum dolore error.",
+    "data_criacao": {
+      "$date": "2025-10-23T05:24:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-24T14:24:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d59"
+    },
+    "numero_pedido": "5847832708552",
+    "nome_cliente": "Sra. Maria Isis Castro",
+    "endereco_completo": "Campo Casa Grande",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Blanditiis blanditiis error ut labore soluta aspernatur reiciendis.",
+    "data_criacao": {
+      "$date": "2025-10-12T22:37:56"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-13T01:37:56"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5a"
+    },
+    "numero_pedido": "7231149468403",
+    "nome_cliente": "Eloá Vargas",
+    "endereco_completo": "Conjunto Alexandre Costela, 35",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Ab fuga blanditiis autem voluptatem nam possimus.",
+    "data_criacao": {
+      "$date": "2025-08-28T16:46:03"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-30T13:46:03"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5b"
+    },
+    "numero_pedido": "0827818227098",
+    "nome_cliente": "Eduardo Campos",
+    "endereco_completo": "Núcleo Maria Sophia Cassiano, 398",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Neque accusantium aut.",
+    "data_criacao": {
+      "$date": "2025-09-30T10:15:28"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-02T02:15:28"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5c"
+    },
+    "numero_pedido": "0391961925656",
+    "nome_cliente": "Maria Sophia Macedo",
+    "endereco_completo": "Trevo de Almeida",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Doloremque eos quae possimus occaecati ducimus.",
+    "data_criacao": {
+      "$date": "2025-09-18T08:00:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-19T21:00:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5d"
+    },
+    "numero_pedido": "1589038927330",
+    "nome_cliente": "Dr. Vitor Hugo Sampaio",
+    "endereco_completo": "Setor de Carvalho, 8",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Pariatur veritatis facilis tempore mollitia a.",
+    "data_criacao": {
+      "$date": "2025-09-09T01:58:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-10T04:58:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5e"
+    },
+    "numero_pedido": "1267319769922",
+    "nome_cliente": "Pietra Dias",
+    "endereco_completo": "Conjunto da Cruz, 57",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Deserunt iusto officia saepe.",
+    "data_criacao": {
+      "$date": "2025-10-19T08:48:58"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-20T11:48:58"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d5f"
+    },
+    "numero_pedido": "6026787617563",
+    "nome_cliente": "Luan Cassiano",
+    "endereco_completo": "Viaduto Costela, 54",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Atque pariatur atque rem eum fugiat.",
+    "data_criacao": {
+      "$date": "2025-10-03T12:18:04"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-04T12:18:04"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d60"
+    },
+    "numero_pedido": "4345422819615",
+    "nome_cliente": "Maysa Almeida",
+    "endereco_completo": "Lago de da Mata, 58",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Explicabo occaecati similique quis.",
+    "data_criacao": {
+      "$date": "2025-10-02T07:10:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-02T08:10:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d61"
+    },
+    "numero_pedido": "5094216809668",
+    "nome_cliente": "Isabela Melo",
+    "endereco_completo": "Trecho de Cunha, 75",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Animi sed at itaque impedit.",
+    "data_criacao": {
+      "$date": "2025-10-17T01:45:36"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T03:45:36"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d62"
+    },
+    "numero_pedido": "7814521384371",
+    "nome_cliente": "Lucas Gabriel Gomes",
+    "endereco_completo": "Jardim Rezende, 53",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur libero magni.",
+    "data_criacao": {
+      "$date": "2025-09-30T22:00:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-02T13:00:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d63"
+    },
+    "numero_pedido": "0435886299536",
+    "nome_cliente": "Carolina da Mata",
+    "endereco_completo": "Jardim Moraes, 43",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Sapiente doloremque natus dolor illum.",
+    "data_criacao": {
+      "$date": "2025-10-16T05:05:34"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-17T05:05:34"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d64"
+    },
+    "numero_pedido": "8622647153349",
+    "nome_cliente": "Isaque Gonçalves",
+    "endereco_completo": "Vereda Martins, 17",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Accusamus vel incidunt id.",
+    "data_criacao": {
+      "$date": "2025-08-29T23:17:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T16:17:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d65"
+    },
+    "numero_pedido": "3959683505548",
+    "nome_cliente": "Vicente Nogueira",
+    "endereco_completo": "Estrada Sophie Melo, 86",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Molestias minus suscipit eveniet ab corrupti.",
+    "data_criacao": {
+      "$date": "2025-10-28T07:08:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-28T11:08:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d66"
+    },
+    "numero_pedido": "1125781700921",
+    "nome_cliente": "Amanda Pimenta",
+    "endereco_completo": "Trecho de Jesus, 587",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Velit soluta nemo quas.",
+    "data_criacao": {
+      "$date": "2025-09-01T17:18:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-03T03:18:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d67"
+    },
+    "numero_pedido": "2345611023085",
+    "nome_cliente": "Srta. Ana Julia Jesus",
+    "endereco_completo": "Jardim de da Rocha, 231",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Corrupti possimus autem maxime aperiam similique consequuntur.",
+    "data_criacao": {
+      "$date": "2025-08-18T01:00:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-18T20:00:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d68"
+    },
+    "numero_pedido": "1949898506258",
+    "nome_cliente": "Thales Machado",
+    "endereco_completo": "Praia Maria Júlia Albuquerque, 9",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Eius laborum laboriosam delectus quibusdam soluta.",
+    "data_criacao": {
+      "$date": "2025-09-07T02:35:36"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d69"
+    },
+    "numero_pedido": "1767555425106",
+    "nome_cliente": "Diego Almeida",
+    "endereco_completo": "Trevo Ferreira, 401",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Iste unde iure.",
+    "data_criacao": {
+      "$date": "2025-10-19T01:04:51"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-19T23:04:51"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6a"
+    },
+    "numero_pedido": "8694529015038",
+    "nome_cliente": "Ágatha Viana",
+    "endereco_completo": "Morro Vitor Hugo Martins, 1",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ab porro hic exercitationem fugit aspernatur deleniti explicabo.",
+    "data_criacao": {
+      "$date": "2025-10-20T16:14:14"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-21T11:14:14"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6b"
+    },
+    "numero_pedido": "4393178179125",
+    "nome_cliente": "Rhavi Sales",
+    "endereco_completo": "Lagoa Agatha Melo, 19",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ipsa cumque molestiae explicabo.",
+    "data_criacao": {
+      "$date": "2025-09-15T06:45:35"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-17T05:45:35"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6c"
+    },
+    "numero_pedido": "1498396068275",
+    "nome_cliente": "Pedro Henrique Garcia",
+    "endereco_completo": "Trecho Oliveira, 69",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Expedita maxime ad quidem.",
+    "data_criacao": {
+      "$date": "2025-08-12T08:49:08"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-14T08:49:08"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6d"
+    },
+    "numero_pedido": "4929507512839",
+    "nome_cliente": "Nicole Casa Grande",
+    "endereco_completo": "Setor Siqueira, 19",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur alias suscipit deleniti iusto.",
+    "data_criacao": {
+      "$date": "2025-09-02T14:21:44"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-02T23:21:44"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6e"
+    },
+    "numero_pedido": "4473586745898",
+    "nome_cliente": "João Miguel Marques",
+    "endereco_completo": "Vale Mathias da Paz, 32",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Ad natus dolor molestiae voluptatem at iure quas.",
+    "data_criacao": {
+      "$date": "2025-10-03T07:31:43"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-03T17:31:43"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d6f"
+    },
+    "numero_pedido": "2566121121829",
+    "nome_cliente": "Cecília Caldeira",
+    "endereco_completo": "Sítio Maria Eduarda Santos, 9",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quasi magnam ab ullam at blanditiis ipsum libero.",
+    "data_criacao": {
+      "$date": "2025-10-20T05:36:18"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-20T22:36:18"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d70"
+    },
+    "numero_pedido": "5513613567440",
+    "nome_cliente": "Maria da Costa",
+    "endereco_completo": "Estrada de da Costa, 63",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Pendente",
+    "descricao_entrega": "Reprehenderit assumenda aliquam.",
+    "data_criacao": {
+      "$date": "2025-08-02T22:41:47"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d71"
+    },
+    "numero_pedido": "2212542262695",
+    "nome_cliente": "Luiz Otávio Nogueira",
+    "endereco_completo": "Residencial de Câmara, 12",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Eos quaerat perferendis nihil autem blanditiis a.",
+    "data_criacao": {
+      "$date": "2025-09-14T16:44:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-16T11:44:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d72"
+    },
+    "numero_pedido": "7509963921016",
+    "nome_cliente": "Melina Marques",
+    "endereco_completo": "Vila Maysa das Neves, 6",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellat enim porro quas quod rerum a.",
+    "data_criacao": {
+      "$date": "2025-09-12T19:45:58"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-13T08:45:58"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d73"
+    },
+    "numero_pedido": "2696119478816",
+    "nome_cliente": "Olívia Martins",
+    "endereco_completo": "Trecho Barbosa, 23",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Commodi optio repellat fuga inventore.",
+    "data_criacao": {
+      "$date": "2025-09-29T02:06:42"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-30T12:06:42"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d74"
+    },
+    "numero_pedido": "0237376972444",
+    "nome_cliente": "Dr. Mateus Rocha",
+    "endereco_completo": "Vila Barbosa, 36",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Repellat distinctio tempore illum voluptates ea.",
+    "data_criacao": {
+      "$date": "2025-10-13T22:02:13"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-14T14:02:13"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d75"
+    },
+    "numero_pedido": "3415748674364",
+    "nome_cliente": "Arthur Miguel Freitas",
+    "endereco_completo": "Parque Mendes, 29",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Corporis itaque id tempora minima neque.",
+    "data_criacao": {
+      "$date": "2025-09-09T06:53:43"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d76"
+    },
+    "numero_pedido": "2233936589211",
+    "nome_cliente": "Maria Alice Machado",
+    "endereco_completo": "Parque Joaquim Araújo",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Quidem necessitatibus impedit quod consequuntur a adipisci.",
+    "data_criacao": {
+      "$date": "2025-10-19T08:13:04"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-20T02:13:04"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d77"
+    },
+    "numero_pedido": "2247985544978",
+    "nome_cliente": "Luísa Câmara",
+    "endereco_completo": "Viela Araújo",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Fuga ipsam officia suscipit ea cumque quam vitae.",
+    "data_criacao": {
+      "$date": "2025-10-22T06:37:37"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-23T04:37:37"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d78"
+    },
+    "numero_pedido": "7801636912261",
+    "nome_cliente": "Nina Melo",
+    "endereco_completo": "Campo de Camargo, 4",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repellat iure itaque.",
+    "data_criacao": {
+      "$date": "2025-09-15T03:16:57"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-17T03:16:57"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d79"
+    },
+    "numero_pedido": "6440153889215",
+    "nome_cliente": "Hadassa Vargas",
+    "endereco_completo": "Praça da Cunha, 30",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Rem eum rem dolorem voluptatibus maxime et.",
+    "data_criacao": {
+      "$date": "2025-08-10T13:10:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-12T08:10:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7a"
+    },
+    "numero_pedido": "9328255434878",
+    "nome_cliente": "Pedro Henrique Farias",
+    "endereco_completo": "Setor Almeida, 62",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Vel consectetur iure mollitia facere fugit illum cumque.",
+    "data_criacao": {
+      "$date": "2025-08-03T19:28:30"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T06:28:30"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7b"
+    },
+    "numero_pedido": "5496229862249",
+    "nome_cliente": "Sr. Juan Rios",
+    "endereco_completo": "Estrada Sabrina Montenegro, 92",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Aspernatur culpa illum eum consequatur perferendis.",
+    "data_criacao": {
+      "$date": "2025-09-25T16:11:27"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-27T11:11:27"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7c"
+    },
+    "numero_pedido": "3050532612698",
+    "nome_cliente": "Olivia Nunes",
+    "endereco_completo": "Rua Barbosa",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ratione suscipit sapiente deleniti molestias dolor commodi.",
+    "data_criacao": {
+      "$date": "2025-10-05T14:05:57"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-05T19:05:57"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7d"
+    },
+    "numero_pedido": "2614260645802",
+    "nome_cliente": "Lorenzo Cavalcante",
+    "endereco_completo": "Vereda de Pimenta",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Deleniti eos temporibus.",
+    "data_criacao": {
+      "$date": "2025-08-21T19:18:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-23T04:18:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7e"
+    },
+    "numero_pedido": "7582465814581",
+    "nome_cliente": "Manuella Cirino",
+    "endereco_completo": "Quadra Teixeira, 99",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Occaecati excepturi a similique atque earum.",
+    "data_criacao": {
+      "$date": "2025-08-31T12:38:06"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d7f"
+    },
+    "numero_pedido": "1536444298981",
+    "nome_cliente": "Benicio Ribeiro",
+    "endereco_completo": "Colônia Rocha, 64",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Vel vel in perferendis impedit quasi praesentium.",
+    "data_criacao": {
+      "$date": "2025-08-29T23:56:23"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-31T05:56:23"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d80"
+    },
+    "numero_pedido": "5480227926553",
+    "nome_cliente": "Srta. Lara Dias",
+    "endereco_completo": "Trevo Pastor, 8",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Earum excepturi minus.",
+    "data_criacao": {
+      "$date": "2025-08-14T14:37:12"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-14T23:37:12"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d81"
+    },
+    "numero_pedido": "2991066801206",
+    "nome_cliente": "Paulo Pinto",
+    "endereco_completo": "Sítio Heitor Ribeiro, 30",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Pendente",
+    "descricao_entrega": "Recusandae velit eveniet reprehenderit.",
+    "data_criacao": {
+      "$date": "2025-08-11T05:27:56"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d82"
+    },
+    "numero_pedido": "2083088839272",
+    "nome_cliente": "Marcela da Cruz",
+    "endereco_completo": "Campo Casa Grande, 91",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Sit iusto beatae perferendis velit cumque incidunt.",
+    "data_criacao": {
+      "$date": "2025-09-03T21:31:25"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-05T13:31:25"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d83"
+    },
+    "numero_pedido": "6160824268117",
+    "nome_cliente": "Maria Vitória Alves",
+    "endereco_completo": "Trevo de Freitas, 96",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Totam nisi beatae cumque culpa maiores.",
+    "data_criacao": {
+      "$date": "2025-09-05T18:54:49"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-07T01:54:49"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d84"
+    },
+    "numero_pedido": "9873786805234",
+    "nome_cliente": "Eloá Pereira",
+    "endereco_completo": "Núcleo Gael Rios, 448",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Officiis culpa itaque distinctio.",
+    "data_criacao": {
+      "$date": "2025-08-09T19:58:07"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-09T23:58:07"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d85"
+    },
+    "numero_pedido": "9365940492874",
+    "nome_cliente": "Cauã Novais",
+    "endereco_completo": "Fazenda Moraes, 74",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Consectetur tempora veritatis vitae quibusdam.",
+    "data_criacao": {
+      "$date": "2025-08-17T05:59:39"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-18T20:59:39"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d86"
+    },
+    "numero_pedido": "8001939256706",
+    "nome_cliente": "Sr. Otto Rios",
+    "endereco_completo": "Pátio Montenegro, 25",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Doloribus libero magni.",
+    "data_criacao": {
+      "$date": "2025-08-28T16:21:36"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-28T17:21:36"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d87"
+    },
+    "numero_pedido": "2409789149845",
+    "nome_cliente": "Luara Freitas",
+    "endereco_completo": "Esplanada Lopes",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Iste assumenda laboriosam eveniet asperiores quaerat voluptatibus.",
+    "data_criacao": {
+      "$date": "2025-09-27T09:38:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-27T22:38:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d88"
+    },
+    "numero_pedido": "5055524166164",
+    "nome_cliente": "Sr. Vicente da Costa",
+    "endereco_completo": "Esplanada Leonardo Fogaça",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Error consequatur eius officiis.",
+    "data_criacao": {
+      "$date": "2025-09-10T16:40:51"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-10T18:40:51"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d89"
+    },
+    "numero_pedido": "7462091585980",
+    "nome_cliente": "Renan da Costa",
+    "endereco_completo": "Trecho Maria Helena Santos, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Em andamento",
+    "descricao_entrega": "Expedita voluptate possimus labore veniam quas minus.",
+    "data_criacao": {
+      "$date": "2025-09-07T07:40:54"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8a"
+    },
+    "numero_pedido": "9080979978853",
+    "nome_cliente": "Maria Sá",
+    "endereco_completo": "Sítio de Cunha, 10",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Rerum ipsam dolorem nam.",
+    "data_criacao": {
+      "$date": "2025-08-11T05:54:41"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-13T01:54:41"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8b"
+    },
+    "numero_pedido": "0825398794511",
+    "nome_cliente": "Dr. José Lopes",
+    "endereco_completo": "Rodovia de Montenegro, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Delectus veritatis voluptatibus molestiae impedit voluptate recusandae.",
+    "data_criacao": {
+      "$date": "2025-09-13T13:15:33"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8c"
+    },
+    "numero_pedido": "2901335075924",
+    "nome_cliente": "Julia da Mata",
+    "endereco_completo": "Lagoa Santos, 46",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Necessitatibus facilis possimus error.",
+    "data_criacao": {
+      "$date": "2025-09-07T05:35:57"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-08T15:35:57"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8d"
+    },
+    "numero_pedido": "4727274079018",
+    "nome_cliente": "Kevin Sá",
+    "endereco_completo": "Praça Alexandre Brito, 36",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Ad necessitatibus deserunt omnis ipsa nemo.",
+    "data_criacao": {
+      "$date": "2025-08-18T21:50:54"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-19T05:50:54"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8e"
+    },
+    "numero_pedido": "9875514902314",
+    "nome_cliente": "Marcelo Alves",
+    "endereco_completo": "Alameda Luigi Pires, 39",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Repudiandae ab non quaerat.",
+    "data_criacao": {
+      "$date": "2025-10-10T08:12:04"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-11T15:12:04"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d8f"
+    },
+    "numero_pedido": "2364024996311",
+    "nome_cliente": "Maria Isis Fernandes",
+    "endereco_completo": "Alameda Borges, 494",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Deserunt veritatis impedit suscipit sequi quia sunt.",
+    "data_criacao": {
+      "$date": "2025-10-08T18:27:03"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-10T17:27:03"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d90"
+    },
+    "numero_pedido": "8261414314097",
+    "nome_cliente": "Sr. João Vitor Almeida",
+    "endereco_completo": "Travessa Mariana Alves, 87",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Em andamento",
+    "descricao_entrega": "Nemo officia dolore.",
+    "data_criacao": {
+      "$date": "2025-10-29T00:02:57"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d91"
+    },
+    "numero_pedido": "6033264574608",
+    "nome_cliente": "Dra. Mariana Machado",
+    "endereco_completo": "Parque Ana Luiza Ribeiro, 31",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Em andamento",
+    "descricao_entrega": "Repellendus ipsa ratione magni id hic facere cumque.",
+    "data_criacao": {
+      "$date": "2025-08-16T12:01:58"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d92"
+    },
+    "numero_pedido": "8508656716068",
+    "nome_cliente": "Sra. Eloá Vieira",
+    "endereco_completo": "Loteamento Monteiro, 75",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Distinctio dolores quia eligendi voluptas assumenda nemo suscipit.",
+    "data_criacao": {
+      "$date": "2025-08-19T11:52:01"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-19T12:52:01"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d93"
+    },
+    "numero_pedido": "9206590526864",
+    "nome_cliente": "Lorenzo Moraes",
+    "endereco_completo": "Feira Sabrina Cardoso, 46",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Fuga quia pariatur aut excepturi mollitia exercitationem.",
+    "data_criacao": {
+      "$date": "2025-10-02T07:39:15"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-03T17:39:15"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d94"
+    },
+    "numero_pedido": "1013250093455",
+    "nome_cliente": "Maria Isis das Neves",
+    "endereco_completo": "Setor Isabel Sampaio, 48",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Consequatur nemo ab vitae saepe eum.",
+    "data_criacao": {
+      "$date": "2025-08-13T12:51:11"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-15T02:51:11"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d95"
+    },
+    "numero_pedido": "0653694323261",
+    "nome_cliente": "Gabriel Costa",
+    "endereco_completo": "Rua Siqueira, 35",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Consequuntur non veritatis cumque.",
+    "data_criacao": {
+      "$date": "2025-10-09T00:12:03"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-09T05:12:03"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d96"
+    },
+    "numero_pedido": "4939992155763",
+    "nome_cliente": "Maria Flor Moura",
+    "endereco_completo": "Pátio de Lima, 66",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Velit non quae aliquam occaecati itaque.",
+    "data_criacao": {
+      "$date": "2025-09-11T07:10:50"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-12T17:10:50"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d97"
+    },
+    "numero_pedido": "1891240396386",
+    "nome_cliente": "Evelyn Fonseca",
+    "endereco_completo": "Viela de Costa, 6",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Facilis adipisci repellendus illo.",
+    "data_criacao": {
+      "$date": "2025-10-12T10:19:10"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-13T17:19:10"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d98"
+    },
+    "numero_pedido": "2907133968468",
+    "nome_cliente": "Ana Lívia Almeida",
+    "endereco_completo": "Avenida Noah Montenegro, 652",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Impedit excepturi ipsam sit nemo quisquam iusto.",
+    "data_criacao": {
+      "$date": "2025-09-28T02:13:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-28T04:13:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d99"
+    },
+    "numero_pedido": "1830907595489",
+    "nome_cliente": "Ana Julia Nascimento",
+    "endereco_completo": "Vila Barros, 61",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Blanditiis quasi autem quisquam dicta.",
+    "data_criacao": {
+      "$date": "2025-10-15T13:43:08"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-15T23:43:08"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9a"
+    },
+    "numero_pedido": "9921434937117",
+    "nome_cliente": "Felipe Peixoto",
+    "endereco_completo": "Distrito Vasconcelos, 71",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Debitis magni debitis totam aspernatur doloremque.",
+    "data_criacao": {
+      "$date": "2025-09-29T22:46:46"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-30T00:46:46"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9b"
+    },
+    "numero_pedido": "0783477444033",
+    "nome_cliente": "Fernando Moraes",
+    "endereco_completo": "Recanto Vieira, 12",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Iste nisi repellendus dignissimos labore.",
+    "data_criacao": {
+      "$date": "2025-08-05T04:33:36"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-06T02:33:36"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9c"
+    },
+    "numero_pedido": "3058439973157",
+    "nome_cliente": "Vitor Gabriel Fogaça",
+    "endereco_completo": "Travessa de Cavalcante, 50",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Maiores aspernatur magni quo maiores.",
+    "data_criacao": {
+      "$date": "2025-09-09T14:53:27"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9d"
+    },
+    "numero_pedido": "4938708798782",
+    "nome_cliente": "Levi Garcia",
+    "endereco_completo": "Viela Cirino, 22",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Nesciunt totam quis quam totam explicabo placeat.",
+    "data_criacao": {
+      "$date": "2025-09-03T12:23:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-04T00:23:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9e"
+    },
+    "numero_pedido": "6170323780805",
+    "nome_cliente": "Larissa da Mata",
+    "endereco_completo": "Lagoa Luna Farias, 5",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quasi consectetur voluptate placeat.",
+    "data_criacao": {
+      "$date": "2025-09-23T06:03:19"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-24T19:03:19"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27d9f"
+    },
+    "numero_pedido": "1790966722199",
+    "nome_cliente": "Zoe Azevedo",
+    "endereco_completo": "Quadra da Rocha, 84",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Dolore tempore nam veniam ipsam.",
+    "data_criacao": {
+      "$date": "2025-09-19T00:58:45"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-19T22:58:45"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da0"
+    },
+    "numero_pedido": "2964123334573",
+    "nome_cliente": "Pedro Lucas Azevedo",
+    "endereco_completo": "Favela Correia, 59",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Distinctio similique accusamus voluptatibus tempora mollitia nesciunt.",
+    "data_criacao": {
+      "$date": "2025-10-01T04:32:05"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da1"
+    },
+    "numero_pedido": "9421382067060",
+    "nome_cliente": "Joana Câmara",
+    "endereco_completo": "Vila Rafaela da Costa, 83",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Est consequatur fugit laudantium tenetur eveniet.",
+    "data_criacao": {
+      "$date": "2025-10-16T06:11:56"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-16T18:11:56"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da2"
+    },
+    "numero_pedido": "5265079183503",
+    "nome_cliente": "Brayan Moura",
+    "endereco_completo": "Praça Fernandes, 760",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Concluída",
+    "descricao_entrega": "Non est iusto iste.",
+    "data_criacao": {
+      "$date": "2025-10-19T13:34:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-20T15:34:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da3"
+    },
+    "numero_pedido": "9075358459412",
+    "nome_cliente": "Ana Júlia Casa Grande",
+    "endereco_completo": "Pátio Maria Cecília Cunha, 501",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Non similique incidunt officia molestias quos reprehenderit.",
+    "data_criacao": {
+      "$date": "2025-08-27T14:03:11"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-29T01:03:11"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da4"
+    },
+    "numero_pedido": "5118423355180",
+    "nome_cliente": "Vitor Hugo Vasconcelos",
+    "endereco_completo": "Recanto Cavalcanti, 550",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Padrão",
+    "status": "Concluída",
+    "descricao_entrega": "Est laborum quam nesciunt possimus repudiandae occaecati.",
+    "data_criacao": {
+      "$date": "2025-08-14T12:31:59"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-15T05:31:59"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da5"
+    },
+    "numero_pedido": "9178766471288",
+    "nome_cliente": "André Aparecida",
+    "endereco_completo": "Viaduto Caleb Costa, 880",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Eveniet veniam minus mollitia impedit.",
+    "data_criacao": {
+      "$date": "2025-08-04T21:59:17"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-05T04:59:17"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da6"
+    },
+    "numero_pedido": "7172698020325",
+    "nome_cliente": "Laís Rocha",
+    "endereco_completo": "Fazenda Cassiano, 27",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Expressa",
+    "status": "Pendente",
+    "descricao_entrega": "Earum odit beatae.",
+    "data_criacao": {
+      "$date": "2025-08-05T12:30:46"
+    },
+    "data_entrega_concluida": null,
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da7"
+    },
+    "numero_pedido": "1658752141879",
+    "nome_cliente": "Fernando Albuquerque",
+    "endereco_completo": "Campo Fonseca, 54",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quibusdam similique architecto reprehenderit.",
+    "data_criacao": {
+      "$date": "2025-10-09T16:55:40"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-10-10T14:55:40"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da8"
+    },
+    "numero_pedido": "1351150365471",
+    "nome_cliente": "Sr. Benício Azevedo",
+    "endereco_completo": "Estação Bento Castro, 3",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Veritatis modi non voluptatibus id veritatis.",
+    "data_criacao": {
+      "$date": "2025-09-11T21:35:24"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-09-13T10:35:24"
+    },
+    "entregador_id": {
+      "$oid": "68fb892daf0ab38ac292f9fe"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "69050e68ec5885a618b27da9"
+    },
+    "numero_pedido": "5863320618479",
+    "nome_cliente": "Sra. Luana Abreu",
+    "endereco_completo": "Distrito João Pedro Dias, 25",
+    "cidade": "São Paulo",
+    "tipo_entrega": "Shoppe",
+    "status": "Concluída",
+    "descricao_entrega": "Quae eum maiores.",
+    "data_criacao": {
+      "$date": "2025-08-24T11:38:26"
+    },
+    "data_entrega_concluida": {
+      "$date": "2025-08-24T12:38:26"
+    },
+    "entregador_id": {
+      "$oid": "68fb9f0b36de3919e6ea05a4"
+    }
+  }
+]

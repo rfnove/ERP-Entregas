@@ -1,21 +1,25 @@
-// A criação e população das tabelas foram feitas através do codigo app.py
 // O Script a baixo mostra como as coleções foram implementdas no banco e 
 // as principais consultas que a aplicação realiza
-
+// Os dados do insertOne inseridos neste script foram excluido
 // Cria a coleção para os usuários (entregadores)
 db.createCollection("entregador")
 
 // Cria a coleção para as entregas
 db.createCollection("entregas")
 
+// Cria a coleção para as metas_entregador
+db.createCollection("metas_entregador")
 // Garante que não haverá dois entregadores com o mesmo email
-db.entregador.createIndex({ "email": 1 }, { unique: true })
+db.entregador.createIndex({ "email": 1 }, { unique: true });
+db.entregador.createIndex({ "cpf": 1 }, { unique: true });
+db.metas_entregador.createIndex({ "entregador_id": 1 }, { unique: true });
+db.entregas.createIndex({ "entregador_id": 1, "data_criacao": -1 });
 
 db.entregador.insertOne({
     "nome": "Nome",
-    "cpf": 12345678900,
-    "email": "email",
-    "senha_hash": "senha_hash",
+    "cpf": "12345678900",
+    "email": "entregador.exemplo@test.com",
+    "senha_hash": "pbkdf2:sha256:600000$exemploHash$0...[hash_real_seria_armazenado_aqui]",
     "data_cadastro": new Date() 
 })
 
@@ -24,7 +28,7 @@ db.entregas.insertOne({
     "nome_cliente": "Cliente Exemplo",
     "endereco_completo": "Rua das Flores, 123",
     "cidade": "São Paulo",
-    "tipo_entrega": "Rápida",
+    "tipo_entrega": "Shoppe",
     "status": "Pendente", // Status inicial
     "descricao_entrega": "Deixar na portaria",
     "data_criacao": new Date(),
@@ -32,6 +36,23 @@ db.entregas.insertOne({
     "entregador_id": ObjectId("6725c568e6f1a8c3e80a9f68") // ID do entregador logado
 })
 
+db.metas_entregador.insertOne({
+        "entregador_id": entregadorExemploId, // Referencia o entregador
+        "meta_financeira_total": 3000.0,
+        "dias_trabalho": 20,
+        "ganho_medio_entrega": 8.50,
+        "meta_produtividade_diaria_calculada": 18, 
+        "meta_eficiencia_perc": 90,
+        "meta_qualidade_falhas_perc": 10,
+        "data_atualizacao": new Date()
+    });
+
+
+//Update necessário após ter importado o arquivo entregas_para_importar.json
+db.entregas.updateMany(
+   { "status": "Em Andamento" }, // 1. O Filtro (O que encontrar)
+   { "$set": { "status": "Em andamento" } } // 2. A Atualização (O que modificar)
+)
 // Exemplo de busca por um entregador específico, com status 'Pendente' e de uma data específica
 // (O filtro de data no código busca pelo dia inteiro, de T00:00:00 a T23:59:59)
 db.entregador.find() // para podermos pegar o id para usarmos na proxima consulta
